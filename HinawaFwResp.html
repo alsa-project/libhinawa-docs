@@ -5,9 +5,9 @@
 <title>HinawaFwResp: Hinawa Reference Manual</title>
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="Hinawa Reference Manual">
-<link rel="up" href="libhinawa.html" title="libhinawa">
-<link rel="prev" href="hinawa-HinawaFwUnit.html" title="HinawaFwUnit">
-<link rel="next" href="hinawa-HinawaFwReq.html" title="HinawaFwReq">
+<link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
+<link rel="prev" href="HinawaFwUnit.html" title="HinawaFwUnit">
+<link rel="next" href="HinawaFwReq.html" title="HinawaFwReq">
 <meta name="generator" content="GTK-Doc V1.28 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -15,24 +15,26 @@
 <table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
-                  <a href="#hinawa-HinawaFwResp.description" class="shortcut">Description</a></span>
+                  <a href="#HinawaFwResp.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#HinawaFwResp.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#HinawaFwResp.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
-<td><a accesskey="u" href="libhinawa.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="hinawa-HinawaFwUnit.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="hinawa-HinawaFwReq.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="u" href="hinawa-fw.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="HinawaFwUnit.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="HinawaFwReq.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
-<a name="hinawa-HinawaFwResp"></a><div class="titlepage"></div>
+<a name="HinawaFwResp"></a><div class="titlepage"></div>
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
-<h2><span class="refentrytitle"><a name="hinawa-HinawaFwResp.top_of_page"></a>HinawaFwResp</span></h2>
+<h2><span class="refentrytitle"><a name="HinawaFwResp.top_of_page"></a>HinawaFwResp</span></h2>
 <p>HinawaFwResp — A transaction responder for a FireWire unit</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
 <div class="refsect1">
-<a name="hinawa-HinawaFwResp.functions"></a><h2>Functions</h2>
+<a name="HinawaFwResp.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
@@ -44,7 +46,7 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="hinawa-HinawaFwResp.html#hinawa-fw-resp-register" title="hinawa_fw_resp_register ()">hinawa_fw_resp_register</a> <span class="c_punctuation">()</span>
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-register" title="hinawa_fw_resp_register ()">hinawa_fw_resp_register</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -52,7 +54,7 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="hinawa-HinawaFwResp.html#hinawa-fw-resp-unregister" title="hinawa_fw_resp_unregister ()">hinawa_fw_resp_unregister</a> <span class="c_punctuation">()</span>
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-unregister" title="hinawa_fw_resp_unregister ()">hinawa_fw_resp_unregister</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -60,7 +62,7 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="hinawa-HinawaFwResp.html#hinawa-fw-resp-get-req-frame" title="hinawa_fw_resp_get_req_frame ()">hinawa_fw_resp_get_req_frame</a> <span class="c_punctuation">()</span>
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-get-req-frame" title="hinawa_fw_resp_get_req_frame ()">hinawa_fw_resp_get_req_frame</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -68,25 +70,47 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
-<a class="link" href="hinawa-HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()">hinawa_fw_resp_set_resp_frame</a> <span class="c_punctuation">()</span>
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()">hinawa_fw_resp_set_resp_frame</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
-<a name="hinawa-HinawaFwResp.description"></a><h2>Description</h2>
+<a name="HinawaFwResp.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signals_return">
+<col width="300px" class="signals_name">
+<col width="200px" class="signals_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a></td>
+<td class="signal_name"><a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal">requested</a></td>
+<td class="signal_flags">Run Last</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinawaFwResp.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> HinawaFwResp
+        <span class="lineart">╰──</span> <a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp">HinawaFwFcp</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinawaFwResp.description"></a><h2>Description</h2>
 <p>A HinawaFwResp responds requests from any units.</p>
 <p>This class is an application of Linux FireWire subsystem. All of operations
 utilize ioctl(2) with subsystem specific request commands.</p>
 </div>
 <div class="refsect1">
-<a name="hinawa-HinawaFwResp.functions_details"></a><h2>Functions</h2>
+<a name="HinawaFwResp.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="hinawa-fw-resp-register"></a><h3>hinawa_fw_resp_register ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hinawa_fw_resp_register (<em class="parameter"><code><span class="type">HinawaFwResp</span> *self</code></em>,
-                         <em class="parameter"><code><span class="type">HinawaFwUnit</span> *unit</code></em>,
+hinawa_fw_resp_register (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
+                         <em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *unit</code></em>,
                          <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
                          <em class="parameter"><code><span class="type">guint</span> width</code></em>,
                          <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
@@ -102,12 +126,12 @@ hinawa_fw_resp_register (<em class="parameter"><code><span class="type">HinawaFw
 <tbody>
 <tr>
 <td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>A <span class="type">HinawaFwResp</span></p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>unit</p></td>
-<td class="parameter_description"><p>A <span class="type">HinawaFwUnit</span></p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -133,7 +157,7 @@ hinawa_fw_resp_register (<em class="parameter"><code><span class="type">HinawaFw
 <div class="refsect2">
 <a name="hinawa-fw-resp-unregister"></a><h3>hinawa_fw_resp_unregister ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hinawa_fw_resp_unregister (<em class="parameter"><code><span class="type">HinawaFwResp</span> *self</code></em>);</pre>
+hinawa_fw_resp_unregister (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>);</pre>
 <p>stop to listen to a range of address in host controller</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-unregister.parameters"></a><h4>Parameters</h4>
@@ -155,9 +179,10 @@ hinawa_fw_resp_unregister (<em class="parameter"><code><span class="type">Hinawa
 <div class="refsect2">
 <a name="hinawa-fw-resp-get-req-frame"></a><h3>hinawa_fw_resp_get_req_frame ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hinawa_fw_resp_get_req_frame (<em class="parameter"><code><span class="type">HinawaFwResp</span> *self</code></em>,
+hinawa_fw_resp_get_req_frame (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
                               <em class="parameter"><code>const <span class="type">guint8</span> **frame</code></em>,
                               <em class="parameter"><code><span class="type">guint</span> *length</code></em>);</pre>
+<p>Retrieve byte frame to be requested.</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-get-req-frame.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -169,7 +194,7 @@ hinawa_fw_resp_get_req_frame (<em class="parameter"><code><span class="type">Hin
 <tbody>
 <tr>
 <td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>A <span class="type">HinawaFwResp</span></p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -191,9 +216,10 @@ response frame. </p></td>
 <div class="refsect2">
 <a name="hinawa-fw-resp-set-resp-frame"></a><h3>hinawa_fw_resp_set_resp_frame ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
-hinawa_fw_resp_set_resp_frame (<em class="parameter"><code><span class="type">HinawaFwResp</span> *self</code></em>,
+hinawa_fw_resp_set_resp_frame (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
                                <em class="parameter"><code><span class="type">guint8</span> *frame</code></em>,
                                <em class="parameter"><code><span class="type">guint</span> length</code></em>);</pre>
+<p>Register byte frame as response.</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-set-resp-frame.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -205,7 +231,7 @@ hinawa_fw_resp_set_resp_frame (<em class="parameter"><code><span class="type">Hi
 <tbody>
 <tr>
 <td class="parameter_name"><p>self</p></td>
-<td class="parameter_description"><p>A <span class="type">HinawaFwResp</span></p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -225,7 +251,54 @@ frame. </p></td>
 </div>
 </div>
 <div class="refsect1">
-<a name="hinawa-HinawaFwResp.other_details"></a><h2>Types and Values</h2>
+<a name="HinawaFwResp.other_details"></a><h2>Types and Values</h2>
+</div>
+<div class="refsect1">
+<a name="HinawaFwResp.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="HinawaFwResp-requested"></a><h3>The <code class="literal">“requested”</code> signal</h3>
+<pre class="programlisting"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a>
+user_function (<a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self,
+               <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode,
+               <span class="type">gpointer</span>      user_data)</pre>
+<p>When any units transfer requests to the range of address to which
+this object listening. The ::requested signal handler can get data
+frame by a call of ::get_req_frame and set data frame by a call of
+::set_resp_frame, then returns rcode.</p>
+<div class="refsect3">
+<a name="HinawaFwResp-requested.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tcode</p></td>
+<td class="parameter_description"><p>One of <span class="type">HinawaTcode</span> enumerators</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="HinawaFwResp-requested.returns"></a><h4>Returns</h4>
+<p> One of <span class="type">HinawaRcode</span> enumerators corresponding to rcodes
+defined in IEEE 1394 specification.</p>
+</div>
+<p>Flags: Run Last</p>
+</div>
 </div>
 </div>
 <div class="footer">

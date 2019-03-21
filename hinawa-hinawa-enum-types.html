@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hinawa_enum_types: Hinawa Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Hinawa Reference Manual">
+<link rel="up" href="hinawa-enumerations.html" title="Hinawa enumerations">
+<link rel="prev" href="hinawa-enumerations.html" title="Hinawa enumerations">
+<link rel="next" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#hinawa-hinawa-enum-types.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#hinawa-hinawa-enum-types.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="hinawa-enumerations.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="hinawa-enumerations.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="hinawa-fw.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="hinawa-hinawa-enum-types"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="hinawa-hinawa-enum-types.top_of_page"></a>hinawa_enum_types</span></h2>
+<p>hinawa_enum_types</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="hinawa-hinawa-enum-types.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode">HinawaFwTcode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode">HinawaFwRcode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndUnitType" title="enum HinawaSndUnitType">HinawaSndUnitType</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="hinawa-hinawa-enum-types.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
+    <span class="lineart">├──</span> HinawaFwRcode
+    <span class="lineart">├──</span> HinawaFwTcode
+    <span class="lineart">╰──</span> HinawaSndUnitType
+</pre>
+</div>
+<div class="refsect1">
+<a name="hinawa-hinawa-enum-types.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="hinawa-hinawa-enum-types.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="hinawa-hinawa-enum-types.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HinawaFwTcode"></a><h3>enum HinawaFwTcode</h3>
+<p>A representation for tcode of asynchronous transaction on IEEE 1394 bus.</p>
+<div class="refsect3">
+<a name="HinawaFwTcode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-WRITE-QUADLET-REQUEST:CAPS"></a>HINAWA_FW_TCODE_WRITE_QUADLET_REQUEST</p></td>
+<td class="enum_member_description">
+<p>For request to write quadlet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-WRITE-BLOCK-REQUEST:CAPS"></a>HINAWA_FW_TCODE_WRITE_BLOCK_REQUEST</p></td>
+<td class="enum_member_description">
+<p>For request to write block.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-WRITE-RESPONSE:CAPS"></a>HINAWA_FW_TCODE_WRITE_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>For response to write.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-READ-QUADLET-REQUEST:CAPS"></a>HINAWA_FW_TCODE_READ_QUADLET_REQUEST</p></td>
+<td class="enum_member_description">
+<p>For response to read quadlet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-READ-BLOCK-REQUEST:CAPS"></a>HINAWA_FW_TCODE_READ_BLOCK_REQUEST</p></td>
+<td class="enum_member_description">
+<p>For request to read block.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-READ-QUADLET-RESPONSE:CAPS"></a>HINAWA_FW_TCODE_READ_QUADLET_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>For response to quadlet read.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-READ-BLOCK-RESPONSE:CAPS"></a>HINAWA_FW_TCODE_READ_BLOCK_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>For response to block read.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-CYCLE-START:CAPS"></a>HINAWA_FW_TCODE_CYCLE_START</p></td>
+<td class="enum_member_description">
+<p>For cycle start.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-REQUEST:CAPS"></a>HINAWA_FW_TCODE_LOCK_REQUEST</p></td>
+<td class="enum_member_description">
+<p>For request to lock.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-STREAM-DATA:CAPS"></a>HINAWA_FW_TCODE_STREAM_DATA</p></td>
+<td class="enum_member_description">
+<p>For stream data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-RESPONSE:CAPS"></a>HINAWA_FW_TCODE_LOCK_RESPONSE</p></td>
+<td class="enum_member_description">
+<p>For response to lock.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-MASK-SWAP:CAPS"></a>HINAWA_FW_TCODE_LOCK_MASK_SWAP</p></td>
+<td class="enum_member_description">
+<p>For lock request for mask-swap.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-COMPARE-SWAP:CAPS"></a>HINAWA_FW_TCODE_LOCK_COMPARE_SWAP</p></td>
+<td class="enum_member_description">
+<p>For lock request for compare-swap.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-FETCH-ADD:CAPS"></a>HINAWA_FW_TCODE_LOCK_FETCH_ADD</p></td>
+<td class="enum_member_description">
+<p>For lock request for fetch-add.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-LITTLE-ADD:CAPS"></a>HINAWA_FW_TCODE_LOCK_LITTLE_ADD</p></td>
+<td class="enum_member_description">
+<p>For lock request for little-add.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-BOUNDED-ADD:CAPS"></a>HINAWA_FW_TCODE_LOCK_BOUNDED_ADD</p></td>
+<td class="enum_member_description">
+<p>For lock request for bounded-add.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-WRAP-ADD:CAPS"></a>HINAWA_FW_TCODE_LOCK_WRAP_ADD</p></td>
+<td class="enum_member_description">
+<p>For lock request for wrap-add.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-TCODE-LOCK-VENDOR-DEPENDENT:CAPS"></a>HINAWA_FW_TCODE_LOCK_VENDOR_DEPENDENT</p></td>
+<td class="enum_member_description">
+<p>For lock request for vendor-dependent.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaFwRcode"></a><h3>enum HinawaFwRcode</h3>
+<p>A representation for rcode of asynchronous transaction on IEEE 1394 bus.</p>
+<div class="refsect3">
+<a name="HinawaFwRcode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-COMPLETE:CAPS"></a>HINAWA_FW_RCODE_COMPLETE</p></td>
+<td class="enum_member_description">
+<p>For completion.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-CONFLICT-ERROR:CAPS"></a>HINAWA_FW_RCODE_CONFLICT_ERROR</p></td>
+<td class="enum_member_description">
+<p>For error of conflicting.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-DATA-ERROR:CAPS"></a>HINAWA_FW_RCODE_DATA_ERROR</p></td>
+<td class="enum_member_description">
+<p>For error of data.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-TYPE-ERROR:CAPS"></a>HINAWA_FW_RCODE_TYPE_ERROR</p></td>
+<td class="enum_member_description">
+<p>For error of type.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-ADDRESS-ERROR:CAPS"></a>HINAWA_FW_RCODE_ADDRESS_ERROR</p></td>
+<td class="enum_member_description">
+<p>For error of address.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-SEND-ERROR:CAPS"></a>HINAWA_FW_RCODE_SEND_ERROR</p></td>
+<td class="enum_member_description">
+<p>For error of sending.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-CANCELLED:CAPS"></a>HINAWA_FW_RCODE_CANCELLED</p></td>
+<td class="enum_member_description">
+<p>For cancellation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-BUSY:CAPS"></a>HINAWA_FW_RCODE_BUSY</p></td>
+<td class="enum_member_description">
+<p>For busyness.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-GENERATION:CAPS"></a>HINAWA_FW_RCODE_GENERATION</p></td>
+<td class="enum_member_description">
+<p>For generation.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-NO-ACK:CAPS"></a>HINAWA_FW_RCODE_NO_ACK</p></td>
+<td class="enum_member_description">
+<p>For no acknowledge.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaSndUnitType"></a><h3>enum HinawaSndUnitType</h3>
+<p>A representation of type for sound unit defined by Linux sound subsystem.</p>
+<div class="refsect3">
+<a name="HinawaSndUnitType.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-DICE:CAPS"></a>HINAWA_SND_UNIT_TYPE_DICE</p></td>
+<td class="enum_member_description">
+<p>The type of DICE ASIC.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-FIREWORKS:CAPS"></a>HINAWA_SND_UNIT_TYPE_FIREWORKS</p></td>
+<td class="enum_member_description">
+<p>The type of Fireworks board module.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-BEBOB:CAPS"></a>HINAWA_SND_UNIT_TYPE_BEBOB</p></td>
+<td class="enum_member_description">
+<p>The type of BeBoB ASIC.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-OXFW:CAPS"></a>HINAWA_SND_UNIT_TYPE_OXFW</p></td>
+<td class="enum_member_description">
+<p>The type of OXFW ASIC</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-DIGI00X:CAPS"></a>HINAWA_SND_UNIT_TYPE_DIGI00X</p></td>
+<td class="enum_member_description">
+<p>The type of Digi00x series.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-TASCAM:CAPS"></a>HINAWA_SND_UNIT_TYPE_TASCAM</p></td>
+<td class="enum_member_description">
+<p>The type of Tascam FireWire series.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-MOTU:CAPS"></a>HINAWA_SND_UNIT_TYPE_MOTU</p></td>
+<td class="enum_member_description">
+<p>The type of MOTU FireWire series.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-FIREFACE:CAPS"></a>HINAWA_SND_UNIT_TYPE_FIREFACE</p></td>
+<td class="enum_member_description">
+<p>The type of RME Fireface series.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

@@ -1,51 +1,116 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <book xmlns="http://www.devhelp.net/book" title="Hinawa Reference Manual" link="index.html" author="" name="hinawa" version="2" language="c">
   <chapters>
-    <sub name="Reference" link="reference.html">
-      <sub name="Introduction" link="introduction.html"/>
-      <sub name="libhinawa" link="libhinawa.html">
-        <sub name="HinawaFwUnit" link="hinawa-HinawaFwUnit.html"/>
-        <sub name="HinawaFwResp" link="hinawa-HinawaFwResp.html"/>
-        <sub name="HinawaFwReq" link="hinawa-HinawaFwReq.html"/>
-        <sub name="HinawaFwFcp" link="hinawa-HinawaFwFcp.html"/>
-        <sub name="HinawaSndUnit" link="hinawa-HinawaSndUnit.html"/>
-        <sub name="HinawaSndDice" link="hinawa-HinawaSndDice.html"/>
-        <sub name="HinawaSndEfw" link="hinawa-HinawaSndEfw.html"/>
-        <sub name="HinawaSndDg00x" link="hinawa-HinawaSndDg00x.html"/>
-        <sub name="HinawaSndMotu" link="hinawa-HinawaSndMotu.html"/>
-        <sub name="HinawaSndTscm" link="hinawa-HinawaSndTscm.html"/>
-        <sub name="Annotation Glossary" link="libhinawa.html#annotation-glossary"/>
-      </sub>
+    <sub name="Introduction" link="introduction.html"/>
+    <sub name="Hinawa enumerations" link="hinawa-enumerations.html">
+      <sub name="hinawa_enum_types" link="hinawa-hinawa-enum-types.html"/>
+    </sub>
+    <sub name="Hinawa objects for Linux FireWire subsystem." link="hinawa-fw.html">
+      <sub name="HinawaFwUnit" link="HinawaFwUnit.html"/>
+      <sub name="HinawaFwResp" link="HinawaFwResp.html"/>
+      <sub name="HinawaFwReq" link="HinawaFwReq.html"/>
+      <sub name="HinawaFwFcp" link="HinawaFwFcp.html"/>
+    </sub>
+    <sub name="Hinawa objects for Linux sound subsystem." link="hinawa-snd.html">
+      <sub name="HinawaSndUnit" link="HinawaSndUnit.html"/>
+      <sub name="HinawaSndDice" link="HinawaSndDice.html"/>
+      <sub name="HinawaSndEfw" link="HinawaSndEfw.html"/>
+      <sub name="HinawaSndDg00x" link="HinawaSndDg00x.html"/>
+      <sub name="HinawaSndMotu" link="HinawaSndMotu.html"/>
+      <sub name="HinawaSndTscm" link="HinawaSndTscm.html"/>
     </sub>
     <sub name="Index of all symbols" link="index-all.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
   </chapters>
   <functions>
-    <keyword type="function" name="hinawa_fw_unit_open ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-open"/>
-    <keyword type="function" name="hinawa_fw_unit_get_config_rom ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-get-config-rom"/>
-    <keyword type="function" name="hinawa_fw_unit_listen ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-listen"/>
-    <keyword type="function" name="hinawa_fw_unit_unlisten ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-unlisten"/>
-    <keyword type="function" name="hinawa_fw_resp_register ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-register"/>
-    <keyword type="function" name="hinawa_fw_resp_unregister ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-unregister"/>
-    <keyword type="function" name="hinawa_fw_resp_get_req_frame ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-get-req-frame"/>
-    <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
-    <keyword type="function" name="hinawa_fw_req_write ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-write"/>
-    <keyword type="function" name="hinawa_fw_req_read ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-read"/>
-    <keyword type="function" name="hinawa_fw_req_lock ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-lock"/>
-    <keyword type="function" name="hinawa_fw_fcp_listen ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-listen"/>
-    <keyword type="function" name="hinawa_fw_fcp_transact ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-transact"/>
-    <keyword type="function" name="hinawa_fw_fcp_unlisten ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-unlisten"/>
-    <keyword type="function" name="hinawa_snd_unit_open ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-open"/>
-    <keyword type="function" name="hinawa_snd_unit_lock ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-lock"/>
-    <keyword type="function" name="hinawa_snd_unit_unlock ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
-    <keyword type="function" name="hinawa_snd_unit_listen ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-listen"/>
-    <keyword type="function" name="hinawa_snd_unit_unlisten ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-unlisten"/>
-    <keyword type="function" name="hinawa_snd_dice_open ()" link="hinawa-HinawaSndDice.html#hinawa-snd-dice-open"/>
-    <keyword type="function" name="hinawa_snd_dice_transact ()" link="hinawa-HinawaSndDice.html#hinawa-snd-dice-transact"/>
-    <keyword type="function" name="hinawa_snd_efw_open ()" link="hinawa-HinawaSndEfw.html#hinawa-snd-efw-open"/>
-    <keyword type="function" name="hinawa_snd_efw_transact ()" link="hinawa-HinawaSndEfw.html#hinawa-snd-efw-transact"/>
-    <keyword type="function" name="hinawa_snd_dg00x_open ()" link="hinawa-HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
-    <keyword type="function" name="hinawa_snd_motu_open ()" link="hinawa-HinawaSndMotu.html#hinawa-snd-motu-open"/>
-    <keyword type="function" name="hinawa_snd_tscm_open ()" link="hinawa-HinawaSndTscm.html#hinawa-snd-tscm-open"/>
-    <keyword type="function" name="hinawa_snd_tscm_get_state ()" link="hinawa-HinawaSndTscm.html#hinawa-snd-tscm-get-state"/>
+    <keyword type="enum" name="enum HinawaFwTcode" link="hinawa-hinawa-enum-types.html#HinawaFwTcode"/>
+    <keyword type="enum" name="enum HinawaFwRcode" link="hinawa-hinawa-enum-types.html#HinawaFwRcode"/>
+    <keyword type="enum" name="enum HinawaSndUnitType" link="hinawa-hinawa-enum-types.html#HinawaSndUnitType"/>
+    <keyword type="function" name="hinawa_fw_unit_open ()" link="HinawaFwUnit.html#hinawa-fw-unit-open"/>
+    <keyword type="function" name="hinawa_fw_unit_get_config_rom ()" link="HinawaFwUnit.html#hinawa-fw-unit-get-config-rom"/>
+    <keyword type="function" name="hinawa_fw_unit_listen ()" link="HinawaFwUnit.html#hinawa-fw-unit-listen"/>
+    <keyword type="function" name="hinawa_fw_unit_unlisten ()" link="HinawaFwUnit.html#hinawa-fw-unit-unlisten"/>
+    <keyword type="property" name="The “bus-manager-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--bus-manager-node-id"/>
+    <keyword type="property" name="The “generation” property" link="HinawaFwUnit.html#HinawaFwUnit--generation"/>
+    <keyword type="property" name="The “ir-manager-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--ir-manager-node-id"/>
+    <keyword type="property" name="The “listening” property" link="HinawaFwUnit.html#HinawaFwUnit--listening"/>
+    <keyword type="property" name="The “local-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--local-node-id"/>
+    <keyword type="property" name="The “node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--node-id"/>
+    <keyword type="property" name="The “root-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--root-node-id"/>
+    <keyword type="signal" name="The “bus-update” signal" link="HinawaFwUnit.html#HinawaFwUnit-bus-update"/>
+    <keyword type="signal" name="The “disconnected” signal" link="HinawaFwUnit.html#HinawaFwUnit-disconnected"/>
+    <keyword type="function" name="hinawa_fw_resp_register ()" link="HinawaFwResp.html#hinawa-fw-resp-register"/>
+    <keyword type="function" name="hinawa_fw_resp_unregister ()" link="HinawaFwResp.html#hinawa-fw-resp-unregister"/>
+    <keyword type="function" name="hinawa_fw_resp_get_req_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-get-req-frame"/>
+    <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
+    <keyword type="signal" name="The “requested” signal" link="HinawaFwResp.html#HinawaFwResp-requested"/>
+    <keyword type="function" name="hinawa_fw_req_write ()" link="HinawaFwReq.html#hinawa-fw-req-write"/>
+    <keyword type="function" name="hinawa_fw_req_read ()" link="HinawaFwReq.html#hinawa-fw-req-read"/>
+    <keyword type="function" name="hinawa_fw_req_lock ()" link="HinawaFwReq.html#hinawa-fw-req-lock"/>
+    <keyword type="property" name="The “timeout” property" link="HinawaFwReq.html#HinawaFwReq--timeout"/>
+    <keyword type="function" name="hinawa_fw_fcp_listen ()" link="HinawaFwFcp.html#hinawa-fw-fcp-listen"/>
+    <keyword type="function" name="hinawa_fw_fcp_transact ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transact"/>
+    <keyword type="function" name="hinawa_fw_fcp_unlisten ()" link="HinawaFwFcp.html#hinawa-fw-fcp-unlisten"/>
+    <keyword type="property" name="The “timeout” property" link="HinawaFwFcp.html#HinawaFwFcp--timeout"/>
+    <keyword type="function" name="hinawa_snd_unit_open ()" link="HinawaSndUnit.html#hinawa-snd-unit-open"/>
+    <keyword type="function" name="hinawa_snd_unit_lock ()" link="HinawaSndUnit.html#hinawa-snd-unit-lock"/>
+    <keyword type="function" name="hinawa_snd_unit_unlock ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
+    <keyword type="function" name="hinawa_snd_unit_listen ()" link="HinawaSndUnit.html#hinawa-snd-unit-listen"/>
+    <keyword type="function" name="hinawa_snd_unit_unlisten ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlisten"/>
+    <keyword type="property" name="The “card” property" link="HinawaSndUnit.html#HinawaSndUnit--card"/>
+    <keyword type="property" name="The “device” property" link="HinawaSndUnit.html#HinawaSndUnit--device"/>
+    <keyword type="property" name="The “guid” property" link="HinawaSndUnit.html#HinawaSndUnit--guid"/>
+    <keyword type="property" name="The “listening” property" link="HinawaSndUnit.html#HinawaSndUnit--listening"/>
+    <keyword type="property" name="The “streaming” property" link="HinawaSndUnit.html#HinawaSndUnit--streaming"/>
+    <keyword type="property" name="The “type” property" link="HinawaSndUnit.html#HinawaSndUnit--type"/>
+    <keyword type="signal" name="The “lock-status” signal" link="HinawaSndUnit.html#HinawaSndUnit-lock-status"/>
+    <keyword type="function" name="hinawa_snd_dice_open ()" link="HinawaSndDice.html#hinawa-snd-dice-open"/>
+    <keyword type="function" name="hinawa_snd_dice_transact ()" link="HinawaSndDice.html#hinawa-snd-dice-transact"/>
+    <keyword type="signal" name="The “notified” signal" link="HinawaSndDice.html#HinawaSndDice-notified"/>
+    <keyword type="function" name="hinawa_snd_efw_open ()" link="HinawaSndEfw.html#hinawa-snd-efw-open"/>
+    <keyword type="function" name="hinawa_snd_efw_transact ()" link="HinawaSndEfw.html#hinawa-snd-efw-transact"/>
+    <keyword type="function" name="hinawa_snd_dg00x_open ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
+    <keyword type="signal" name="The “message” signal" link="HinawaSndDg00x.html#HinawaSndDg00x-message"/>
+    <keyword type="function" name="hinawa_snd_motu_open ()" link="HinawaSndMotu.html#hinawa-snd-motu-open"/>
+    <keyword type="signal" name="The “notified” signal" link="HinawaSndMotu.html#HinawaSndMotu-notified"/>
+    <keyword type="function" name="hinawa_snd_tscm_open ()" link="HinawaSndTscm.html#hinawa-snd-tscm-open"/>
+    <keyword type="function" name="hinawa_snd_tscm_get_state ()" link="HinawaSndTscm.html#hinawa-snd-tscm-get-state"/>
+    <keyword type="signal" name="The “control” signal" link="HinawaSndTscm.html#HinawaSndTscm-control"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_WRITE_QUADLET_REQUEST" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-WRITE-QUADLET-REQUEST:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_WRITE_BLOCK_REQUEST" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-WRITE-BLOCK-REQUEST:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_WRITE_RESPONSE" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-WRITE-RESPONSE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_READ_QUADLET_REQUEST" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-READ-QUADLET-REQUEST:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_READ_BLOCK_REQUEST" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-READ-BLOCK-REQUEST:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_READ_QUADLET_RESPONSE" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-READ-QUADLET-RESPONSE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_READ_BLOCK_RESPONSE" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-READ-BLOCK-RESPONSE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_CYCLE_START" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-CYCLE-START:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_REQUEST" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-REQUEST:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_STREAM_DATA" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-STREAM-DATA:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_RESPONSE" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-RESPONSE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_MASK_SWAP" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-MASK-SWAP:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_COMPARE_SWAP" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-COMPARE-SWAP:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_FETCH_ADD" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-FETCH-ADD:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_LITTLE_ADD" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-LITTLE-ADD:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_BOUNDED_ADD" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-BOUNDED-ADD:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_WRAP_ADD" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-WRAP-ADD:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_TCODE_LOCK_VENDOR_DEPENDENT" link="hinawa-hinawa-enum-types.html#HINAWA-FW-TCODE-LOCK-VENDOR-DEPENDENT:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_COMPLETE" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-COMPLETE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_CONFLICT_ERROR" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-CONFLICT-ERROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_DATA_ERROR" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-DATA-ERROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_TYPE_ERROR" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-TYPE-ERROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_ADDRESS_ERROR" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-ADDRESS-ERROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_SEND_ERROR" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-SEND-ERROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_CANCELLED" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-CANCELLED:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_BUSY" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-BUSY:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_GENERATION" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-GENERATION:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_NO_ACK" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-NO-ACK:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_DICE" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-DICE:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_FIREWORKS" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-FIREWORKS:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_BEBOB" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-BEBOB:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_OXFW" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-OXFW:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_DIGI00X" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-DIGI00X:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_TASCAM" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-TASCAM:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_MOTU" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-MOTU:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_FIREFACE" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-FIREFACE:CAPS"/>
   </functions>
 </book>
