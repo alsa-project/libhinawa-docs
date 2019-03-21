@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Hinawa Reference Manual" link="index.html" author="" name="hinawa" version="2" language="c">
+  <chapters>
+    <sub name="Reference" link="reference.html">
+      <sub name="Introduction" link="introduction.html"/>
+      <sub name="libhinawa" link="libhinawa.html">
+        <sub name="HinawaFwUnit" link="hinawa-HinawaFwUnit.html"/>
+        <sub name="HinawaFwResp" link="hinawa-HinawaFwResp.html"/>
+        <sub name="HinawaFwReq" link="hinawa-HinawaFwReq.html"/>
+        <sub name="HinawaFwFcp" link="hinawa-HinawaFwFcp.html"/>
+        <sub name="HinawaSndUnit" link="hinawa-HinawaSndUnit.html"/>
+        <sub name="HinawaSndDice" link="hinawa-HinawaSndDice.html"/>
+        <sub name="HinawaSndEfw" link="hinawa-HinawaSndEfw.html"/>
+        <sub name="HinawaSndDg00x" link="hinawa-HinawaSndDg00x.html"/>
+        <sub name="HinawaSndMotu" link="hinawa-HinawaSndMotu.html"/>
+        <sub name="HinawaSndTscm" link="hinawa-HinawaSndTscm.html"/>
+        <sub name="Annotation Glossary" link="libhinawa.html#annotation-glossary"/>
+      </sub>
+    </sub>
+    <sub name="Index of all symbols" link="index-all.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="hinawa_fw_unit_open ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-open"/>
+    <keyword type="function" name="hinawa_fw_unit_get_config_rom ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-get-config-rom"/>
+    <keyword type="function" name="hinawa_fw_unit_listen ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-listen"/>
+    <keyword type="function" name="hinawa_fw_unit_unlisten ()" link="hinawa-HinawaFwUnit.html#hinawa-fw-unit-unlisten"/>
+    <keyword type="function" name="hinawa_fw_resp_register ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-register"/>
+    <keyword type="function" name="hinawa_fw_resp_unregister ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-unregister"/>
+    <keyword type="function" name="hinawa_fw_resp_get_req_frame ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-get-req-frame"/>
+    <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="hinawa-HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
+    <keyword type="function" name="hinawa_fw_req_write ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-write"/>
+    <keyword type="function" name="hinawa_fw_req_read ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-read"/>
+    <keyword type="function" name="hinawa_fw_req_lock ()" link="hinawa-HinawaFwReq.html#hinawa-fw-req-lock"/>
+    <keyword type="function" name="hinawa_fw_fcp_listen ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-listen"/>
+    <keyword type="function" name="hinawa_fw_fcp_transact ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-transact"/>
+    <keyword type="function" name="hinawa_fw_fcp_unlisten ()" link="hinawa-HinawaFwFcp.html#hinawa-fw-fcp-unlisten"/>
+    <keyword type="function" name="hinawa_snd_unit_open ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-open"/>
+    <keyword type="function" name="hinawa_snd_unit_lock ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-lock"/>
+    <keyword type="function" name="hinawa_snd_unit_unlock ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
+    <keyword type="function" name="hinawa_snd_unit_listen ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-listen"/>
+    <keyword type="function" name="hinawa_snd_unit_unlisten ()" link="hinawa-HinawaSndUnit.html#hinawa-snd-unit-unlisten"/>
+    <keyword type="function" name="hinawa_snd_dice_open ()" link="hinawa-HinawaSndDice.html#hinawa-snd-dice-open"/>
+    <keyword type="function" name="hinawa_snd_dice_transact ()" link="hinawa-HinawaSndDice.html#hinawa-snd-dice-transact"/>
+    <keyword type="function" name="hinawa_snd_efw_open ()" link="hinawa-HinawaSndEfw.html#hinawa-snd-efw-open"/>
+    <keyword type="function" name="hinawa_snd_efw_transact ()" link="hinawa-HinawaSndEfw.html#hinawa-snd-efw-transact"/>
+    <keyword type="function" name="hinawa_snd_dg00x_open ()" link="hinawa-HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
+    <keyword type="function" name="hinawa_snd_motu_open ()" link="hinawa-HinawaSndMotu.html#hinawa-snd-motu-open"/>
+    <keyword type="function" name="hinawa_snd_tscm_open ()" link="hinawa-HinawaSndTscm.html#hinawa-snd-tscm-open"/>
+    <keyword type="function" name="hinawa_snd_tscm_get_state ()" link="hinawa-HinawaSndTscm.html#hinawa-snd-tscm-get-state"/>
+  </functions>
+</book>

@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>libhinawa: Hinawa Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Hinawa Reference Manual">
+<link rel="up" href="reference.html" title="Part I. Reference">
+<link rel="prev" href="introduction.html" title="Introduction">
+<link rel="next" href="hinawa-HinawaFwUnit.html" title="HinawaFwUnit">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts"></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="reference.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="introduction.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="hinawa-HinawaFwUnit.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="libhinawa"></a>libhinawa</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaFwUnit.html">HinawaFwUnit</a></span><span class="refpurpose"> — An event listener for FireWire unit</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaFwResp.html">HinawaFwResp</a></span><span class="refpurpose"> — A transaction responder for a FireWire unit</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaFwReq.html">HinawaFwReq</a></span><span class="refpurpose"> — A transaction executor to a FireWire unit</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaFwFcp.html">HinawaFwFcp</a></span><span class="refpurpose"> — A FCP transaction executor to a FireWire unit</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndUnit.html">HinawaSndUnit</a></span><span class="refpurpose"> — An event listener for ALSA FireWire sound devices</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndDice.html">HinawaSndDice</a></span><span class="refpurpose"> — A notification listener for Dice models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndEfw.html">HinawaSndEfw</a></span><span class="refpurpose"> — A transaction executor for Fireworks models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndDg00x.html">HinawaSndDg00x</a></span><span class="refpurpose"> — A notification listener for Dg00x models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndMotu.html">HinawaSndMotu</a></span><span class="refpurpose"> — A notification listener for Motu models</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="hinawa-HinawaSndTscm.html">HinawaSndTscm</a></span><span class="refpurpose"> — A state reader for Tascam FireWire models</span>
+</dt>
+<dt><span class="glossary"><a href="libhinawa.html#annotation-glossary">Annotation Glossary</a></span></dt>
+</dl></div>
+<p>
+            This library gives 9 objects, 5 objects are abstraction of the
+            functionality in ALSA firewire stack, the others are abstractions
+            of the transaction functionality in Linux firewire stack.</p>
+<p>libhinawa supports gobject introspection, thus this library
+            is available with gobject introspection bindings for each languages
+            such as Python, Ruby and so on. When using this mechanism, please
+            refer to documents in each language implementation.</p>
+<div class="glossary">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="annotation-glossary"></a>Annotation Glossary</h2></div></div></div>
+<a name="glsA"></a><h3 class="title">A</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-array"></a>array</span></dt>
+<dd class="glossdef"><p>Parameter points to an array of items.</p></dd>
+<a name="glsE"></a><h3 class="title">E</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-element-type"></a>element-type</span></dt>
+<dd class="glossdef"><p>Generics and defining elements of containers and arrays.</p></dd>
+<a name="glsI"></a><h3 class="title">I</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-in"></a>in</span></dt>
+<dd class="glossdef"><p>Parameter for input. Default is <acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-inout"></a>inout</span></dt>
+<dd class="glossdef"><p>Parameter for input and for returning results. Default is <acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>.</p></dd>
+<a name="glsN"></a><h3 class="title">N</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-nullable"></a>nullable</span></dt>
+<dd class="glossdef"><p>NULL may be passed as the value in, out, in-out; or as a return value.</p></dd>
+<a name="glsO"></a><h3 class="title">O</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-optional"></a>optional</span></dt>
+<dd class="glossdef"><p>NULL may be passed instead of a pointer to a location.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-out"></a>out</span></dt>
+<dd class="glossdef"><p>Parameter for returning results. Default is <acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-out%20caller-allocates"></a>out caller-allocates</span></dt>
+<dd class="glossdef"><p>Out parameter, where caller must allocate storage.</p></dd>
+<a name="glsT"></a><h3 class="title">T</h3>
+<dt><span class="glossterm"><a name="annotation-glossterm-transfer%20full"></a>transfer full</span></dt>
+<dd class="glossdef"><p>Free data after the code is done.</p></dd>
+<dt><span class="glossterm"><a name="annotation-glossterm-transfer%20none"></a>transfer none</span></dt>
+<dd class="glossdef"><p>Don't free data after the code is done.</p></dd>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>

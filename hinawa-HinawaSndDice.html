@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HinawaSndDice: Hinawa Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Hinawa Reference Manual">
+<link rel="up" href="libhinawa.html" title="libhinawa">
+<link rel="prev" href="hinawa-HinawaSndUnit.html" title="HinawaSndUnit">
+<link rel="next" href="hinawa-HinawaSndEfw.html" title="HinawaSndEfw">
+<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#hinawa-HinawaSndDice.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="libhinawa.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="hinawa-HinawaSndUnit.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="hinawa-HinawaSndEfw.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="hinawa-HinawaSndDice"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="hinawa-HinawaSndDice.top_of_page"></a>HinawaSndDice</span></h2>
+<p>HinawaSndDice — A notification listener for Dice models</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="hinawa-HinawaSndDice.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_return">
+<col class="functions_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="hinawa-HinawaSndDice.html#hinawa-snd-dice-open" title="hinawa_snd_dice_open ()">hinawa_snd_dice_open</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="hinawa-HinawaSndDice.html#hinawa-snd-dice-transact" title="hinawa_snd_dice_transact ()">hinawa_snd_dice_transact</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="hinawa-HinawaSndDice.description"></a><h2>Description</h2>
+<p>A <span class="type">HinawaSndDice</span> listen to Dice notification and generates signal when
+received. This inherits <span class="type">HinawaSndUnit</span>.</p>
+</div>
+<div class="refsect1">
+<a name="hinawa-HinawaSndDice.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinawa-snd-dice-open"></a><h3>hinawa_snd_dice_open ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_snd_dice_open (<em class="parameter"><code><span class="type">HinawaSndDice</span> *self</code></em>,
+                      <em class="parameter"><code><span class="type">gchar</span> *path</code></em>,
+                      <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Open ALSA hwdep character device and check it for Dice  devices.</p>
+<div class="refsect3">
+<a name="hinawa-snd-dice-open.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <span class="type">HinawaSndUnit</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>path</p></td>
+<td class="parameter_description"><p>A full path of a special file for ALSA hwdep character device</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-snd-dice-transact"></a><h3>hinawa_snd_dice_transact ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_snd_dice_transact (<em class="parameter"><code><span class="type">HinawaSndDice</span> *self</code></em>,
+                          <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
+                          <em class="parameter"><code><span class="type">GArray</span> *frame</code></em>,
+                          <em class="parameter"><code><span class="type">guint32</span> bit_flag</code></em>,
+                          <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Execute write transactions to the given address, then wait and check
+notification.</p>
+<div class="refsect3">
+<a name="hinawa-snd-dice-transact.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <span class="type">HinawaSndDice</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>addr</p></td>
+<td class="parameter_description"><p>A destination address of target device</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>a 32bit array. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint32][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym>][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>bit_flag</p></td>
+<td class="parameter_description"><p>bit flag to wait</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="hinawa-HinawaSndDice.other_details"></a><h2>Types and Values</h2>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.28</div>
+</body>
+</html>
