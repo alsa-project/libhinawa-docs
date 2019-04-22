@@ -28,11 +28,16 @@
 <p>This library mainly supports operations for asynchronous
         communication to units on IEEE 1394 bus. Additionally, this library
         supports some model-specific operations for some Audio and Music units
-        on IEEE 1394 bus, supported by drivers in ALSA firewire stack. This
-        library launches two threads internally to dispatch input events.</p>
+	on IEEE 1394 bus, supported by drivers in ALSA firewire stack.</p>
 <GTKDOCLINK HREF="Overview">
             <img src="overview.png">
-        </GTKDOCLINK><p>libhinawa supports gobject introspection, thus this library
+        </GTKDOCLINK><p>This library internally launches two threads for two purposes;
+        dispatcher and notifier. The dispatcher dispatches events from two types
+	of special files; Linux FireWire character devices and ALSA HwDep
+	character devices. The notifier emits GObject signal and execute any
+	handler on this thread so that the handler can wait for events from
+        the dispatcher.</p>
+<p>libhinawa supports gobject introspection, thus this library
         is available with gobject introspection bindings of each language
         such as Python, Ruby and so on. When using this mechanism, please
         refer to documents in each language implementation.</p>

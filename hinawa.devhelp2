@@ -26,6 +26,7 @@
     <keyword type="enum" name="enum HinawaFwTcode" link="hinawa-hinawa-enum-types.html#HinawaFwTcode"/>
     <keyword type="enum" name="enum HinawaFwRcode" link="hinawa-hinawa-enum-types.html#HinawaFwRcode"/>
     <keyword type="enum" name="enum HinawaSndUnitType" link="hinawa-hinawa-enum-types.html#HinawaSndUnitType"/>
+    <keyword type="function" name="hinawa_fw_unit_new ()" link="HinawaFwUnit.html#hinawa-fw-unit-new" since="1.3."/>
     <keyword type="function" name="hinawa_fw_unit_open ()" link="HinawaFwUnit.html#hinawa-fw-unit-open"/>
     <keyword type="function" name="hinawa_fw_unit_get_config_rom ()" link="HinawaFwUnit.html#hinawa-fw-unit-get-config-rom"/>
     <keyword type="function" name="hinawa_fw_unit_listen ()" link="HinawaFwUnit.html#hinawa-fw-unit-listen"/>
@@ -39,19 +40,23 @@
     <keyword type="property" name="The “root-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--root-node-id"/>
     <keyword type="signal" name="The “bus-update” signal" link="HinawaFwUnit.html#HinawaFwUnit-bus-update"/>
     <keyword type="signal" name="The “disconnected” signal" link="HinawaFwUnit.html#HinawaFwUnit-disconnected"/>
+    <keyword type="function" name="hinawa_fw_resp_new ()" link="HinawaFwResp.html#hinawa-fw-resp-new" since="1.3."/>
     <keyword type="function" name="hinawa_fw_resp_register ()" link="HinawaFwResp.html#hinawa-fw-resp-register"/>
     <keyword type="function" name="hinawa_fw_resp_unregister ()" link="HinawaFwResp.html#hinawa-fw-resp-unregister"/>
     <keyword type="function" name="hinawa_fw_resp_get_req_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-get-req-frame"/>
     <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
     <keyword type="signal" name="The “requested” signal" link="HinawaFwResp.html#HinawaFwResp-requested"/>
+    <keyword type="function" name="hinawa_fw_req_new ()" link="HinawaFwReq.html#hinawa-fw-req-new" since="1.3."/>
     <keyword type="function" name="hinawa_fw_req_write ()" link="HinawaFwReq.html#hinawa-fw-req-write"/>
     <keyword type="function" name="hinawa_fw_req_read ()" link="HinawaFwReq.html#hinawa-fw-req-read"/>
     <keyword type="function" name="hinawa_fw_req_lock ()" link="HinawaFwReq.html#hinawa-fw-req-lock"/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwReq.html#HinawaFwReq--timeout"/>
+    <keyword type="function" name="hinawa_fw_fcp_new ()" link="HinawaFwFcp.html#hinawa-fw-fcp-new" since="1.3."/>
     <keyword type="function" name="hinawa_fw_fcp_listen ()" link="HinawaFwFcp.html#hinawa-fw-fcp-listen"/>
     <keyword type="function" name="hinawa_fw_fcp_transact ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transact"/>
     <keyword type="function" name="hinawa_fw_fcp_unlisten ()" link="HinawaFwFcp.html#hinawa-fw-fcp-unlisten"/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwFcp.html#HinawaFwFcp--timeout"/>
+    <keyword type="function" name="hinawa_snd_unit_new ()" link="HinawaSndUnit.html#hinawa-snd-unit-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_unit_open ()" link="HinawaSndUnit.html#hinawa-snd-unit-open"/>
     <keyword type="function" name="hinawa_snd_unit_lock ()" link="HinawaSndUnit.html#hinawa-snd-unit-lock"/>
     <keyword type="function" name="hinawa_snd_unit_unlock ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
@@ -64,15 +69,20 @@
     <keyword type="property" name="The “streaming” property" link="HinawaSndUnit.html#HinawaSndUnit--streaming"/>
     <keyword type="property" name="The “type” property" link="HinawaSndUnit.html#HinawaSndUnit--type"/>
     <keyword type="signal" name="The “lock-status” signal" link="HinawaSndUnit.html#HinawaSndUnit-lock-status"/>
+    <keyword type="function" name="hinawa_snd_dice_new ()" link="HinawaSndDice.html#hinawa-snd-dice-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dice_open ()" link="HinawaSndDice.html#hinawa-snd-dice-open"/>
     <keyword type="function" name="hinawa_snd_dice_transact ()" link="HinawaSndDice.html#hinawa-snd-dice-transact"/>
     <keyword type="signal" name="The “notified” signal" link="HinawaSndDice.html#HinawaSndDice-notified"/>
+    <keyword type="function" name="hinawa_snd_efw_new ()" link="HinawaSndEfw.html#hinawa-snd-efw-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_efw_open ()" link="HinawaSndEfw.html#hinawa-snd-efw-open"/>
     <keyword type="function" name="hinawa_snd_efw_transact ()" link="HinawaSndEfw.html#hinawa-snd-efw-transact"/>
+    <keyword type="function" name="hinawa_snd_dg00x_new ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dg00x_open ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
     <keyword type="signal" name="The “message” signal" link="HinawaSndDg00x.html#HinawaSndDg00x-message"/>
+    <keyword type="function" name="hinawa_snd_motu_new ()" link="HinawaSndMotu.html#hinawa-snd-motu-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_motu_open ()" link="HinawaSndMotu.html#hinawa-snd-motu-open"/>
     <keyword type="signal" name="The “notified” signal" link="HinawaSndMotu.html#HinawaSndMotu-notified"/>
+    <keyword type="function" name="hinawa_snd_tscm_new ()" link="HinawaSndTscm.html#hinawa-snd-tscm-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_tscm_open ()" link="HinawaSndTscm.html#hinawa-snd-tscm-open"/>
     <keyword type="function" name="hinawa_snd_tscm_get_state ()" link="HinawaSndTscm.html#hinawa-snd-tscm-get-state"/>
     <keyword type="signal" name="The “control” signal" link="HinawaSndTscm.html#HinawaSndTscm-control"/>
