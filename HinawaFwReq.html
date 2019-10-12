@@ -29,7 +29,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="HinawaFwReq.top_of_page"></a>HinawaFwReq</span></h2>
-<p>HinawaFwReq — A transaction executor to a FireWire unit</p>
+<p>HinawaFwReq — A transaction executor to a FireWire unit.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -73,6 +73,14 @@
 <a class="link" href="HinawaFwReq.html#hinawa-fw-req-lock" title="hinawa_fw_req_lock ()">hinawa_fw_req_lock</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction" title="hinawa_fw_req_transaction ()">hinawa_fw_req_transaction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -99,12 +107,8 @@
 </div>
 <div class="refsect1">
 <a name="HinawaFwReq.description"></a><h2>Description</h2>
-<p>A HinawaFwReq supports three types of transactions in IEEE 1212:</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p>read</p></li>
-<li class="listitem"><p>write</p></li>
-<li class="listitem"><p>lock</p></li>
-</ul></div>
+<p>A HinawaFwReq supports some types of transactions in IEEE 1212. Mainly for
+read, write and lock operations.</p>
 <p>This class is an application of Linux FireWire subsystem. All of operations
 utilize ioctl(2) with subsystem specific request commands.</p>
 </div>
@@ -130,6 +134,10 @@ hinawa_fw_req_write (<em class="parameter"><code><a class="link" href="HinawaFwR
                      <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
                      <em class="parameter"><code><span class="type">GByteArray</span> *frame</code></em>,
                      <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_req_write</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction" title="hinawa_fw_req_transaction ()"><code class="function">hinawa_fw_req_transaction()</code></a> instead.</p>
+</div>
 <p>Execute write transactions to the given unit.</p>
 <div class="refsect3">
 <a name="hinawa-fw-req-write.parameters"></a><h4>Parameters</h4>
@@ -179,6 +187,10 @@ hinawa_fw_req_read (<em class="parameter"><code><a class="link" href="HinawaFwRe
                     <em class="parameter"><code><span class="type">GByteArray</span> *frame</code></em>,
                     <em class="parameter"><code><span class="type">guint</span> length</code></em>,
                     <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_req_read</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction" title="hinawa_fw_req_transaction ()"><code class="function">hinawa_fw_req_transaction()</code></a> instead.</p>
+</div>
 <p>Execute read transaction to the given unit.</p>
 <div class="refsect3">
 <a name="hinawa-fw-req-read.parameters"></a><h4>Parameters</h4>
@@ -233,6 +245,10 @@ hinawa_fw_req_lock (<em class="parameter"><code><a class="link" href="HinawaFwRe
                     <em class="parameter"><code><span class="type">GByteArray</span> **frame</code></em>,
                     <em class="parameter"><code><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> lock_tcode</code></em>,
                     <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_req_lock</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction" title="hinawa_fw_req_transaction ()"><code class="function">hinawa_fw_req_transaction()</code></a> instead.</p>
+</div>
 <p>Execute lock transaction to the given unit.</p>
 <div class="refsect3">
 <a name="hinawa-fw-req-lock.parameters"></a><h4>Parameters</h4>
@@ -276,6 +292,80 @@ hinawa_fw_req_lock (<em class="parameter"><code><a class="link" href="HinawaFwRe
 </tbody>
 </table></div>
 </div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-fw-req-transaction"></a><h3>hinawa_fw_req_transaction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_req_transaction (<em class="parameter"><code><a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a> *self</code></em>,
+                           <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
+                           <em class="parameter"><code><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode</code></em>,
+                           <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> length</code></em>,
+                           <em class="parameter"><code><span class="type">guint8</span> *const *frame</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> *frame_size</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Execute transactions to the given node according to given code.</p>
+<div class="refsect3">
+<a name="hinawa-fw-req-transaction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tcode</p></td>
+<td class="parameter_description"><p>A transaction code of HinawaFwTcode.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>addr</p></td>
+<td class="parameter_description"><p>A destination address of target device</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>The range of address in byte unit.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>An array with elements for byte
+data. Callers should give it for buffer with enough space against the
+request since this library performs no reallocation. Due to the
+reason, the value of this argument should point to the pointer to the
+array and immutable. The content of array is mutable for read and
+lock transaction. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=frame_size][<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame_size</p></td>
+<td class="parameter_description"><p>The size of array in byte unit. The value of this argument
+should point to the numerical number and mutable for read and
+lock transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4.</p>
 </div>
 </div>
 <div class="refsect1">

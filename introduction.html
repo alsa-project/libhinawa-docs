@@ -26,17 +26,17 @@
         resources in two Linux subsystems; FireWire subsystem and Sound subsystem.
         </p>
 <p>This library mainly supports operations for asynchronous
-        communication to units on IEEE 1394 bus. Additionally, this library
-        supports some model-specific operations for some Audio and Music units
-	on IEEE 1394 bus, supported by drivers in ALSA firewire stack.</p>
+        communication to nodes on IEEE 1394 bus. Additionally, this library
+        supports some model-specific operations for Audio and Music units
+        on IEEE 1394 bus, supported by drivers in ALSA firewire stack.</p>
 <GTKDOCLINK HREF="Overview">
             <img src="overview.png">
-        </GTKDOCLINK><p>This library internally launches two threads for two purposes;
-        dispatcher and notifier. The dispatcher dispatches events from two types
-	of special files; Linux FireWire character devices and ALSA HwDep
-	character devices. The notifier emits GObject signal and execute any
-	handler on this thread so that the handler can wait for events from
-        the dispatcher.</p>
+        </GTKDOCLINK><p>This library expects userspace applications to use GMainContext
+        to run event dispatcher with GSource from HinawaFwNode and
+        HinawaSndUnit. Additionally this library launches a thread for event
+        notifier which emits GObject signal and execute any handler on this
+        thread so that the handler can wait for events from the dispatcher.
+        </p>
 <p>libhinawa supports gobject introspection, thus this library
         is available with gobject introspection bindings of each language
         such as Python, Ruby and so on. When using this mechanism, please

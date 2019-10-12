@@ -6,7 +6,7 @@
 <meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="Hinawa Reference Manual">
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
-<link rel="prev" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
+<link rel="prev" href="HinawaFwNode.html" title="HinawaFwNode">
 <link rel="next" href="HinawaFwResp.html" title="HinawaFwResp">
 <meta name="generator" content="GTK-Doc V1.28 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
@@ -22,7 +22,7 @@
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="hinawa-fw.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
-<td><a accesskey="p" href="hinawa-fw.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="p" href="HinawaFwNode.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
 <td><a accesskey="n" href="HinawaFwResp.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
@@ -30,7 +30,8 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="HinawaFwUnit.top_of_page"></a>HinawaFwUnit</span></h2>
-<p>HinawaFwUnit — An event listener for FireWire unit</p>
+<p>HinawaFwUnit — An object to maintain association between IEEE 1394 unit
+	       and its parent.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -79,6 +80,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-unlisten" title="hinawa_fw_unit_unlisten ()">hinawa_fw_unit_unlisten</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-get-node" title="hinawa_fw_unit_get_node ()">hinawa_fw_unit_get_node</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -162,9 +171,15 @@
 </div>
 <div class="refsect1">
 <a name="HinawaFwUnit.description"></a><h2>Description</h2>
-<p>A <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> is an event listener for a certain FireWire unit.
-This class is an application of Linux FireWire subsystem.
-All of operations utilize ioctl(2) with subsystem specific request commands.</p>
+<p>A <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> object has a reference to an instance of HinawaFwNode for
+Linux FireWire character device, corresponding to parent node on IEEE 1394
+bus. This object is expected to be used by inheritance from subclasses; e.g.
+HinawaSndUnit, and should not be instantiated directly for newly written
+code since the object is planned to be abstract class in future libhinawa
+release.</p>
+<p>All of operations are done by associated HinawaFwNode. Some APIs and
+properties which <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> has are maintained just for backward
+compatibility and already deprecated. Instead, use associated HinawaFwNode.</p>
 </div>
 <div class="refsect1">
 <a name="HinawaFwUnit.functions_details"></a><h2>Functions</h2>
@@ -172,6 +187,11 @@ All of operations utilize ioctl(2) with subsystem specific request commands.</p>
 <a name="hinawa-fw-unit-new"></a><h3>hinawa_fw_unit_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="returnvalue">HinawaFwUnit</span></a> *
 hinawa_fw_unit_new (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_unit_new</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>HinawaFwUnit is planned to be an abstract class in future
+	    release. Please instantiate for derived class, instead.</p>
+</div>
 <p>Instantiate <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> object and return the instance.</p>
 <div class="refsect3">
 <a name="hinawa-fw-unit-new.returns"></a><h4>Returns</h4>
@@ -221,6 +241,12 @@ hinawa_fw_unit_open (<em class="parameter"><code><a class="link" href="HinawaFwU
 <pre class="programlisting">const <span class="returnvalue">guint8</span> *
 hinawa_fw_unit_get_config_rom (<em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *self</code></em>,
                                <em class="parameter"><code><span class="type">guint</span> *length</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_unit_get_config_rom</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Instead, use <a class="link" href="HinawaFwNode.html#hinawa-fw-node-get-config-rom" title="hinawa_fw_node_get_config_rom ()"><code class="function">hinawa_fw_node_get_config_rom()</code></a> for an instance
+	    of HinawaFwNode retrieved by a call of
+	    <a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-get-node" title="hinawa_fw_unit_get_node ()"><code class="function">hinawa_fw_unit_get_node()</code></a>.</p>
+</div>
 <p>Get cached content of configuration ROM.</p>
 <div class="refsect3">
 <a name="hinawa-fw-unit-get-config-rom.parameters"></a><h4>Parameters</h4>
@@ -246,7 +272,8 @@ hinawa_fw_unit_get_config_rom (<em class="parameter"><code><a class="link" href=
 </div>
 <div class="refsect3">
 <a name="hinawa-fw-unit-get-config-rom.returns"></a><h4>Returns</h4>
-<p>config rom image. </p>
+<p>config
+rom image. </p>
 <p><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
@@ -256,6 +283,14 @@ hinawa_fw_unit_get_config_rom (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_unit_listen (<em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *self</code></em>,
                        <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_unit_listen</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Instead, use GSource retrieved by a call of
+	    <a class="link" href="HinawaFwNode.html#hinawa-fw-node-create-source" title="hinawa_fw_node_create_source ()"><code class="function">hinawa_fw_node_create_source()</code></a> for an instance of
+	    HinawaFwNode retrieved by a call of
+	    <a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-get-node" title="hinawa_fw_unit_get_node ()"><code class="function">hinawa_fw_unit_get_node()</code></a>. Then use GMainContext and
+	    GMainLoop of GLib for event loop.</p>
+</div>
 <p>Start to listen to any events from the unit.</p>
 <div class="refsect3">
 <a name="hinawa-fw-unit-listen.parameters"></a><h4>Parameters</h4>
@@ -285,6 +320,11 @@ hinawa_fw_unit_listen (<em class="parameter"><code><a class="link" href="HinawaF
 <a name="hinawa-fw-unit-unlisten"></a><h3>hinawa_fw_unit_unlisten ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_unit_unlisten (<em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *self</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_unit_unlisten</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Instead, maintain GMainContext and GMainLoop with GSource
+	    retrieved by a call of <a class="link" href="HinawaFwNode.html#hinawa-fw-node-create-source" title="hinawa_fw_node_create_source ()"><code class="function">hinawa_fw_node_create_source()</code></a>.</p>
+</div>
 <p>Stop to listen to any events from the unit.</p>
 <div class="refsect3">
 <a name="hinawa-fw-unit-unlisten.parameters"></a><h4>Parameters</h4>
@@ -301,6 +341,37 @@ hinawa_fw_unit_unlisten (<em class="parameter"><code><a class="link" href="Hinaw
 </tr></tbody>
 </table></div>
 </div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-fw-unit-get-node"></a><h3>hinawa_fw_unit_get_node ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_unit_get_node (<em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *self</code></em>,
+                         <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> **node</code></em>);</pre>
+<p>Retrieve an instance of <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> associated to the given unit.</p>
+<div class="refsect3">
+<a name="hinawa-fw-unit-get-node.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4.</p>
 </div>
 </div>
 <div class="refsect1">
@@ -368,6 +439,11 @@ user_function (<a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><sp
 <p>When IEEE 1394 bus is updated, the ::bus-update signal is generated.
 Handlers can read current generation in the bus via 'generation'
 property.</p>
+<div class="warning">
+<p><code class="literal">HinawaFwUnit::bus-update</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use an instance of HinawaFwNode retrieved by a call
+	    of <a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-get-node" title="hinawa_fw_unit_get_node ()"><code class="function">hinawa_fw_unit_get_node()</code></a>.</p>
+</div>
 <div class="refsect3">
 <a name="HinawaFwUnit-bus-update.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -398,8 +474,13 @@ property.</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *self,
                <span class="type">gpointer</span>      user_data)</pre>
-<p>When phicical FireWire devices are disconnected from IEEE 1394 bus,
-the <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> becomes unlostening and emits this signal.</p>
+<p>When physical FireWire devices are disconnected from IEEE 1394 bus,
+the <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> becomes unlistening and emits this signal.</p>
+<div class="warning">
+<p><code class="literal">HinawaFwUnit::disconnected</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use an instance of HinawaFwNode retrieved by a call
+	    of <a class="link" href="HinawaFwUnit.html#hinawa-fw-unit-get-node" title="hinawa_fw_unit_get_node ()"><code class="function">hinawa_fw_unit_get_node()</code></a>.</p>
+</div>
 <div class="refsect3">
 <a name="HinawaFwUnit-disconnected.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

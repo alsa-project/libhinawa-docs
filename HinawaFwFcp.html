@@ -62,6 +62,30 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-transaction" title="hinawa_fw_fcp_transaction ()">hinawa_fw_fcp_transaction</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-bind" title="hinawa_fw_fcp_bind ()">hinawa_fw_fcp_bind</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-unbind" title="hinawa_fw_fcp_unbind ()">hinawa_fw_fcp_unbind</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-transact" title="hinawa_fw_fcp_transact ()">hinawa_fw_fcp_transact</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -127,6 +151,11 @@ hinawa_fw_fcp_new (<em class="parameter"><code><span class="type">void</span></c
 hinawa_fw_fcp_listen (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
                       <em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *unit</code></em>,
                       <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_fcp_listen</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-bind" title="hinawa_fw_fcp_bind ()"><code class="function">hinawa_fw_fcp_bind()</code></a> with an instance of HinawaFwNode,
+	    instead.</p>
+</div>
 <p>Start to listen to FCP responses.</p>
 <div class="refsect3">
 <a name="hinawa-fw-fcp-listen.parameters"></a><h4>Parameters</h4>
@@ -158,12 +187,139 @@ hinawa_fw_fcp_listen (<em class="parameter"><code><a class="link" href="HinawaFw
 </div>
 <hr>
 <div class="refsect2">
+<a name="hinawa-fw-fcp-transaction"></a><h3>hinawa_fw_fcp_transaction ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_fcp_transaction (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
+                           <em class="parameter"><code>const <span class="type">guint8</span> *req_frame</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> req_frame_size</code></em>,
+                           <em class="parameter"><code><span class="type">guint8</span> *const *resp_frame</code></em>,
+                           <em class="parameter"><code><span class="type">guint</span> *resp_frame_size</code></em>,
+                           <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Execute FCP transaction.</p>
+<div class="refsect3">
+<a name="hinawa-fw-fcp-transaction.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>req_frame</p></td>
+<td class="parameter_description"><p>An array with elements for
+request byte data. The value of this argument should point to
+the array and immutable. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=req_frame_size][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>req_frame_size</p></td>
+<td class="parameter_description"><p>The size of array for request in byte unit.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>resp_frame</p></td>
+<td class="parameter_description"><p>An array with elements
+for response byte data. Callers should give it for buffer with
+enough space against the request since this library performs no
+reallocation. Due to the reason, the value of this argument
+should point to the pointer to the array and immutable. The
+content of array is mutable. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=resp_frame_size][<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>resp_frame_size</p></td>
+<td class="parameter_description"><p>The size of array for response in byte unit. The value of
+this argument should point to the numerical number and
+mutable.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-fw-fcp-bind"></a><h3>hinawa_fw_fcp_bind ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_fcp_bind (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
+                    <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
+                    <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<p>Start to listen to FCP responses.</p>
+<div class="refsect3">
+<a name="hinawa-fw-fcp-bind.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-fw-fcp-unbind"></a><h3>hinawa_fw_fcp_unbind ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_fcp_unbind (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>);</pre>
+<p>Stop to listen to FCP responses.</p>
+<div class="refsect3">
+<a name="hinawa-fw-fcp-unbind.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody><tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+<p class="since">Since: 1.4.</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hinawa-fw-fcp-transact"></a><h3>hinawa_fw_fcp_transact ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_transact (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
                         <em class="parameter"><code><span class="type">GByteArray</span> *req_frame</code></em>,
                         <em class="parameter"><code><span class="type">GByteArray</span> *resp_frame</code></em>,
                         <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_fcp_transact</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-transaction" title="hinawa_fw_fcp_transaction ()"><code class="function">hinawa_fw_fcp_transaction()</code></a> instead,</p>
+</div>
 <p>Execute fCP transaction.</p>
 <div class="refsect3">
 <a name="hinawa-fw-fcp-transact.parameters"></a><h4>Parameters</h4>
@@ -204,6 +360,10 @@ frame for response. </p></td>
 <a name="hinawa-fw-fcp-unlisten"></a><h3>hinawa_fw_fcp_unlisten ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_unlisten (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_fcp_unlisten</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-unbind" title="hinawa_fw_fcp_unbind ()"><code class="function">hinawa_fw_fcp_unbind()</code></a>, instead.</p>
+</div>
 <p>Stop to listen to FCP responses.</p>
 <div class="refsect3">
 <a name="hinawa-fw-fcp-unlisten.parameters"></a><h4>Parameters</h4>
