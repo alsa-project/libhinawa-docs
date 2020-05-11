@@ -8,7 +8,7 @@
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="prev" href="HinawaFwUnit.html" title="HinawaFwUnit">
 <link rel="next" href="HinawaFwReq.html" title="HinawaFwReq">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,8 +37,8 @@
 <a name="HinawaFwResp.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -104,20 +104,20 @@
 <a name="HinawaFwResp.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody><tr>
 <td class="signal_type"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a></td>
 <td class="signal_name"><a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal">requested</a></td>
-<td class="signal_flags">Run Last</td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="HinawaFwResp.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> HinawaFwResp
         <span class="lineart">╰──</span> <a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp">HinawaFwFcp</a>
 </pre>
@@ -147,9 +147,9 @@ hinawa_fw_resp_new (<em class="parameter"><code><span class="type">void</span></
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_resp_reserve (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
                         <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
-                        <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
-                        <em class="parameter"><code><span class="type">guint</span> width</code></em>,
-                        <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> addr</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> width</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Start to listen to a range of address in host controller which connects to
 the node.</p>
 <div class="refsect3">
@@ -183,7 +183,7 @@ the node.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -220,9 +220,9 @@ hinawa_fw_resp_release (<em class="parameter"><code><a class="link" href="Hinawa
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_resp_register (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
                          <em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *unit</code></em>,
-                         <em class="parameter"><code><span class="type">guint64</span> addr</code></em>,
-                         <em class="parameter"><code><span class="type">guint</span> width</code></em>,
-                         <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> addr</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> width</code></em>,
+                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">hinawa_fw_resp_register</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
 <p>Use <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-reserve" title="hinawa_fw_resp_reserve ()"><code class="function">hinawa_fw_resp_reserve()</code></a> with an instance of
@@ -260,7 +260,7 @@ hinawa_fw_resp_register (<em class="parameter"><code><a class="link" href="Hinaw
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -299,8 +299,8 @@ hinawa_fw_resp_unregister (<em class="parameter"><code><a class="link" href="Hin
 <a name="hinawa-fw-resp-get-req-frame"></a><h3>hinawa_fw_resp_get_req_frame ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_resp_get_req_frame (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
-                              <em class="parameter"><code>const <span class="type">guint8</span> **frame</code></em>,
-                              <em class="parameter"><code><span class="type">guint</span> *length</code></em>);</pre>
+                              <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **frame</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *length</code></em>);</pre>
 <p>Retrieve byte frame to be requested.</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-get-req-frame.parameters"></a><h4>Parameters</h4>
@@ -336,8 +336,8 @@ frame. </p></td>
 <a name="hinawa-fw-resp-set-resp-frame"></a><h3>hinawa_fw_resp_set_resp_frame ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_resp_set_resp_frame (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
-                               <em class="parameter"><code><span class="type">guint8</span> *frame</code></em>,
-                               <em class="parameter"><code><span class="type">guint</span> length</code></em>);</pre>
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *frame</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> length</code></em>);</pre>
 <p>Register byte frame as response.</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-set-resp-frame.parameters"></a><h4>Parameters</h4>
@@ -370,16 +370,13 @@ frame. </p></td>
 </div>
 </div>
 <div class="refsect1">
-<a name="HinawaFwResp.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="HinawaFwResp.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
 <a name="HinawaFwResp-requested"></a><h3>The <code class="literal">“requested”</code> signal</h3>
 <pre class="programlisting"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a>
 user_function (<a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self,
                <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode,
-               <span class="type">gpointer</span>      user_data)</pre>
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
 <p>When any node transfers requests to the range of address to which
 this object listening. The ::requested signal handler can get data
 frame by a call of ::get_req_frame and set data frame by a call of
@@ -416,11 +413,11 @@ frame by a call of ::get_req_frame and set data frame by a call of
 <p> One of <span class="type">HinawaRcode</span> enumerators corresponding to rcodes
 defined in IEEE 1394 specification.</p>
 </div>
-<p>Flags: Run Last</p>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

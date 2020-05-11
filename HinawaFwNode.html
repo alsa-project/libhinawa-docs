@@ -8,7 +8,7 @@
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="prev" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="next" href="HinawaFwUnit.html" title="HinawaFwUnit">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -38,8 +38,8 @@
 <a name="HinawaFwNode.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -87,32 +87,32 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--bus-manager-node-id" title="The “bus-manager-node-id” property">bus-manager-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--generation" title="The “generation” property">generation</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--ir-manager-node-id" title="The “ir-manager-node-id” property">ir-manager-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--local-node-id" title="The “local-node-id” property">local-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--node-id" title="The “node-id” property">node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><span class="type">gulong</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--root-node-id" title="The “root-node-id” property">root-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -123,27 +123,27 @@
 <a name="HinawaFwNode.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody>
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode-bus-update" title="The “bus-update” signal">bus-update</a></td>
-<td class="signal_flags">Run Last</td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr>
 <tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
 <td class="signal_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode-disconnected" title="The “disconnected” signal">disconnected</a></td>
-<td class="signal_flags">Run Last</td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="HinawaFwNode.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> HinawaFwNode
 </pre>
 </div>
@@ -171,8 +171,8 @@ hinawa_fw_node_new (<em class="parameter"><code><span class="type">void</span></
 <a name="hinawa-fw-node-open"></a><h3>hinawa_fw_node_open ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_node_open (<em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self</code></em>,
-                     <em class="parameter"><code>const <span class="type">gchar</span> *path</code></em>,
-                     <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                     <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *path</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Open Linux FireWire character device to operate node on IEEE 1394 bus.</p>
 <div class="refsect3">
 <a name="hinawa-fw-node-open.parameters"></a><h4>Parameters</h4>
@@ -195,7 +195,7 @@ hinawa_fw_node_open (<em class="parameter"><code><a class="link" href="HinawaFwN
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -208,9 +208,9 @@ hinawa_fw_node_open (<em class="parameter"><code><a class="link" href="HinawaFwN
 <a name="hinawa-fw-node-get-config-rom"></a><h3>hinawa_fw_node_get_config_rom ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_node_get_config_rom (<em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self</code></em>,
-                               <em class="parameter"><code>const <span class="type">guint8</span> **image</code></em>,
-                               <em class="parameter"><code><span class="type">guint</span> *length</code></em>,
-                               <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **image</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *length</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Get cached content of configuration ROM.</p>
 <div class="refsect3">
 <a name="hinawa-fw-node-get-config-rom.parameters"></a><h4>Parameters</h4>
@@ -239,7 +239,7 @@ configuration ROM. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -252,8 +252,8 @@ configuration ROM. </p></td>
 <a name="hinawa-fw-node-create-source"></a><h3>hinawa_fw_node_create_source ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_node_create_source (<em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self</code></em>,
-                              <em class="parameter"><code><span class="type">GSource</span> **gsrc</code></em>,
-                              <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                              <em class="parameter"><code><a href="../glib/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a> **gsrc</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Create Gsource for GMainContext to dispatch events for the node on IEEE 1394
 bus.</p>
 <div class="refsect3">
@@ -272,12 +272,12 @@ bus.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>gsrc</p></td>
-<td class="parameter_description"><p>A <span class="type">GSource</span>. </p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-The-Main-Event-Loop.html#GSource"><span class="type">GSource</span></a>. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -287,49 +287,52 @@ bus.</p>
 </div>
 </div>
 <div class="refsect1">
-<a name="HinawaFwNode.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="HinawaFwNode.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="HinawaFwNode--bus-manager-node-id"></a><h3>The <code class="literal">“bus-manager-node-id”</code> property</h3>
-<pre class="programlisting">  “bus-manager-node-id”      <span class="type">gulong</span></pre>
+<pre class="programlisting">  “bus-manager-node-id”      <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>Node-ID for bus manager on the bus at this generation.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--generation"></a><h3>The <code class="literal">“generation”</code> property</h3>
-<pre class="programlisting">  “generation”               <span class="type">gulong</span></pre>
+<pre class="programlisting">  “generation”               <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>current level of generation on this bus.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--ir-manager-node-id"></a><h3>The <code class="literal">“ir-manager-node-id”</code> property</h3>
-<pre class="programlisting">  “ir-manager-node-id”       <span class="type">gulong</span></pre>
+<pre class="programlisting">  “ir-manager-node-id”       <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>Node-ID for isochronous resource manager on the bus at this generation.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--local-node-id"></a><h3>The <code class="literal">“local-node-id”</code> property</h3>
-<pre class="programlisting">  “local-node-id”            <span class="type">gulong</span></pre>
+<pre class="programlisting">  “local-node-id”            <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>Node-ID for a node which this node use to communicate to the other nodes on the bus at this generation.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--node-id"></a><h3>The <code class="literal">“node-id”</code> property</h3>
-<pre class="programlisting">  “node-id”                  <span class="type">gulong</span></pre>
+<pre class="programlisting">  “node-id”                  <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>Node-ID of this node at this generation.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--root-node-id"></a><h3>The <code class="literal">“root-node-id”</code> property</h3>
-<pre class="programlisting">  “root-node-id”             <span class="type">gulong</span></pre>
+<pre class="programlisting">  “root-node-id”             <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
 <p>Node-ID for root of bus topology at this generation.</p>
+<p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 </div>
 </div>
@@ -339,7 +342,7 @@ bus.</p>
 <a name="HinawaFwNode-bus-update"></a><h3>The <code class="literal">“bus-update”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self,
-               <span class="type">gpointer</span>      user_data)</pre>
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
 <p>When IEEE 1394 bus is updated, the ::bus-update signal is generated.
 Handlers can read current generation in the bus via 'generation'
 property.</p>
@@ -365,7 +368,7 @@ property.</p>
 </tbody>
 </table></div>
 </div>
-<p>Flags: Run Last</p>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 <p class="since">Since: 1.4.</p>
 </div>
 <hr>
@@ -373,7 +376,7 @@ property.</p>
 <a name="HinawaFwNode-disconnected"></a><h3>The <code class="literal">“disconnected”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self,
-               <span class="type">gpointer</span>      user_data)</pre>
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
 <p>When phicical FireWire devices are disconnected from IEEE 1394 bus,
 the ::disconnected signal is generated.</p>
 <div class="refsect3">
@@ -398,12 +401,12 @@ the ::disconnected signal is generated.</p>
 </tbody>
 </table></div>
 </div>
-<p>Flags: Run Last</p>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 <p class="since">Since: 1.4.</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="prev" href="HinawaFwReq.html" title="HinawaFwReq">
 <link rel="next" href="hinawa-snd.html" title="Hinawa objects for Linux sound subsystem.">
-<meta name="generator" content="GTK-Doc V1.28 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -37,8 +37,8 @@
 <a name="HinawaFwFcp.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -109,7 +109,7 @@
 <col width="200px" class="properties_flags">
 </colgroup>
 <tbody><tr>
-<td class="property_type"><span class="type">guint</span></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwFcp.html#HinawaFwFcp--timeout" title="The “timeout” property">timeout</a></td>
 <td class="property_flags">Read / Write / Construct</td>
 </tr></tbody>
@@ -117,7 +117,7 @@
 </div>
 <div class="refsect1">
 <a name="HinawaFwFcp.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    GObject
+<pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a class="link" href="HinawaFwResp.html" title="HinawaFwResp">HinawaFwResp</a>
         <span class="lineart">╰──</span> HinawaFwFcp
 </pre>
@@ -150,7 +150,7 @@ hinawa_fw_fcp_new (<em class="parameter"><code><span class="type">void</span></c
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_listen (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
                       <em class="parameter"><code><a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit"><span class="type">HinawaFwUnit</span></a> *unit</code></em>,
-                      <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">hinawa_fw_fcp_listen</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
 <p>Use <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-bind" title="hinawa_fw_fcp_bind ()"><code class="function">hinawa_fw_fcp_bind()</code></a> with an instance of HinawaFwNode,
@@ -178,7 +178,7 @@ hinawa_fw_fcp_listen (<em class="parameter"><code><a class="link" href="HinawaFw
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -190,11 +190,11 @@ hinawa_fw_fcp_listen (<em class="parameter"><code><a class="link" href="HinawaFw
 <a name="hinawa-fw-fcp-transaction"></a><h3>hinawa_fw_fcp_transaction ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_transaction (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
-                           <em class="parameter"><code>const <span class="type">guint8</span> *req_frame</code></em>,
-                           <em class="parameter"><code><span class="type">guint</span> req_frame_size</code></em>,
-                           <em class="parameter"><code><span class="type">guint8</span> *const *resp_frame</code></em>,
-                           <em class="parameter"><code><span class="type">guint</span> *resp_frame_size</code></em>,
-                           <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                           <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *req_frame</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> req_frame_size</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *const *resp_frame</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *resp_frame_size</code></em>,
+                           <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Execute FCP transaction.</p>
 <div class="refsect3">
 <a name="hinawa-fw-fcp-transaction.parameters"></a><h4>Parameters</h4>
@@ -241,7 +241,7 @@ mutable.</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -255,7 +255,7 @@ mutable.</p></td>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_bind (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
                     <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
-                    <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                    <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Start to listen to FCP responses.</p>
 <div class="refsect3">
 <a name="hinawa-fw-fcp-bind.parameters"></a><h4>Parameters</h4>
@@ -278,7 +278,7 @@ hinawa_fw_fcp_bind (<em class="parameter"><code><a class="link" href="HinawaFwFc
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -313,9 +313,9 @@ hinawa_fw_fcp_unbind (<em class="parameter"><code><a class="link" href="HinawaFw
 <a name="hinawa-fw-fcp-transact"></a><h3>hinawa_fw_fcp_transact ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_fcp_transact (<em class="parameter"><code><a class="link" href="HinawaFwFcp.html" title="HinawaFwFcp"><span class="type">HinawaFwFcp</span></a> *self</code></em>,
-                        <em class="parameter"><code><span class="type">GByteArray</span> *req_frame</code></em>,
-                        <em class="parameter"><code><span class="type">GByteArray</span> *resp_frame</code></em>,
-                        <em class="parameter"><code><span class="type">GError</span> **exception</code></em>);</pre>
+                        <em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *req_frame</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Byte-Arrays.html#GByteArray"><span class="type">GByteArray</span></a> *resp_frame</code></em>,
+                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <div class="warning">
 <p><code class="literal">hinawa_fw_fcp_transact</code> has been deprecated since version 1.4 and should not be used in newly-written code.</p>
 <p>Use <a class="link" href="HinawaFwFcp.html#hinawa-fw-fcp-transaction" title="hinawa_fw_fcp_transaction ()"><code class="function">hinawa_fw_fcp_transaction()</code></a> instead,</p>
@@ -348,7 +348,7 @@ frame for response. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <span class="type">GError</span></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -383,14 +383,12 @@ hinawa_fw_fcp_unlisten (<em class="parameter"><code><a class="link" href="Hinawa
 </div>
 </div>
 <div class="refsect1">
-<a name="HinawaFwFcp.other_details"></a><h2>Types and Values</h2>
-</div>
-<div class="refsect1">
 <a name="HinawaFwFcp.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="HinawaFwFcp--timeout"></a><h3>The <code class="literal">“timeout”</code> property</h3>
-<pre class="programlisting">  “timeout”                  <span class="type">guint</span></pre>
+<pre class="programlisting">  “timeout”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>An elapse to expire waiting for response by msec unit.</p>
+<p>Owner: HinawaFwFcp</p>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 200</p>
@@ -398,6 +396,6 @@ hinawa_fw_fcp_unlisten (<em class="parameter"><code><a class="link" href="Hinawa
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.28</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
