@@ -7,7 +7,6 @@
     </sub>
     <sub name="Hinawa objects for Linux FireWire subsystem." link="hinawa-fw.html">
       <sub name="HinawaFwNode" link="HinawaFwNode.html"/>
-      <sub name="HinawaFwUnit" link="HinawaFwUnit.html"/>
       <sub name="HinawaFwResp" link="HinawaFwResp.html"/>
       <sub name="HinawaFwReq" link="HinawaFwReq.html"/>
       <sub name="HinawaFwFcp" link="HinawaFwFcp.html"/>
@@ -39,66 +38,42 @@
     <keyword type="property" name="The “root-node-id” property" link="HinawaFwNode.html#HinawaFwNode--root-node-id"/>
     <keyword type="signal" name="The “bus-update” signal" link="HinawaFwNode.html#HinawaFwNode-bus-update"/>
     <keyword type="signal" name="The “disconnected” signal" link="HinawaFwNode.html#HinawaFwNode-disconnected"/>
-    <keyword type="function" name="hinawa_fw_unit_new ()" link="HinawaFwUnit.html#hinawa-fw-unit-new" deprecated="" since="1.3."/>
-    <keyword type="function" name="hinawa_fw_unit_open ()" link="HinawaFwUnit.html#hinawa-fw-unit-open"/>
-    <keyword type="function" name="hinawa_fw_unit_get_config_rom ()" link="HinawaFwUnit.html#hinawa-fw-unit-get-config-rom" deprecated=""/>
-    <keyword type="function" name="hinawa_fw_unit_listen ()" link="HinawaFwUnit.html#hinawa-fw-unit-listen" deprecated=""/>
-    <keyword type="function" name="hinawa_fw_unit_unlisten ()" link="HinawaFwUnit.html#hinawa-fw-unit-unlisten" deprecated=""/>
-    <keyword type="function" name="hinawa_fw_unit_get_node ()" link="HinawaFwUnit.html#hinawa-fw-unit-get-node" since="1.4."/>
-    <keyword type="property" name="The “bus-manager-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--bus-manager-node-id"/>
-    <keyword type="property" name="The “generation” property" link="HinawaFwUnit.html#HinawaFwUnit--generation"/>
-    <keyword type="property" name="The “ir-manager-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--ir-manager-node-id"/>
-    <keyword type="property" name="The “listening” property" link="HinawaFwUnit.html#HinawaFwUnit--listening"/>
-    <keyword type="property" name="The “local-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--local-node-id"/>
-    <keyword type="property" name="The “node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--node-id"/>
-    <keyword type="property" name="The “root-node-id” property" link="HinawaFwUnit.html#HinawaFwUnit--root-node-id"/>
-    <keyword type="signal" name="The “bus-update” signal" link="HinawaFwUnit.html#HinawaFwUnit-bus-update"/>
-    <keyword type="signal" name="The “disconnected” signal" link="HinawaFwUnit.html#HinawaFwUnit-disconnected"/>
     <keyword type="function" name="hinawa_fw_resp_new ()" link="HinawaFwResp.html#hinawa-fw-resp-new" since="1.3."/>
     <keyword type="function" name="hinawa_fw_resp_reserve ()" link="HinawaFwResp.html#hinawa-fw-resp-reserve" since="1.4."/>
     <keyword type="function" name="hinawa_fw_resp_release ()" link="HinawaFwResp.html#hinawa-fw-resp-release" since="1.4."/>
-    <keyword type="function" name="hinawa_fw_resp_register ()" link="HinawaFwResp.html#hinawa-fw-resp-register" deprecated=""/>
-    <keyword type="function" name="hinawa_fw_resp_unregister ()" link="HinawaFwResp.html#hinawa-fw-resp-unregister" deprecated=""/>
     <keyword type="function" name="hinawa_fw_resp_get_req_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-get-req-frame"/>
     <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
+    <keyword type="property" name="The “is-reserved” property" link="HinawaFwResp.html#HinawaFwResp--is-reserved"/>
     <keyword type="signal" name="The “requested” signal" link="HinawaFwResp.html#HinawaFwResp-requested"/>
     <keyword type="function" name="hinawa_fw_req_new ()" link="HinawaFwReq.html#hinawa-fw-req-new" since="1.3."/>
-    <keyword type="function" name="hinawa_fw_req_write ()" link="HinawaFwReq.html#hinawa-fw-req-write" deprecated="1.4: Use hinawa_fw_req_transaction() instead."/>
-    <keyword type="function" name="hinawa_fw_req_read ()" link="HinawaFwReq.html#hinawa-fw-req-read" deprecated="1.4: Use hinawa_fw_req_transaction() instead."/>
-    <keyword type="function" name="hinawa_fw_req_lock ()" link="HinawaFwReq.html#hinawa-fw-req-lock" deprecated="1.4: Use hinawa_fw_req_transaction() instead."/>
     <keyword type="function" name="hinawa_fw_req_transaction ()" link="HinawaFwReq.html#hinawa-fw-req-transaction" since="1.4."/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwReq.html#HinawaFwReq--timeout"/>
     <keyword type="function" name="hinawa_fw_fcp_new ()" link="HinawaFwFcp.html#hinawa-fw-fcp-new" since="1.3."/>
-    <keyword type="function" name="hinawa_fw_fcp_listen ()" link="HinawaFwFcp.html#hinawa-fw-fcp-listen" deprecated=""/>
     <keyword type="function" name="hinawa_fw_fcp_transaction ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transaction" since="1.4."/>
     <keyword type="function" name="hinawa_fw_fcp_bind ()" link="HinawaFwFcp.html#hinawa-fw-fcp-bind"/>
     <keyword type="function" name="hinawa_fw_fcp_unbind ()" link="HinawaFwFcp.html#hinawa-fw-fcp-unbind" since="1.4."/>
-    <keyword type="function" name="hinawa_fw_fcp_transact ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transact" deprecated="1.4: Use hinawa_fw_fcp_transaction() instead,"/>
-    <keyword type="function" name="hinawa_fw_fcp_unlisten ()" link="HinawaFwFcp.html#hinawa-fw-fcp-unlisten" deprecated="1.4: Use hinawa_fw_fcp_unbind(), instead."/>
+    <keyword type="property" name="The “is-bound” property" link="HinawaFwFcp.html#HinawaFwFcp--is-bound"/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwFcp.html#HinawaFwFcp--timeout"/>
     <keyword type="function" name="hinawa_snd_unit_new ()" link="HinawaSndUnit.html#hinawa-snd-unit-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_unit_open ()" link="HinawaSndUnit.html#hinawa-snd-unit-open"/>
+    <keyword type="function" name="hinawa_snd_unit_get_node ()" link="HinawaSndUnit.html#hinawa-snd-unit-get-node" since="2.0."/>
     <keyword type="function" name="hinawa_snd_unit_lock ()" link="HinawaSndUnit.html#hinawa-snd-unit-lock"/>
     <keyword type="function" name="hinawa_snd_unit_unlock ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
-    <keyword type="function" name="hinawa_snd_unit_listen ()" link="HinawaSndUnit.html#hinawa-snd-unit-listen" deprecated=""/>
-    <keyword type="function" name="hinawa_snd_unit_unlisten ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlisten" deprecated=""/>
     <keyword type="function" name="hinawa_snd_unit_create_source ()" link="HinawaSndUnit.html#hinawa-snd-unit-create-source" since="1.4."/>
     <keyword type="property" name="The “card” property" link="HinawaSndUnit.html#HinawaSndUnit--card"/>
     <keyword type="property" name="The “device” property" link="HinawaSndUnit.html#HinawaSndUnit--device"/>
     <keyword type="property" name="The “guid” property" link="HinawaSndUnit.html#HinawaSndUnit--guid"/>
-    <keyword type="property" name="The “listening” property" link="HinawaSndUnit.html#HinawaSndUnit--listening"/>
     <keyword type="property" name="The “streaming” property" link="HinawaSndUnit.html#HinawaSndUnit--streaming"/>
     <keyword type="property" name="The “type” property" link="HinawaSndUnit.html#HinawaSndUnit--type"/>
+    <keyword type="signal" name="The “disconnected” signal" link="HinawaSndUnit.html#HinawaSndUnit-disconnected"/>
     <keyword type="signal" name="The “lock-status” signal" link="HinawaSndUnit.html#HinawaSndUnit-lock-status"/>
     <keyword type="function" name="hinawa_snd_dice_new ()" link="HinawaSndDice.html#hinawa-snd-dice-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dice_open ()" link="HinawaSndDice.html#hinawa-snd-dice-open"/>
     <keyword type="function" name="hinawa_snd_dice_transaction ()" link="HinawaSndDice.html#hinawa-snd-dice-transaction" since="1.4."/>
-    <keyword type="function" name="hinawa_snd_dice_transact ()" link="HinawaSndDice.html#hinawa-snd-dice-transact" deprecated="1.4: Use hinawa_snd_dice_transaction(), instead."/>
     <keyword type="signal" name="The “notified” signal" link="HinawaSndDice.html#HinawaSndDice-notified"/>
     <keyword type="function" name="hinawa_snd_efw_new ()" link="HinawaSndEfw.html#hinawa-snd-efw-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_efw_open ()" link="HinawaSndEfw.html#hinawa-snd-efw-open"/>
     <keyword type="function" name="hinawa_snd_efw_transaction ()" link="HinawaSndEfw.html#hinawa-snd-efw-transaction" since="1.4."/>
-    <keyword type="function" name="hinawa_snd_efw_transact ()" link="HinawaSndEfw.html#hinawa-snd-efw-transact" deprecated="1.4: Use hinawa_snd_efw_transaction(), instead."/>
     <keyword type="function" name="hinawa_snd_dg00x_new ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dg00x_open ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
     <keyword type="signal" name="The “message” signal" link="HinawaSndDg00x.html#HinawaSndDg00x-message"/>

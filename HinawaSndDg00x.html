@@ -78,9 +78,8 @@
 <div class="refsect1">
 <a name="HinawaSndDg00x.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
-    <span class="lineart">╰──</span> <a class="link" href="HinawaFwUnit.html" title="HinawaFwUnit">HinawaFwUnit</a>
-        <span class="lineart">╰──</span> <a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit">HinawaSndUnit</a>
-            <span class="lineart">╰──</span> HinawaSndDg00x
+    <span class="lineart">╰──</span> <a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit">HinawaSndUnit</a>
+        <span class="lineart">╰──</span> HinawaSndDg00x
 </pre>
 </div>
 <div class="refsect1">
@@ -144,7 +143,7 @@ hinawa_snd_dg00x_open (<em class="parameter"><code><a class="link" href="HinawaS
 <a name="HinawaSndDg00x-message"></a><h3>The <code class="literal">“message”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="HinawaSndDg00x.html" title="HinawaSndDg00x"><span class="type">HinawaSndDg00x</span></a> *self,
-               <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a>          message,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>           message,
                <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>        user_data)</pre>
 <p>When Dg00x models transfer notification, the ::message signal is
 generated.</p>

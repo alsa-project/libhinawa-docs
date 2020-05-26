@@ -7,7 +7,7 @@
 <link rel="home" href="index.html" title="Hinawa Reference Manual">
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="prev" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
-<link rel="next" href="HinawaFwUnit.html" title="HinawaFwUnit">
+<link rel="next" href="HinawaFwResp.html" title="HinawaFwResp">
 <meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
@@ -23,7 +23,7 @@
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="hinawa-fw.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
 <td><a accesskey="p" href="hinawa-fw.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
-<td><a accesskey="n" href="HinawaFwUnit.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+<td><a accesskey="n" href="HinawaFwResp.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
 </tr></table>
 <div class="refentry">
 <a name="HinawaFwNode"></a><div class="titlepage"></div>
@@ -87,32 +87,32 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--bus-manager-node-id" title="The “bus-manager-node-id” property">bus-manager-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--generation" title="The “generation” property">generation</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--ir-manager-node-id" title="The “ir-manager-node-id” property">ir-manager-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--local-node-id" title="The “local-node-id” property">local-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--node-id" title="The “node-id” property">node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
 <tr>
-<td class="property_type"><a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></td>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="HinawaFwNode.html#HinawaFwNode--root-node-id" title="The “root-node-id” property">root-node-id</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -209,7 +209,7 @@ hinawa_fw_node_open (<em class="parameter"><code><a class="link" href="HinawaFwN
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_node_get_config_rom (<em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *self</code></em>,
                                <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **image</code></em>,
-                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *length</code></em>,
+                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>,
                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
 <p>Get cached content of configuration ROM.</p>
 <div class="refsect3">
@@ -290,50 +290,56 @@ bus.</p>
 <a name="HinawaFwNode.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="HinawaFwNode--bus-manager-node-id"></a><h3>The <code class="literal">“bus-manager-node-id”</code> property</h3>
-<pre class="programlisting">  “bus-manager-node-id”      <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “bus-manager-node-id”      <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Node-ID for bus manager on the bus at this generation.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--generation"></a><h3>The <code class="literal">“generation”</code> property</h3>
-<pre class="programlisting">  “generation”               <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “generation”               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>current level of generation on this bus.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--ir-manager-node-id"></a><h3>The <code class="literal">“ir-manager-node-id”</code> property</h3>
-<pre class="programlisting">  “ir-manager-node-id”       <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “ir-manager-node-id”       <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Node-ID for isochronous resource manager on the bus at this generation.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--local-node-id"></a><h3>The <code class="literal">“local-node-id”</code> property</h3>
-<pre class="programlisting">  “local-node-id”            <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “local-node-id”            <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Node-ID for a node which this node use to communicate to the other nodes on the bus at this generation.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--node-id"></a><h3>The <code class="literal">“node-id”</code> property</h3>
-<pre class="programlisting">  “node-id”                  <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “node-id”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Node-ID of this node at this generation.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--root-node-id"></a><h3>The <code class="literal">“root-node-id”</code> property</h3>
-<pre class="programlisting">  “root-node-id”             <a href="../glib/glib-Basic-Types.html#gulong"><span class="type">gulong</span></a></pre>
+<pre class="programlisting">  “root-node-id”             <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Node-ID for root of bus topology at this generation.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
+<p>Default value: 0</p>
 </div>
 </div>
 <div class="refsect1">
