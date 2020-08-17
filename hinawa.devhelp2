@@ -26,10 +26,17 @@
     <keyword type="enum" name="enum HinawaFwTcode" link="hinawa-hinawa-enum-types.html#HinawaFwTcode"/>
     <keyword type="enum" name="enum HinawaFwRcode" link="hinawa-hinawa-enum-types.html#HinawaFwRcode"/>
     <keyword type="enum" name="enum HinawaSndUnitType" link="hinawa-hinawa-enum-types.html#HinawaSndUnitType"/>
+    <keyword type="enum" name="enum HinawaFwNodeError" link="hinawa-hinawa-enum-types.html#HinawaFwNodeError"/>
+    <keyword type="enum" name="enum HinawaFwFcpError" link="hinawa-hinawa-enum-types.html#HinawaFwFcpError"/>
+    <keyword type="enum" name="enum HinawaSndUnitError" link="hinawa-hinawa-enum-types.html#HinawaSndUnitError"/>
+    <keyword type="enum" name="enum HinawaSndDiceError" link="hinawa-hinawa-enum-types.html#HinawaSndDiceError"/>
+    <keyword type="enum" name="enum HinawaSndEfwStatus" link="hinawa-hinawa-enum-types.html#HinawaSndEfwStatus"/>
+    <keyword type="function" name="hinawa_fw_node_error_quark ()" link="HinawaFwNode.html#hinawa-fw-node-error-quark"/>
     <keyword type="function" name="hinawa_fw_node_new ()" link="HinawaFwNode.html#hinawa-fw-node-new" since="1.4."/>
     <keyword type="function" name="hinawa_fw_node_open ()" link="HinawaFwNode.html#hinawa-fw-node-open" since="1.4."/>
     <keyword type="function" name="hinawa_fw_node_get_config_rom ()" link="HinawaFwNode.html#hinawa-fw-node-get-config-rom" since="1.4."/>
     <keyword type="function" name="hinawa_fw_node_create_source ()" link="HinawaFwNode.html#hinawa-fw-node-create-source" since="1.4."/>
+    <keyword type="macro" name="HINAWA_FW_NODE_ERROR" link="HinawaFwNode.html#HINAWA-FW-NODE-ERROR:CAPS"/>
     <keyword type="property" name="The “bus-manager-node-id” property" link="HinawaFwNode.html#HinawaFwNode--bus-manager-node-id"/>
     <keyword type="property" name="The “generation” property" link="HinawaFwNode.html#HinawaFwNode--generation"/>
     <keyword type="property" name="The “ir-manager-node-id” property" link="HinawaFwNode.html#HinawaFwNode--ir-manager-node-id"/>
@@ -45,21 +52,33 @@
     <keyword type="function" name="hinawa_fw_resp_set_resp_frame ()" link="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame"/>
     <keyword type="property" name="The “is-reserved” property" link="HinawaFwResp.html#HinawaFwResp--is-reserved"/>
     <keyword type="signal" name="The “requested” signal" link="HinawaFwResp.html#HinawaFwResp-requested"/>
+    <keyword type="function" name="hinawa_fw_req_error_quark ()" link="HinawaFwReq.html#hinawa-fw-req-error-quark"/>
     <keyword type="function" name="hinawa_fw_req_new ()" link="HinawaFwReq.html#hinawa-fw-req-new" since="1.3."/>
+    <keyword type="function" name="hinawa_fw_req_transaction_async ()" link="HinawaFwReq.html#hinawa-fw-req-transaction-async" since="2.1."/>
+    <keyword type="function" name="hinawa_fw_req_transaction_sync ()" link="HinawaFwReq.html#hinawa-fw-req-transaction-sync" since="2.1."/>
     <keyword type="function" name="hinawa_fw_req_transaction ()" link="HinawaFwReq.html#hinawa-fw-req-transaction" since="1.4."/>
+    <keyword type="macro" name="HINAWA_FW_REQ_ERROR" link="HinawaFwReq.html#HINAWA-FW-REQ-ERROR:CAPS"/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwReq.html#HinawaFwReq--timeout"/>
+    <keyword type="signal" name="The “responded” signal" link="HinawaFwReq.html#HinawaFwReq-responded"/>
+    <keyword type="function" name="hinawa_fw_fcp_error_quark ()" link="HinawaFwFcp.html#hinawa-fw-fcp-error-quark"/>
     <keyword type="function" name="hinawa_fw_fcp_new ()" link="HinawaFwFcp.html#hinawa-fw-fcp-new" since="1.3."/>
-    <keyword type="function" name="hinawa_fw_fcp_transaction ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transaction" since="1.4."/>
+    <keyword type="function" name="hinawa_fw_fcp_transaction ()" link="HinawaFwFcp.html#hinawa-fw-fcp-transaction" deprecated="2.1: Use #hinawa_fw_fcp_avc_transaction(), instead." since="1.4."/>
     <keyword type="function" name="hinawa_fw_fcp_bind ()" link="HinawaFwFcp.html#hinawa-fw-fcp-bind"/>
     <keyword type="function" name="hinawa_fw_fcp_unbind ()" link="HinawaFwFcp.html#hinawa-fw-fcp-unbind" since="1.4."/>
+    <keyword type="function" name="hinawa_fw_fcp_command ()" link="HinawaFwFcp.html#hinawa-fw-fcp-command" since="2.1."/>
+    <keyword type="function" name="hinawa_fw_fcp_avc_transaction ()" link="HinawaFwFcp.html#hinawa-fw-fcp-avc-transaction" since="2.1."/>
+    <keyword type="macro" name="HINAWA_FW_FCP_ERROR" link="HinawaFwFcp.html#HINAWA-FW-FCP-ERROR:CAPS"/>
     <keyword type="property" name="The “is-bound” property" link="HinawaFwFcp.html#HinawaFwFcp--is-bound"/>
     <keyword type="property" name="The “timeout” property" link="HinawaFwFcp.html#HinawaFwFcp--timeout"/>
+    <keyword type="signal" name="The “responded” signal" link="HinawaFwFcp.html#HinawaFwFcp-responded"/>
+    <keyword type="function" name="hinawa_snd_unit_error_quark ()" link="HinawaSndUnit.html#hinawa-snd-unit-error-quark"/>
     <keyword type="function" name="hinawa_snd_unit_new ()" link="HinawaSndUnit.html#hinawa-snd-unit-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_unit_open ()" link="HinawaSndUnit.html#hinawa-snd-unit-open"/>
     <keyword type="function" name="hinawa_snd_unit_get_node ()" link="HinawaSndUnit.html#hinawa-snd-unit-get-node" since="2.0."/>
     <keyword type="function" name="hinawa_snd_unit_lock ()" link="HinawaSndUnit.html#hinawa-snd-unit-lock"/>
     <keyword type="function" name="hinawa_snd_unit_unlock ()" link="HinawaSndUnit.html#hinawa-snd-unit-unlock"/>
     <keyword type="function" name="hinawa_snd_unit_create_source ()" link="HinawaSndUnit.html#hinawa-snd-unit-create-source" since="1.4."/>
+    <keyword type="macro" name="HINAWA_SND_UNIT_ERROR" link="HinawaSndUnit.html#HINAWA-SND-UNIT-ERROR:CAPS"/>
     <keyword type="property" name="The “card” property" link="HinawaSndUnit.html#HinawaSndUnit--card"/>
     <keyword type="property" name="The “device” property" link="HinawaSndUnit.html#HinawaSndUnit--device"/>
     <keyword type="property" name="The “guid” property" link="HinawaSndUnit.html#HinawaSndUnit--guid"/>
@@ -67,13 +86,20 @@
     <keyword type="property" name="The “type” property" link="HinawaSndUnit.html#HinawaSndUnit--type"/>
     <keyword type="signal" name="The “disconnected” signal" link="HinawaSndUnit.html#HinawaSndUnit-disconnected"/>
     <keyword type="signal" name="The “lock-status” signal" link="HinawaSndUnit.html#HinawaSndUnit-lock-status"/>
+    <keyword type="function" name="hinawa_snd_dice_error_quark ()" link="HinawaSndDice.html#hinawa-snd-dice-error-quark"/>
     <keyword type="function" name="hinawa_snd_dice_new ()" link="HinawaSndDice.html#hinawa-snd-dice-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dice_open ()" link="HinawaSndDice.html#hinawa-snd-dice-open"/>
     <keyword type="function" name="hinawa_snd_dice_transaction ()" link="HinawaSndDice.html#hinawa-snd-dice-transaction" since="1.4."/>
+    <keyword type="macro" name="HINAWA_SND_DICE_ERROR" link="HinawaSndDice.html#HINAWA-SND-DICE-ERROR:CAPS"/>
     <keyword type="signal" name="The “notified” signal" link="HinawaSndDice.html#HinawaSndDice-notified"/>
+    <keyword type="function" name="hinawa_snd_efw_error_quark ()" link="HinawaSndEfw.html#hinawa-snd-efw-error-quark"/>
     <keyword type="function" name="hinawa_snd_efw_new ()" link="HinawaSndEfw.html#hinawa-snd-efw-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_efw_open ()" link="HinawaSndEfw.html#hinawa-snd-efw-open"/>
+    <keyword type="function" name="hinawa_snd_efw_transaction_async ()" link="HinawaSndEfw.html#hinawa-snd-efw-transaction-async" since="2.1."/>
     <keyword type="function" name="hinawa_snd_efw_transaction ()" link="HinawaSndEfw.html#hinawa-snd-efw-transaction" since="1.4."/>
+    <keyword type="function" name="hinawa_snd_efw_transaction_sync ()" link="HinawaSndEfw.html#hinawa-snd-efw-transaction-sync" since="2.1."/>
+    <keyword type="macro" name="HINAWA_SND_EFW_ERROR" link="HinawaSndEfw.html#HINAWA-SND-EFW-ERROR:CAPS"/>
+    <keyword type="signal" name="The “responded” signal" link="HinawaSndEfw.html#HinawaSndEfw-responded"/>
     <keyword type="function" name="hinawa_snd_dg00x_new ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_dg00x_open ()" link="HinawaSndDg00x.html#hinawa-snd-dg00x-open"/>
     <keyword type="signal" name="The “message” signal" link="HinawaSndDg00x.html#HinawaSndDg00x-message"/>
@@ -112,6 +138,7 @@
     <keyword type="constant" name="HINAWA_FW_RCODE_BUSY" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-BUSY:CAPS"/>
     <keyword type="constant" name="HINAWA_FW_RCODE_GENERATION" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-GENERATION:CAPS"/>
     <keyword type="constant" name="HINAWA_FW_RCODE_NO_ACK" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-NO-ACK:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_RCODE_INVALID" link="hinawa-hinawa-enum-types.html#HINAWA-FW-RCODE-INVALID:CAPS"/>
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_DICE" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-DICE:CAPS"/>
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_FIREWORKS" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-FIREWORKS:CAPS"/>
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_BEBOB" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-BEBOB:CAPS"/>
@@ -120,5 +147,37 @@
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_TASCAM" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-TASCAM:CAPS"/>
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_MOTU" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-MOTU:CAPS"/>
     <keyword type="constant" name="HINAWA_SND_UNIT_TYPE_FIREFACE" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-TYPE-FIREFACE:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_NODE_ERROR_DISCONNECTED" link="hinawa-hinawa-enum-types.html#HINAWA-FW-NODE-ERROR-DISCONNECTED:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_NODE_ERROR_OPENED" link="hinawa-hinawa-enum-types.html#HINAWA-FW-NODE-ERROR-OPENED:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_NODE_ERROR_NOT_OPENED" link="hinawa-hinawa-enum-types.html#HINAWA-FW-NODE-ERROR-NOT-OPENED:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_NODE_ERROR_FAILED" link="hinawa-hinawa-enum-types.html#HINAWA-FW-NODE-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_FCP_ERROR_TIMEOUT" link="hinawa-hinawa-enum-types.html#HINAWA-FW-FCP-ERROR-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINAWA_FW_FCP_ERROR_LARGE_RESP" link="hinawa-hinawa-enum-types.html#HINAWA-FW-FCP-ERROR-LARGE-RESP:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_DISCONNECTED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-DISCONNECTED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_USED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-USED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_OPENED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-OPENED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_NOT_OPENED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-NOT-OPENED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_LOCKED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-LOCKED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_UNLOCKED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-UNLOCKED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_WRONG_CLASS" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-WRONG-CLASS:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_UNIT_ERROR_FAILED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-UNIT-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_DICE_ERROR_TIMEOUT" link="hinawa-hinawa-enum-types.html#HINAWA-SND-DICE-ERROR-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_OK" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-OK:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_COMMAND" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-COMMAND:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_COMM_ERR" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-COMM-ERR:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_QUAD_COUNT" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-QUAD-COUNT:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_UNSUPPORTED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-UNSUPPORTED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_TIMEOUT" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_DSP_TIMEOUT" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-DSP-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_RATE" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-RATE:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_CLOCK" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-CLOCK:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_CHANNEL" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-CHANNEL:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_PAN" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-PAN:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_FLASH_BUSY" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-FLASH-BUSY:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_MIRROR" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-MIRROR:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_LED" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-LED:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_BAD_PARAMETER" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-BAD-PARAMETER:CAPS"/>
+    <keyword type="constant" name="HINAWA_SND_EFW_STATUS_LARGE_RESP" link="hinawa-hinawa-enum-types.html#HINAWA-SND-EFW-STATUS-LARGE-RESP:CAPS"/>
   </functions>
 </book>

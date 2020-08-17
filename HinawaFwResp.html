@@ -123,6 +123,11 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="HinawaFwResp.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;fw_resp.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="HinawaFwResp.description"></a><h2>Description</h2>
 <p>A HinawaFwResp responds requests from any units.</p>
 <p>This class is an application of Linux FireWire subsystem. All of operations
@@ -183,7 +188,7 @@ the node.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -309,9 +314,9 @@ user_function (<a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><sp
                <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode,
                <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
 <p>When any node transfers requests to the range of address to which
-this object listening. The ::requested signal handler can get data
-frame by a call of ::get_req_frame and set data frame by a call of
-::set_resp_frame, then returns rcode.</p>
+this object listening. The <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal"><span class="type">“requested”</span></a> signal handler can get data
+frame by a call of <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-get-req-frame" title="hinawa_fw_resp_get_req_frame ()"><code class="function">hinawa_fw_resp_get_req_frame()</code></a> and set data frame by a call of
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()"><code class="function">hinawa_fw_resp_set_resp_frame()</code></a>, then returns rcode.</p>
 <div class="refsect3">
 <a name="HinawaFwResp-requested.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">

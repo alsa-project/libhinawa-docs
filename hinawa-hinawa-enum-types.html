@@ -52,6 +52,26 @@
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndUnitType" title="enum HinawaSndUnitType">HinawaSndUnitType</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwNodeError" title="enum HinawaFwNodeError">HinawaFwNodeError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwFcpError" title="enum HinawaFwFcpError">HinawaFwFcpError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndUnitError" title="enum HinawaSndUnitError">HinawaSndUnitError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndDiceError" title="enum HinawaSndDiceError">HinawaSndDiceError</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndEfwStatus" title="enum HinawaSndEfwStatus">HinawaSndEfwStatus</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -60,6 +80,7 @@
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Enumeration-and-Flag-Types.html">GEnum</a>
     <span class="lineart">├──</span> HinawaFwRcode
     <span class="lineart">├──</span> HinawaFwTcode
+    <span class="lineart">├──</span> HinawaSndEfwStatus
     <span class="lineart">╰──</span> HinawaSndUnitType
 </pre>
 </div>
@@ -297,6 +318,13 @@
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-RCODE-INVALID:CAPS"></a>HINAWA_FW_RCODE_INVALID</p></td>
+<td class="enum_member_description">
+<p>For rcode out of specification.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -367,6 +395,316 @@
 <td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-TYPE-FIREFACE:CAPS"></a>HINAWA_SND_UNIT_TYPE_FIREFACE</p></td>
 <td class="enum_member_description">
 <p>The type of RME Fireface series.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaFwNodeError"></a><h3>enum HinawaFwNodeError</h3>
+<p>A set of error code for GError with domain which equals to <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>.</p>
+<div class="refsect3">
+<a name="HinawaFwNodeError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-NODE-ERROR-DISCONNECTED:CAPS"></a>HINAWA_FW_NODE_ERROR_DISCONNECTED</p></td>
+<td class="enum_member_description">
+<p>The node associated to the instance is disconnected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-NODE-ERROR-OPENED:CAPS"></a>HINAWA_FW_NODE_ERROR_OPENED</p></td>
+<td class="enum_member_description">
+<p>The instance is already associated to node by opening
+				firewire character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-NODE-ERROR-NOT-OPENED:CAPS"></a>HINAWA_FW_NODE_ERROR_NOT_OPENED</p></td>
+<td class="enum_member_description">
+<p>The instance is not associated to node by opening
+				firewire character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-NODE-ERROR-FAILED:CAPS"></a>HINAWA_FW_NODE_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The system call fails.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaFwFcpError"></a><h3>enum HinawaFwFcpError</h3>
+<div class="refsect3">
+<a name="HinawaFwFcpError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-FCP-ERROR-TIMEOUT:CAPS"></a>HINAWA_FW_FCP_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>The transaction is canceled due to response timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-FW-FCP-ERROR-LARGE-RESP:CAPS"></a>HINAWA_FW_FCP_ERROR_LARGE_RESP</p></td>
+<td class="enum_member_description">
+<p>The size of response is larger than expected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaSndUnitError"></a><h3>enum HinawaSndUnitError</h3>
+<p>A set of error code for GError with domain of <a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndUnitError" title="enum HinawaSndUnitError"><span class="type">HinawaSndUnitError</span></a>.</p>
+<div class="refsect3">
+<a name="HinawaSndUnitError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-DISCONNECTED:CAPS"></a>HINAWA_SND_UNIT_ERROR_DISCONNECTED</p></td>
+<td class="enum_member_description">
+<p>The hwdep device associated to the instance is disconnected.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-USED:CAPS"></a>HINAWA_SND_UNIT_ERROR_USED</p></td>
+<td class="enum_member_description">
+<p>The hedep device is already in use.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-OPENED:CAPS"></a>HINAWA_SND_UNIT_ERROR_OPENED</p></td>
+<td class="enum_member_description">
+<p>The instance is already associated to unit by opening hwdep
+				character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-NOT-OPENED:CAPS"></a>HINAWA_SND_UNIT_ERROR_NOT_OPENED</p></td>
+<td class="enum_member_description">
+<p>The instance is not associated to unit yet by opening hwdep
+				character device.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-LOCKED:CAPS"></a>HINAWA_SND_UNIT_ERROR_LOCKED</p></td>
+<td class="enum_member_description">
+<p>The hwdep device is already locked for kernel packet streaming.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-UNLOCKED:CAPS"></a>HINAWA_SND_UNIT_ERROR_UNLOCKED</p></td>
+<td class="enum_member_description">
+<p>The hwdep device is not locked for kernel packet streaming yet.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-WRONG-CLASS:CAPS"></a>HINAWA_SND_UNIT_ERROR_WRONG_CLASS</p></td>
+<td class="enum_member_description">
+<p>The hwdep device is not for the unit expected by the class.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-UNIT-ERROR-FAILED:CAPS"></a>HINAWA_SND_UNIT_ERROR_FAILED</p></td>
+<td class="enum_member_description">
+<p>The system call fails.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaSndDiceError"></a><h3>enum HinawaSndDiceError</h3>
+<p>A set of error code for GError with domain which equals to <a class="link" href="HinawaSndDice.html#hinawa-snd-dice-error-quark" title="hinawa_snd_dice_error_quark ()"><code class="function">hinawa_snd_dice_error_quark()</code></a>.</p>
+<div class="refsect3">
+<a name="HinawaSndDiceError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody><tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-DICE-ERROR-TIMEOUT:CAPS"></a>HINAWA_SND_DICE_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>The transaction is canceled due to response timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaSndEfwStatus"></a><h3>enum HinawaSndEfwStatus</h3>
+<p>A set of status code for Echo Audio Fireworks Transaction.</p>
+<div class="refsect3">
+<a name="HinawaSndEfwStatus.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-OK:CAPS"></a>HINAWA_SND_EFW_STATUS_OK</p></td>
+<td class="enum_member_description">
+<p>The transaction finishes successfully.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD</p></td>
+<td class="enum_member_description">
+<p>The request or response includes invalid header.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-COMMAND:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_COMMAND</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid category or command.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-COMM-ERR:CAPS"></a>HINAWA_SND_EFW_STATUS_COMM_ERR</p></td>
+<td class="enum_member_description">
+<p>The transaction fails due to communication error.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-QUAD-COUNT:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_QUAD_COUNT</p></td>
+<td class="enum_member_description">
+<p>The number of quadlets in transaction is invalid.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-UNSUPPORTED:CAPS"></a>HINAWA_SND_EFW_STATUS_UNSUPPORTED</p></td>
+<td class="enum_member_description">
+<p>The request is not supported.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-TIMEOUT:CAPS"></a>HINAWA_SND_EFW_STATUS_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>The transaction is canceled due to response timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-DSP-TIMEOUT:CAPS"></a>HINAWA_SND_EFW_STATUS_DSP_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>The operation for DSP did not finish within timeout.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-RATE:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_RATE</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for sampling frequency.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-CLOCK:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_CLOCK</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for source of clock.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-CHANNEL:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_CHANNEL</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for the number of channel.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-PAN:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_PAN</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for panning.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-FLASH-BUSY:CAPS"></a>HINAWA_SND_EFW_STATUS_FLASH_BUSY</p></td>
+<td class="enum_member_description">
+<p>The on-board flash is busy and not operable.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-MIRROR:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_MIRROR</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for mirroring channel.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-LED:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_LED</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value for LED.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-BAD-PARAMETER:CAPS"></a>HINAWA_SND_EFW_STATUS_BAD_PARAMETER</p></td>
+<td class="enum_member_description">
+<p>The request includes invalid value of parameter.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HINAWA-SND-EFW-STATUS-LARGE-RESP:CAPS"></a>HINAWA_SND_EFW_STATUS_LARGE_RESP</p></td>
+<td class="enum_member_description">
+<p>The size of response is larger than expected.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

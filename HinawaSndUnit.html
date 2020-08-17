@@ -44,6 +44,14 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()">hinawa_snd_unit_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit"><span class="returnvalue">HinawaSndUnit</span></a> *
 </td>
 <td class="function_name">
@@ -154,6 +162,19 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="HinawaSndUnit.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinawaSndUnit.html#HINAWA-SND-UNIT-ERROR:CAPS" title="HINAWA_SND_UNIT_ERROR">HINAWA_SND_UNIT_ERROR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="HinawaSndUnit.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> HinawaSndUnit
@@ -165,12 +186,28 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="HinawaSndUnit.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;snd_unit.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="HinawaSndUnit.description"></a><h2>Description</h2>
 <p>This class is an application of ALSA FireWire stack. Any functionality which
 ALSA drivers in the stack can be available.</p>
 </div>
 <div class="refsect1">
 <a name="HinawaSndUnit.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinawa-snd-unit-error-quark"></a><h3>hinawa_snd_unit_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinawa_snd_unit_error_quark ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndUnitError" title="enum HinawaSndUnitError"><span class="type">HinawaSndUnitError</span></a>.</p>
+<div class="refsect3">
+<a name="hinawa-snd-unit-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hinawa-snd-unit-new"></a><h3>hinawa_snd_unit_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit"><span class="returnvalue">HinawaSndUnit</span></a> *
@@ -211,7 +248,8 @@ hinawa_snd_unit_open (<em class="parameter"><code><a class="link" href="HinawaSn
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with three domains; <code class="function"><GTKDOCLINK HREF="g-file-error-quark"><code class="function">g_file_error_quark()</code></code></GTKDOCLINK>,
+<a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>, and <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -272,7 +310,7 @@ hinawa_snd_unit_lock (<em class="parameter"><code><a class="link" href="HinawaSn
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -302,7 +340,7 @@ hinawa_snd_unit_unlock (<em class="parameter"><code><a class="link" href="Hinawa
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -338,13 +376,21 @@ hinawa_snd_unit_create_source (<em class="parameter"><code><a class="link" href=
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain with <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p class="since">Since: 1.4.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinawaSndUnit.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINAWA-SND-UNIT-ERROR:CAPS"></a><h3>HINAWA_SND_UNIT_ERROR</h3>
+<pre class="programlisting">#define HINAWA_SND_UNIT_ERROR hinawa_snd_unit_error_quark()
+</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -436,7 +482,7 @@ hwdep character device.</p>
 user_function (<a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit"><span class="type">HinawaSndUnit</span></a> *self,
                <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a>       state,
                <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>       user_data)</pre>
-<p>When ALSA kernel-streaming status is changed, this ::lock-status
+<p>When ALSA kernel-streaming status is changed, this <a class="link" href="HinawaSndUnit.html#HinawaSndUnit-lock-status" title="The “lock-status” signal"><span class="type">“lock-status”</span></a>
 signal is generated.</p>
 <div class="refsect3">
 <a name="HinawaSndUnit-lock-status.parameters"></a><h4>Parameters</h4>

@@ -16,7 +16,8 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#HinawaSndEfw.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#HinawaSndEfw.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+                  <a href="#HinawaSndEfw.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#HinawaSndEfw.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="hinawa-snd.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -42,6 +43,14 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-error-quark" title="hinawa_snd_efw_error_quark ()">hinawa_snd_efw_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="returnvalue">HinawaSndEfw</span></a> *
 </td>
 <td class="function_name">
@@ -61,10 +70,54 @@
 <span class="returnvalue">void</span>
 </td>
 <td class="function_name">
+<a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-transaction-async" title="hinawa_snd_efw_transaction_async ()">hinawa_snd_efw_transaction_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
 <a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-transaction" title="hinawa_snd_efw_transaction ()">hinawa_snd_efw_transaction</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-transaction-sync" title="hinawa_snd_efw_transaction_sync ()">hinawa_snd_efw_transaction_sync</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
 </tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinawaSndEfw.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="HinawaSndEfw.html#HinawaSndEfw-responded" title="The “responded” signal">responded</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinawaSndEfw.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinawaSndEfw.html#HINAWA-SND-EFW-ERROR:CAPS" title="HINAWA_SND_EFW_ERROR">HINAWA_SND_EFW_ERROR</a></td>
+</tr></tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -75,12 +128,28 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="HinawaSndEfw.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;snd_efw.h&gt;
+</pre>
+</div>
+<div class="refsect1">
 <a name="HinawaSndEfw.description"></a><h2>Description</h2>
 <p>A <a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a> is an application of Echo Fireworks Transaction (EFT).
 This inherits <a class="link" href="HinawaSndUnit.html" title="HinawaSndUnit"><span class="type">HinawaSndUnit</span></a>.</p>
 </div>
 <div class="refsect1">
 <a name="HinawaSndEfw.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinawa-snd-efw-error-quark"></a><h3>hinawa_snd_efw_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinawa_snd_efw_error_quark ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndEfwStatus" title="enum HinawaSndEfwStatus"><span class="type">HinawaSndEfwStatus</span></a>.</p>
+<div class="refsect3">
+<a name="hinawa-snd-efw-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hinawa-snd-efw-new"></a><h3>hinawa_snd_efw_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="returnvalue">HinawaSndEfw</span></a> *
@@ -121,12 +190,76 @@ hinawa_snd_efw_open (<em class="parameter"><code><a class="link" href="HinawaSnd
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a></p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with three domains; <code class="function"><GTKDOCLINK HREF="g-file-error-quark"><code class="function">g_file_error_quark()</code></code></GTKDOCLINK>,
+<a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>, and <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-snd-efw-transaction-async"></a><h3>hinawa_snd_efw_transaction_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_snd_efw_transaction_async (<em class="parameter"><code><a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a> *self</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> category</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> command</code></em>,
+                                  <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *args</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> arg_count</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *resp_seqnum</code></em>,
+                                  <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
+<p>Transfer asynchronous transaction for command frame of Echo Fireworks protocol. When receiving
+asynchronous transaction for response frame, <a class="link" href="HinawaSndEfw.html#HinawaSndEfw-responded" title="The “responded” signal"><span class="type">“responded”</span></a> GObject signal is emitted.</p>
+<div class="refsect3">
+<a name="hinawa-snd-efw-transaction-async.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>category</p></td>
+<td class="parameter_description"><p>One of category for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command</p></td>
+<td class="parameter_description"><p>One of commands for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>args</p></td>
+<td class="parameter_description"><p>An array with elements for quadlet data as
+arguments for command. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=arg_count][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_count</p></td>
+<td class="parameter_description"><p>The number of quadlets in the args array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>resp_seqnum</p></td>
+<td class="parameter_description"><p>The sequence number for response transaction;. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -140,7 +273,8 @@ hinawa_snd_efw_transaction (<em class="parameter"><code><a class="link" href="Hi
                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *const *params</code></em>,
                             <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *param_count</code></em>,
                             <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
-<p>Execute transaction according to Echo Fireworks Transaction protocol.</p>
+<p>Transfer request of transaction according to Echo Fireworks Transaction protocol, then wait for
+the response of transaction within 200 millisecond timeout.</p>
 <div class="refsect3">
 <a name="hinawa-snd-efw-transaction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -193,13 +327,177 @@ The content of array is mutable for parameters in response. </p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with three domains; <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>,
+and <a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-error-quark" title="hinawa_snd_efw_error_quark ()"><code class="function">hinawa_snd_efw_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p class="since">Since: 1.4.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-snd-efw-transaction-sync"></a><h3>hinawa_snd_efw_transaction_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_snd_efw_transaction_sync (<em class="parameter"><code><a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> category</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> command</code></em>,
+                                 <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *args</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> arg_count</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *const *params</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *param_count</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout_ms</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
+<p>Transfer asynchronous transaction for command frame of Echo Fireworks protocol, then wait
+asynchronous transaction for response frame within the given timeout.</p>
+<div class="refsect3">
+<a name="hinawa-snd-efw-transaction-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>category</p></td>
+<td class="parameter_description"><p>one of category for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command</p></td>
+<td class="parameter_description"><p>one of commands for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>args</p></td>
+<td class="parameter_description"><p>An array with elements for
+quadlet data as arguments for command. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=arg_count][<acronym title="Parameter for input. Default is transfer none."><span class="acronym">in</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>arg_count</p></td>
+<td class="parameter_description"><p>The number of quadlets in the args array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>params</p></td>
+<td class="parameter_description"><p>An array with elements for
+quadlet data to save parameters in response. Callers should give it
+for buffer with enough space against the request since this library
+performs no reallocation. Due to the reason, the value of this
+argument should point to the pointer to the array and immutable.
+The content of array is mutable for parameters in response. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=param_count][<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>][<acronym title="NULL may be passed as the value in, out, in-out; or as a return value."><span class="acronym">nullable</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>param_count</p></td>
+<td class="parameter_description"><p>The number of quadlets in the params array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout_ms</p></td>
+<td class="parameter_description"><p>The timeout to wait for response of the transaction since request is transferred in
+milliseconds.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with three domains; <a class="link" href="HinawaSndUnit.html#hinawa-snd-unit-error-quark" title="hinawa_snd_unit_error_quark ()"><code class="function">hinawa_snd_unit_error_quark()</code></a>,
+and <a class="link" href="HinawaSndEfw.html#hinawa-snd-efw-error-quark" title="hinawa_snd_efw_error_quark ()"><code class="function">hinawa_snd_efw_error_quark()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinawaSndEfw.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINAWA-SND-EFW-ERROR:CAPS"></a><h3>HINAWA_SND_EFW_ERROR</h3>
+<pre class="programlisting">#define HINAWA_SND_EFW_ERROR hinawa_snd_efw_error_quark()
+</pre>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinawaSndEfw.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="HinawaSndEfw-responded"></a><h3>The <code class="literal">“responded”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a>      *self,
+               <a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndEfwStatus" title="enum HinawaSndEfwStatus"><span class="type">HinawaSndEfwStatus</span></a> status,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>              seqnum,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>              category,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>              command,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           frame,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>              frame_size,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
+<p>When the unit transfers asynchronous packet as response for Echo Audio Fireworks
+protocol, and the process successfully reads the content of response from ALSA
+Fireworks driver, the <a class="link" href="HinawaSndEfw.html#HinawaSndEfw-responded" title="The “responded” signal"><span class="type">“responded”</span></a> signal handler is called with parameters
+of the response.</p>
+<div class="refsect3">
+<a name="HinawaSndEfw-responded.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaSndEfw.html" title="HinawaSndEfw"><span class="type">HinawaSndEfw</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>status</p></td>
+<td class="parameter_description"><p>One of <a class="link" href="hinawa-hinawa-enum-types.html#HinawaSndEfwStatus" title="enum HinawaSndEfwStatus"><span class="type">HinawaSndEfwStatus</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>seqnum</p></td>
+<td class="parameter_description"><p>The sequence number of response.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>category</p></td>
+<td class="parameter_description"><p>The value of category field in the response.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>command</p></td>
+<td class="parameter_description"><p>The value of command field in the response.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>The array with elements for
+quadlet data of response for Echo Fireworks protocol. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=frame_size][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint32]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame_size</p></td>
+<td class="parameter_description"><p>The number of elements of the array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>

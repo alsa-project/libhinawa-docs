@@ -17,7 +17,8 @@
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#HinawaFwReq.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
                   <a href="#HinawaFwReq.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
-                  <a href="#HinawaFwReq.properties" class="shortcut">Properties</a></span>
+                  <a href="#HinawaFwReq.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#HinawaFwReq.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="hinawa-fw.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -43,10 +44,34 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwReq.html#hinawa-fw-req-error-quark" title="hinawa_fw_req_error_quark ()">hinawa_fw_req_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="returnvalue">HinawaFwReq</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="HinawaFwReq.html#hinawa-fw-req-new" title="hinawa_fw_req_new ()">hinawa_fw_req_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction-async" title="hinawa_fw_req_transaction_async ()">hinawa_fw_req_transaction_async</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwReq.html#hinawa-fw-req-transaction-sync" title="hinawa_fw_req_transaction_sync ()">hinawa_fw_req_transaction_sync</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -76,9 +101,42 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="HinawaFwReq.signals"></a><h2>Signals</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
+</colgroup>
+<tbody><tr>
+<td class="signal_type"><span class="returnvalue">void</span></td>
+<td class="signal_name"><a class="link" href="HinawaFwReq.html#HinawaFwReq-responded" title="The “responded” signal">responded</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinawaFwReq.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinawaFwReq.html#HINAWA-FW-REQ-ERROR:CAPS" title="HINAWA_FW_REQ_ERROR">HINAWA_FW_REQ_ERROR</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="HinawaFwReq.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="../gobject/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> HinawaFwReq
+</pre>
+</div>
+<div class="refsect1">
+<a name="HinawaFwReq.includes"></a><h2>Includes</h2>
+<pre class="synopsis">#include &lt;fw_req.h&gt;
 </pre>
 </div>
 <div class="refsect1">
@@ -90,6 +148,17 @@ utilize ioctl(2) with subsystem specific request commands.</p>
 </div>
 <div class="refsect1">
 <a name="HinawaFwReq.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinawa-fw-req-error-quark"></a><h3>hinawa_fw_req_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinawa_fw_req_error_quark ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="type">HinawaFwRcode</span></a>.</p>
+<div class="refsect3">
+<a name="hinawa-fw-req-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hinawa-fw-req-new"></a><h3>hinawa_fw_req_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="returnvalue">HinawaFwReq</span></a> *
@@ -103,6 +172,167 @@ hinawa_fw_req_new (<em class="parameter"><code><span class="type">void</span></c
 </div>
 <hr>
 <div class="refsect2">
+<a name="hinawa-fw-req-transaction-async"></a><h3>hinawa_fw_req_transaction_async ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_req_transaction_async (<em class="parameter"><code><a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a> *self</code></em>,
+                                 <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
+                                 <em class="parameter"><code><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> addr</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *const *frame</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *frame_size</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
+<p>Execute request subaction of transactions to the given node according to given code. When the
+response subaction arrives and read the contents, <a class="link" href="HinawaFwReq.html#HinawaFwReq-responded" title="The “responded” signal"><span class="type">“responded”</span></a> signal handler is called
+as long as event dispatcher runs.</p>
+<div class="refsect3">
+<a name="hinawa-fw-req-transaction-async.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tcode</p></td>
+<td class="parameter_description"><p>A transaction code of HinawaFwTcode.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>addr</p></td>
+<td class="parameter_description"><p>A destination address of target device</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>The range of address in byte unit.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>An array with elements for byte
+data. Callers should give it for buffer with enough space against the
+request since this library performs no reallocation. Due to the
+reason, the value of this argument should point to the pointer to the
+array and immutable. The content of array is mutable for read and
+lock transaction. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=frame_size][<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame_size</p></td>
+<td class="parameter_description"><p>The size of array in byte unit. The value of this argument
+should point to the numerical number and mutable for read and
+lock transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with two domains; <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>,
+and <a class="link" href="HinawaFwReq.html#hinawa-fw-req-error-quark" title="hinawa_fw_req_error_quark ()"><code class="function">hinawa_fw_req_error_quark()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hinawa-fw-req-transaction-sync"></a><h3>hinawa_fw_req_transaction_sync ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+hinawa_fw_req_transaction_sync (<em class="parameter"><code><a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a> *self</code></em>,
+                                <em class="parameter"><code><a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a> *node</code></em>,
+                                <em class="parameter"><code><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> addr</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> length</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *const *frame</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *frame_size</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> timeout_ms</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
+<p>Execute request subaction of transaction to the given node according to given code, then wait
+for response subaction within the given timeout. The <a class="link" href="HinawaFwReq.html#HinawaFwReq--timeout" title="The “timeout” property"><span class="type">“timeout”</span></a> property of instance
+is ignored.</p>
+<div class="refsect3">
+<a name="hinawa-fw-req-transaction-sync.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>node</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tcode</p></td>
+<td class="parameter_description"><p>A transaction code of HinawaFwTcode.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>addr</p></td>
+<td class="parameter_description"><p>A destination address of target device</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>The range of address in byte unit.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>An array with elements for byte
+data. Callers should give it for buffer with enough space against the
+request since this library performs no reallocation. Due to the
+reason, the value of this argument should point to the pointer to the
+array and immutable. The content of array is mutable for read and
+lock transaction. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=frame_size][<acronym title="Parameter for input and for returning results. Default is transfer full."><span class="acronym">inout</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame_size</p></td>
+<td class="parameter_description"><p>The size of array in byte unit. The value of this argument
+should point to the numerical number and mutable for read and
+lock transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>timeout_ms</p></td>
+<td class="parameter_description"><p>The timeout to wait for response subaction of the transaction since request
+subaction is initiated, in milliseconds.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>exception</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with two domains; <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>,
+and <a class="link" href="HinawaFwReq.html#hinawa-fw-req-error-quark" title="hinawa_fw_req_error_quark ()"><code class="function">hinawa_fw_req_error_quark()</code></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: 2.1.</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="hinawa-fw-req-transaction"></a><h3>hinawa_fw_req_transaction ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 hinawa_fw_req_transaction (<em class="parameter"><code><a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a> *self</code></em>,
@@ -113,7 +343,8 @@ hinawa_fw_req_transaction (<em class="parameter"><code><a class="link" href="Hin
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> *const *frame</code></em>,
                            <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *frame_size</code></em>,
                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **exception</code></em>);</pre>
-<p>Execute transactions to the given node according to given code.</p>
+<p>Execute request subaction of transaction to the given node according to given code, then wait
+for response subaction within <a class="link" href="HinawaFwReq.html#HinawaFwReq--timeout" title="The “timeout” property"><span class="type">“timeout”</span></a>.</p>
 <div class="refsect3">
 <a name="hinawa-fw-req-transaction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -167,13 +398,22 @@ lock transaction.</p></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with two domains; <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>,
+and <a class="link" href="HinawaFwReq.html#hinawa-fw-req-error-quark" title="hinawa_fw_req_error_quark ()"><code class="function">hinawa_fw_req_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <p class="since">Since: 1.4.</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinawaFwReq.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINAWA-FW-REQ-ERROR:CAPS"></a><h3>HINAWA_FW_REQ_ERROR</h3>
+<pre class="programlisting">#define HINAWA_FW_REQ_ERROR hinawa_fw_req_error_quark()
+</pre>
 </div>
 </div>
 <div class="refsect1">
@@ -186,6 +426,60 @@ lock transaction.</p></td>
 <p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= 10</p>
 <p>Default value: 200</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="HinawaFwReq.signal-details"></a><h2>Signal Details</h2>
+<div class="refsect2">
+<a name="HinawaFwReq-responded"></a><h3>The <code class="literal">“responded”</code> signal</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+user_function (<a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a>  *self,
+               <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="type">HinawaFwRcode</span></a> rcode,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      frame,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         frame_size,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
+<p>When the unit transfers asynchronous packet as response subaction for the transaction,
+and the process successfully reads the content of packet from Linux firewire subsystem,
+the <a class="link" href="HinawaFwReq.html#HinawaFwReq-responded" title="The “responded” signal"><span class="type">“responded”</span></a> signal handler is called.</p>
+<div class="refsect3">
+<a name="HinawaFwReq-responded.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwReq.html" title="HinawaFwReq"><span class="type">HinawaFwReq</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>rcode</p></td>
+<td class="parameter_description"><p>One of <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="type">HinawaFwRcode</span></a>.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>The array with elements for
+byte data of response subaction for transaction. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=frame_size][<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame_size</p></td>
+<td class="parameter_description"><p>The number of elements of the array.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
 </div>
 </div>
