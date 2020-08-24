@@ -44,6 +44,14 @@
 <tbody>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-error-quark" title="hinawa_fw_resp_error_quark ()">hinawa_fw_resp_error_quark</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="returnvalue">HinawaFwResp</span></a> *
 </td>
 <td class="function_name">
@@ -108,10 +116,30 @@
 <col width="300px" class="signal_proto_name">
 <col width="200px" class="signal_proto_flags">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
 <td class="signal_type"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a></td>
 <td class="signal_name"><a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal">requested</a></td>
 <td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+<tr>
+<td class="signal_type"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a></td>
+<td class="signal_name"><a class="link" href="HinawaFwResp.html#HinawaFwResp-requested2" title="The “requested2” signal">requested2</a></td>
+<td class="signal_flags"><a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="HinawaFwResp.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="HinawaFwResp.html#HINAWA-FW-RESP-ERROR:CAPS" title="HINAWA_FW_RESP_ERROR">HINAWA_FW_RESP_ERROR</a></td>
 </tr></tbody>
 </table></div>
 </div>
@@ -135,6 +163,17 @@ utilize ioctl(2) with subsystem specific request commands.</p>
 </div>
 <div class="refsect1">
 <a name="HinawaFwResp.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="hinawa-fw-resp-error-quark"></a><h3>hinawa_fw_resp_error_quark ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>
+hinawa_fw_resp_error_quark ();</pre>
+<p>Return the GQuark for error domain of GError which has code in <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRespError" title="enum HinawaFwRespError"><span class="type">HinawaFwRespError</span></a>.</p>
+<div class="refsect3">
+<a name="hinawa-fw-resp-error-quark.returns"></a><h4>Returns</h4>
+<p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="hinawa-fw-resp-new"></a><h3>hinawa_fw_resp_new ()</h3>
 <pre class="programlisting"><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="returnvalue">HinawaFwResp</span></a> *
@@ -188,7 +227,8 @@ the node.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>exception</p></td>
-<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with domain of <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>.</p></td>
+<td class="parameter_description"><p>A <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a>. Error can be generated with two domain of <a class="link" href="HinawaFwNode.html#hinawa-fw-node-error-quark" title="hinawa_fw_node_error_quark ()"><code class="function">hinawa_fw_node_error_quark()</code></a>
+and <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-error-quark" title="hinawa_fw_resp_error_quark ()"><code class="function">hinawa_fw_resp_error_quark()</code></a>.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -226,6 +266,11 @@ hinawa_fw_resp_release (<em class="parameter"><code><a class="link" href="Hinawa
 hinawa_fw_resp_get_req_frame (<em class="parameter"><code><a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self</code></em>,
                               <em class="parameter"><code>const <a href="../glib/glib-Basic-Types.html#guint8"><span class="type">guint8</span></a> **frame</code></em>,
                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *length</code></em>);</pre>
+<div class="warning">
+<p><code class="literal">hinawa_fw_resp_get_req_frame</code> has been deprecated since version 2.2 and should not be used in newly-written code.</p>
+<p>handler for <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested2" title="The “requested2” signal"><span class="type">“requested2”</span></a> signal can receive the frame in its
+	    argument.</p>
+</div>
 <p>Retrieve byte frame to be requested.</p>
 <div class="refsect3">
 <a name="hinawa-fw-resp-get-req-frame.parameters"></a><h4>Parameters</h4>
@@ -295,6 +340,14 @@ frame. </p></td>
 </div>
 </div>
 <div class="refsect1">
+<a name="HinawaFwResp.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HINAWA-FW-RESP-ERROR:CAPS"></a><h3>HINAWA_FW_RESP_ERROR</h3>
+<pre class="programlisting">#define HINAWA_FW_RESP_ERROR hinawa_fw_resp_error_quark()
+</pre>
+</div>
+</div>
+<div class="refsect1">
 <a name="HinawaFwResp.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="HinawaFwResp--is-reserved"></a><h3>The <code class="literal">“is-reserved”</code> property</h3>
@@ -313,10 +366,15 @@ frame. </p></td>
 user_function (<a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self,
                <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode,
                <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
-<p>When any node transfers requests to the range of address to which
-this object listening. The <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal"><span class="type">“requested”</span></a> signal handler can get data
-frame by a call of <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-get-req-frame" title="hinawa_fw_resp_get_req_frame ()"><code class="function">hinawa_fw_resp_get_req_frame()</code></a> and set data frame by a call of
-<a class="link" href="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()"><code class="function">hinawa_fw_resp_set_resp_frame()</code></a>, then returns rcode.</p>
+<p>When any node transfers requests to the range of address to which this object listening,
+the <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal"><span class="type">“requested”</span></a> signal handler is called with <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a>, without the
+case that <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested2" title="The “requested2” signal"><span class="type">“requested2”</span></a> signal handler is already assigned.</p>
+<p>The handler can get data frame by a call of <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-get-req-frame" title="hinawa_fw_resp_get_req_frame ()"><code class="function">hinawa_fw_resp_get_req_frame()</code></a> and set data
+frame by a call of <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()"><code class="function">hinawa_fw_resp_set_resp_frame()</code></a>, then returns rcode.</p>
+<div class="warning">
+<p><code class="literal">HinawaFwResp::requested</code> has been deprecated since version 2.2 and should not be used in newly-written code.</p>
+<p>Use <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested2" title="The “requested2” signal"><span class="type">“requested2”</span></a>, instead.</p>
+</div>
 <div class="refsect3">
 <a name="HinawaFwResp-requested.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -346,8 +404,96 @@ frame by a call of <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-get-re
 </div>
 <div class="refsect3">
 <a name="HinawaFwResp-requested.returns"></a><h4>Returns</h4>
-<p> One of <span class="type">HinawaRcode</span> enumerators corresponding to rcodes
-defined in IEEE 1394 specification.</p>
+<p> One of <span class="type">HinawaRcode</span> enumerators corresponding to rcodes defined in IEEE 1394
+specification.</p>
+</div>
+<p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="HinawaFwResp-requested2"></a><h3>The <code class="literal">“requested2”</code> signal</h3>
+<pre class="programlisting"><a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwRcode" title="enum HinawaFwRcode"><span class="returnvalue">HinawaFwRcode</span></a>
+user_function (<a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a> *self,
+               <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwTcode" title="enum HinawaFwTcode"><span class="type">HinawaFwTcode</span></a> tcode,
+               <a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a>       offset,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         src,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         dst,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         card,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         generation,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      frame,
+               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a>         length,
+               <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
+<p>When any node transfers request subaction to the range of address to which this object
+listening, the <a class="link" href="HinawaFwResp.html#HinawaFwResp-requested" title="The “requested” signal"><span class="type">“requested”</span></a> signal handler is called with arrived frame for
+the subaction. The handler is expected to call <a class="link" href="HinawaFwResp.html#hinawa-fw-resp-set-resp-frame" title="hinawa_fw_resp_set_resp_frame ()"><code class="function">hinawa_fw_resp_set_resp_frame()</code></a> with
+frame and return rcode for response subaction.</p>
+<div class="refsect3">
+<a name="HinawaFwResp-requested2.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>self</p></td>
+<td class="parameter_description"><p>A <a class="link" href="HinawaFwResp.html" title="HinawaFwResp"><span class="type">HinawaFwResp</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>tcode</p></td>
+<td class="parameter_description"><p>One of <span class="type">HinawaTcode</span> enumerations</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>offset</p></td>
+<td class="parameter_description"><p>The address offset at which the transaction arrives.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>src</p></td>
+<td class="parameter_description"><p>The node ID of source for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>dst</p></td>
+<td class="parameter_description"><p>The node ID of destination for the transaction.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>card</p></td>
+<td class="parameter_description"><p>The index of card corresponding to 1394 OHCI controller.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>generation</p></td>
+<td class="parameter_description"><p>The generation of bus when the transaction is transferred.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>frame</p></td>
+<td class="parameter_description"><p>The array with elements for byte
+data. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Generics and defining elements of containers and arrays."><span class="acronym">element-type</span></acronym> guint8][<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>length</p></td>
+<td class="parameter_description"><p>The length of bytes for the frame.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>user_data</p></td>
+<td class="parameter_description"><p>user data set when the signal handler was connected.</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="HinawaFwResp-requested2.returns"></a><h4>Returns</h4>
+<p> One of <span class="type">HinawaRcode</span> enumerators corresponding to rcodes defined in IEEE 1394
+specification.</p>
 </div>
 <p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
 </div>
