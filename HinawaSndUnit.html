@@ -8,7 +8,7 @@
 <link rel="up" href="hinawa-snd.html" title="Hinawa objects for Linux sound subsystem.">
 <link rel="prev" href="hinawa-snd.html" title="Hinawa objects for Linux sound subsystem.">
 <link rel="next" href="HinawaSndDice.html" title="HinawaSndDice">
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -117,7 +117,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<span class="type">char</span> *</td>
 <td class="property_name"><a class="link" href="HinawaSndUnit.html#HinawaSndUnit--device" title="The “device” property">device</a></td>
 <td class="property_flags">Read</td>
 </tr>
@@ -206,6 +206,7 @@ hinawa_snd_unit_error_quark ();</pre>
 <a name="hinawa-snd-unit-error-quark.returns"></a><h4>Returns</h4>
 <p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
 </div>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -255,6 +256,7 @@ hinawa_snd_unit_open (<em class="parameter"><code><a class="link" href="HinawaSn
 </tbody>
 </table></div>
 </div>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -280,7 +282,7 @@ hinawa_snd_unit_get_node (<em class="parameter"><code><a class="link" href="Hina
 <tr>
 <td class="parameter_name"><p>node</p></td>
 <td class="parameter_description"><p>A <a class="link" href="HinawaFwNode.html" title="HinawaFwNode"><span class="type">HinawaFwNode</span></a>. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -316,6 +318,7 @@ hinawa_snd_unit_lock (<em class="parameter"><code><a class="link" href="HinawaSn
 </tbody>
 </table></div>
 </div>
+<p class="since">Since: 0.3</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -346,6 +349,7 @@ hinawa_snd_unit_unlock (<em class="parameter"><code><a class="link" href="Hinawa
 </tbody>
 </table></div>
 </div>
+<p class="since">Since: 0.3</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -398,19 +402,21 @@ hinawa_snd_unit_create_source (<em class="parameter"><code><a class="link" href=
 <div class="refsect2">
 <a name="HinawaSndUnit--card"></a><h3>The <code class="literal">“card”</code> property</h3>
 <pre class="programlisting">  “card”                     <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>The numerical ID for ALSA sound card.</p>
+<p>The numeric ID for ALSA sound card.</p>
 <p>Owner: HinawaSndUnit</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 2.0</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaSndUnit--device"></a><h3>The <code class="literal">“device”</code> property</h3>
-<pre class="programlisting">  “device”                   <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<pre class="programlisting">  “device”                   <span class="type">char</span> *</pre>
 <p>A name of special file as FireWire unit.</p>
 <p>Owner: HinawaSndUnit</p>
 <p>Flags: Read</p>
 <p>Default value: NULL</p>
+<p class="since">Since: 0.3</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -420,6 +426,7 @@ hinawa_snd_unit_create_source (<em class="parameter"><code><a class="link" href=
 <p>Owner: HinawaSndUnit</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -429,6 +436,7 @@ hinawa_snd_unit_create_source (<em class="parameter"><code><a class="link" href=
 <p>Owner: HinawaSndUnit</p>
 <p>Flags: Read</p>
 <p>Default value: FALSE</p>
+<p class="since">Since: 0.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -438,6 +446,7 @@ hinawa_snd_unit_create_source (<em class="parameter"><code><a class="link" href=
 <p>Owner: HinawaSndUnit</p>
 <p>Flags: Read</p>
 <p>Default value: HINAWA_SND_UNIT_TYPE_DICE</p>
+<p class="since">Since: 1.0</p>
 </div>
 </div>
 <div class="refsect1">
@@ -474,6 +483,7 @@ hwdep character device.</p>
 </table></div>
 </div>
 <p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 2.0</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -512,10 +522,11 @@ signal is generated.</p>
 </table></div>
 </div>
 <p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
+<p class="since">Since: 0.3</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32.1</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

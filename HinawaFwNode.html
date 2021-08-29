@@ -8,7 +8,7 @@
 <link rel="up" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="prev" href="hinawa-fw.html" title="Hinawa objects for Linux FireWire subsystem.">
 <link rel="next" href="HinawaFwResp.html" title="HinawaFwResp">
-<meta name="generator" content="GTK-Doc V1.32.1 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -190,6 +190,7 @@ hinawa_fw_node_error_quark ();</pre>
 <a name="hinawa-fw-node-error-quark.returns"></a><h4>Returns</h4>
 <p> A <a href="../glib/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</p>
 </div>
+<p class="since">Since: 2.1</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -268,7 +269,7 @@ hinawa_fw_node_get_config_rom (<em class="parameter"><code><a class="link" href=
 <td class="parameter_name"><p>image</p></td>
 <td class="parameter_description"><p>The content of
 configuration ROM. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=length][<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>length</p></td>
@@ -338,55 +339,61 @@ and code of <a class="link" href="hinawa-hinawa-enum-types.html#HinawaFwNodeErro
 <div class="refsect2">
 <a name="HinawaFwNode--bus-manager-node-id"></a><h3>The <code class="literal">“bus-manager-node-id”</code> property</h3>
 <pre class="programlisting">  “bus-manager-node-id”      <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Node-ID for bus manager on the bus at this generation.</p>
+<p>Node ID of node which plays role of bus manager at current generation of bus topology.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--generation"></a><h3>The <code class="literal">“generation”</code> property</h3>
 <pre class="programlisting">  “generation”               <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>current level of generation on this bus.</p>
+<p>Current generation of bus topology.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--ir-manager-node-id"></a><h3>The <code class="literal">“ir-manager-node-id”</code> property</h3>
 <pre class="programlisting">  “ir-manager-node-id”       <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Node-ID for isochronous resource manager on the bus at this generation.</p>
+<p>Node ID of node which plays role of isochronous resource manager at current generation of bus topology.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--local-node-id"></a><h3>The <code class="literal">“local-node-id”</code> property</h3>
 <pre class="programlisting">  “local-node-id”            <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Node-ID for a node which this node use to communicate to the other nodes on the bus at this generation.</p>
+<p>Node ID of node which application uses to communicate to node associated to instance of object at current generation of bus topology. In general, it is for OHCI 1394 host controller.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--node-id"></a><h3>The <code class="literal">“node-id”</code> property</h3>
 <pre class="programlisting">  “node-id”                  <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Node-ID of this node at this generation.</p>
+<p>Node ID of node associated to instance of object at current generation of bus topology. This parameter is effective after the association.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="HinawaFwNode--root-node-id"></a><h3>The <code class="literal">“root-node-id”</code> property</h3>
 <pre class="programlisting">  “root-node-id”             <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Node-ID for root of bus topology at this generation.</p>
+<p>Node ID of root node in bus topology at current generation of the bus topology.</p>
 <p>Owner: HinawaFwNode</p>
 <p>Flags: Read</p>
 <p>Default value: 0</p>
+<p class="since">Since: 1.4</p>
 </div>
 </div>
 <div class="refsect1">
@@ -422,7 +429,7 @@ property.</p>
 </table></div>
 </div>
 <p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since: 1.4.</p>
+<p class="since">Since: 1.4</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -455,11 +462,11 @@ the <a class="link" href="HinawaFwNode.html#HinawaFwNode-disconnected" title="Th
 </table></div>
 </div>
 <p>Flags: <a href="../gobject/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>
-<p class="since">Since: 1.4.</p>
+<p class="since">Since: 1.4</p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.32.1</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
