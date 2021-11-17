@@ -17,6 +17,7 @@
       <sub name="HinawaSndEfw" link="HinawaSndEfw.html"/>
       <sub name="HinawaSndDg00x" link="HinawaSndDg00x.html"/>
       <sub name="HinawaSndMotu" link="HinawaSndMotu.html"/>
+      <sub name="HinawaSndMotuRegisterDspParameter" link="HinawaSndMotuRegisterDspParameter.html"/>
       <sub name="HinawaSndTscm" link="HinawaSndTscm.html"/>
     </sub>
     <sub name="Index of all symbols" link="index-all.html"/>
@@ -112,7 +113,27 @@
     <keyword type="signal" name="The “message” signal" link="HinawaSndDg00x.html#HinawaSndDg00x-message"/>
     <keyword type="function" name="hinawa_snd_motu_new ()" link="HinawaSndMotu.html#hinawa-snd-motu-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_motu_open ()" link="HinawaSndMotu.html#hinawa-snd-motu-open" since="0.8"/>
+    <keyword type="function" name="hinawa_snd_motu_read_register_dsp_parameter ()" link="HinawaSndMotu.html#hinawa-snd-motu-read-register-dsp-parameter" since="2.4"/>
+    <keyword type="function" name="hinawa_snd_motu_read_register_dsp_meter ()" link="HinawaSndMotu.html#hinawa-snd-motu-read-register-dsp-meter" since="2.4"/>
+    <keyword type="function" name="hinawa_snd_motu_read_command_dsp_meter ()" link="HinawaSndMotu.html#hinawa-snd-motu-read-command-dsp-meter" since="2.4"/>
     <keyword type="signal" name="The “notified” signal" link="HinawaSndMotu.html#HinawaSndMotu-notified"/>
+    <keyword type="signal" name="The “register-dsp-changed” signal" link="HinawaSndMotu.html#HinawaSndMotu-register-dsp-changed"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_new ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-new" since="2.4"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_source_gain ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-source-gain"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_source_pan ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-source-pan"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_source_flag ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-source-flag"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_source_paired_balance ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-source-paired-balance"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_source_paired_width ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-source-paired-width"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_output_paired_volume ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-output-paired-volume"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_mixer_output_paired_flag ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-mixer-output-paired-flag"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_main_output_paired_volume ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-main-output-paired-volume"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_headphone_output_paired_volume ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-headphone-output-paired-volume"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_headphone_output_paired_assignment ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-headphone-output-paired-assignment"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_line_input_boost_flag ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-line-input-boost-flag"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_line_input_nominal_level_flag ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-line-input-nominal-level-flag"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_input_gain_and_invert ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-input-gain-and-invert"/>
+    <keyword type="function" name="hinawa_snd_motu_register_dsp_parameter_get_input_flag ()" link="HinawaSndMotuRegisterDspParameter.html#hinawa-snd-motu-register-dsp-parameter-get-input-flag"/>
+    <keyword type="macro" name="HINAWA_TYPE_MOTU_REGISTER_DSP_PARAMETER" link="HinawaSndMotuRegisterDspParameter.html#HINAWA-TYPE-MOTU-REGISTER-DSP-PARAMETER:CAPS"/>
     <keyword type="function" name="hinawa_snd_tscm_new ()" link="HinawaSndTscm.html#hinawa-snd-tscm-new" since="1.3."/>
     <keyword type="function" name="hinawa_snd_tscm_open ()" link="HinawaSndTscm.html#hinawa-snd-tscm-open" since="1.1"/>
     <keyword type="function" name="hinawa_snd_tscm_get_state ()" link="HinawaSndTscm.html#hinawa-snd-tscm-get-state" since="1.1"/>
