@@ -1,0 +1,326 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hinawa.SndEfw.transaction_sync</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Hinawa.SndEfw.transaction_sync"/>
+  <meta priority="og:description" content="Reference for Hinawa.SndEfw.transaction_sync"/>
+  <meta name="twitter:title" content="Hinawa.SndEfw.transaction_sync"/>
+  <meta name="twitter:description" content="Reference for Hinawa.SndEfw.transaction_sync"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">Hinawa</a></h3>
+        <p>API Version: 3.0</p>
+        
+        <p>Library Version: 2.4.0</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="class.SndEfw.html">SndEfw</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.SndEfw.open.html">open</a>
+  
+    <a class="method" href="method.SndEfw.transaction.html">transaction</a>
+  
+    <a class="method" href="method.SndEfw.transaction_async.html">transaction_async</a>
+  
+    <a class="method current" href="method.SndEfw.transaction_sync.html">transaction_sync</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index.html">Hinawa</a><span class="sep"></span><a href="class.SndEfw.html">SndEfw</a><span class="sep"></span>transaction_sync</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.h#L86">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
+<span class="n">hinawa_snd_efw_transaction_sync</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">HinawaSndEfw</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">command</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">guint32</span><span class="o">*</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">gsize</span><span class="w"> </span><span class="n">arg_count</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint32</span><span class="o">*</span><span class="w"> </span><span class="k">const</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">gsize</span><span class="o">*</span><span class="w"> </span><span class="n">param_count</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">guint</span><span class="w"> </span><span class="n">timeout_ms</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">GError</span><span class="o">**</span><span class="w"> </span><span class="n">error</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.c#L244">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Transfer asynchronous transaction for command frame of Echo Fireworks protocol, then wait
+asynchronous transaction for response frame within the given&nbsp;timeout.</p>
+      </div>
+
+      <div class="docblock">
+        <table>
+          
+          
+          <tr><td>Available since:</td><td>2.1.</td></tr>
+          
+          
+          
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>category</code></td>
+            <td><code>guint</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>One of category for the&nbsp;transaction.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>command</code></td>
+            <td><code>guint</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>One of commands for the&nbsp;transaction.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>args</code></td>
+            <td>An array of&nbsp;<code>guint32</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>An array with elements for
+  quadlet data as arguments for&nbsp;command.</p></td>
+          </tr>
+          
+          <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td>The length of the array is specified in the <code>arg_count</code> argument.</td></tr>
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>arg_count</code></td>
+            <td><code>gsize</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The number of quadlets in the args&nbsp;array.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>params</code></td>
+            <td>An array of&nbsp;<code>guint32*</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>An array with elements for
+    quadlet data to save parameters in response. Callers should give it
+    for buffer with enough space against the request since this library
+    performs no reallocation. Due to the reason, the value of this
+    argument should point to the pointer to the array and immutable.
+    The content of array is mutable for parameters in&nbsp;response.</p></td>
+          </tr>
+          <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
+          
+          <tr><td>&nbsp;</td><td>The argument can be set to <code>NULL</code>.</td></tr>
+          
+          
+          
+          <tr><td>&nbsp;</td><td>The length of the array is specified in the <code>param_count</code> argument.</td></tr>
+          <tr><td>&nbsp;</td><td title="transfer: full">The instance takes ownership of the data, and is responsible for freeing it.</td></tr>
+          
+          
+          <tr class="arg-name">
+            <td><code>param_count</code></td>
+            <td><code>gsize*</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The number of quadlets in the params&nbsp;array.</p></td>
+          </tr>
+          <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>timeout_ms</code></td>
+            <td><code>guint</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The timeout to wait for response of the transaction since request is transferred in&nbsp;milliseconds.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>error</code></td>
+            <td><code>GError **</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td>The return location for a <code>GError*</code>, or <code>NULL</code>.</td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hinawa &ndash; 3.0: Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Hinawa: Overview"/>
+  <meta property="og:description" content="Reference for Hinawa-3.0: Overview"/>
+  <meta name="twitter:title" content="Hinawa: Overview"/>
+  <meta name="twitter:description" content="Reference for Hinawa-3.0: Overview"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">Hinawa</a></h3>
+        <p>API Version: 3.0</p>
+        
+        <p>Library Version: 2.4.0</p>
+        
+      </div>
+      
+      
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <section>
+    <div class="docblock">
+    <p>This library gives some objects for abstraction to operate system resources in two Linux
+subsystems; FireWire subsystem and Sound&nbsp;subsystem.</p>
+<p>This library mainly supports operations for asynchronous communication to nodes on <span class="caps">IEEE</span> 1394 bus.
+Additionally, this library supports some model-specific operations for Audio and Music units on
+<span class="caps">IEEE</span> 1394 bus, supported by drivers in <span class="caps">ALSA</span> firewire&nbsp;stack.</p>
+<p><img alt="Overview of libhinawa" src="overview.png" /></p>
+<p>This library expects userspace applications to use GMainContext to run event dispatcher with
+GSource from HinawaFwNode and HinawaSndUnit. Additionally this library launches a thread for event
+notifier which emits GObject signal and execute any handler on this thread so that the handler can
+wait for events from the&nbsp;dispatcher.</p>
+<p>libhinawa supports gobject introspection, thus this library is available with gobject introspection
+bindings of each language such as Python, Ruby and so on. When using this mechanism, please refer
+to documents in each language&nbsp;implementation.</p>
+    </div>
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      
+        
+      
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

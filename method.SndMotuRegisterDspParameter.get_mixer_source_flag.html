@@ -1,0 +1,237 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hinawa.SndMotuRegisterDspParameter.get_mixer_source_flag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta priority="og:title" content="Hinawa.SndMotuRegisterDspParameter.get_mixer_source_flag"/>
+  <meta priority="og:description" content="Reference for Hinawa.SndMotuRegisterDspParameter.get_mixer_source_flag"/>
+  <meta name="twitter:title" content="Hinawa.SndMotuRegisterDspParameter.get_mixer_source_flag"/>
+  <meta name="twitter:description" content="Reference for Hinawa.SndMotuRegisterDspParameter.get_mixer_source_flag"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">Hinawa</a></h3>
+        <p>API Version: 3.0</p>
+        
+        <p>Library Version: 2.4.0</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a href="struct.SndMotuRegisterDspParameter.html">SndMotuRegisterDspParameter</a>
+  </div>
+</div>
+<div class="section">
+  <h5>Methods</h5>
+  <div class="links">
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_headphone_output_paired_assignment.html">get_headphone_output_paired_assignment</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_headphone_output_paired_volume.html">get_headphone_output_paired_volume</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_input_flag.html">get_input_flag</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_input_gain_and_invert.html">get_input_gain_and_invert</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_line_input_boost_flag.html">get_line_input_boost_flag</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_line_input_nominal_level_flag.html">get_line_input_nominal_level_flag</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_main_output_paired_volume.html">get_main_output_paired_volume</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_output_paired_flag.html">get_mixer_output_paired_flag</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_output_paired_volume.html">get_mixer_output_paired_volume</a>
+  
+    <a class="method current" href="method.SndMotuRegisterDspParameter.get_mixer_source_flag.html">get_mixer_source_flag</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_source_gain.html">get_mixer_source_gain</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_source_paired_balance.html">get_mixer_source_paired_balance</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_source_paired_width.html">get_mixer_source_paired_width</a>
+  
+    <a class="method" href="method.SndMotuRegisterDspParameter.get_mixer_source_pan.html">get_mixer_source_pan</a>
+  
+  </div>
+</div>
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Method</h3>
+    <h1><a href="index.html">Hinawa</a><span class="sep"></span><a href="struct.SndMotuRegisterDspParameter.html">SndMotuRegisterDspParameter</a><span class="sep"></span>get_mixer_source_flag</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a class="anchor" href="#declaration"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_motu_register_dsp_parameter.h#L28">[src]</a>
+        
+      </h4>
+
+      <div class="docblock c-decl">
+        <pre><code><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"></span>
+<span class="n">hinawa_snd_motu_register_dsp_parameter_get_mixer_source_flag</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">HinawaSndMotuRegisterDspParameter</span><span class="o">*</span><span class="w"> </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">gsize</span><span class="w"> </span><span class="n">mixer</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">guint8</span><span class="o">**</span><span class="w"> </span><span class="n">flag</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</pre></div>
+</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a class="anchor" href="#description"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_motu_register_dsp_parameter.c#L87">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+        <p>Get the array with elements for the data of source flags in indicated mixer. The data consists of
+bit flags&nbsp;below:</p>
+<ul>
+<li>0x01: whether to enable mute function for the&nbsp;source.</li>
+<li>0x02: whether to enable solo function for the&nbsp;source.</li>
+</ul>
+      </div>
+
+      <div class="docblock">
+        <table>
+          
+          
+          
+          
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    
+    <div class="parameters toggle-wrapper">
+      <h4 id="parameters">
+        Parameters
+        <a href="#parameters" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+        <table class="arguments">
+          
+          <tr class="arg-name">
+            <td><code>mixer</code></td>
+            <td><code>gsize</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The numeric index of mixer, up to&nbsp;4.</p></td>
+          </tr>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <tr class="arg-name">
+            <td><code>flag</code></td>
+            <td>An array of&nbsp;<code>guint8*</code></td>
+          </tr>
+          <tr class="arg-description">
+            <td>&nbsp;</td>
+            <td><p>The array with elements for the data of source&nbsp;flag.</p></td>
+          </tr>
+          <tr><td>&nbsp;</td><td title="direction: out">The argument will be set by the function.</td></tr>
+          
+          
+          
+          
+          <tr><td>&nbsp;</td><td>The array must have 20 elements.</td></tr>
+          
+          <tr><td>&nbsp;</td><td title="transfer: none">The data is owned by the caller of the function.</td></tr>
+          
+          
+          
+        </table>
+      </div>
+    </div>
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!--
+SPDX-FileCopyrightText: 2021 GNOME Foundation
+
+SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hinawa.SndEfwStatus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8" />
+
+  
+  <meta property="og:type" content="website"/>
+
+  
+
+  
+  <meta property="og:title" content="Hinawa.SndEfwStatus"/>
+  <meta property="og:description" content="Reference for Hinawa.SndEfwStatus"/>
+  <meta name="twitter:title" content="Hinawa.SndEfwStatus"/>
+  <meta name="twitter:description" content="Reference for Hinawa.SndEfwStatus"/>
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+
+  
+  
+
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  
+
+  
+  <script src="urlmap.js"></script>
+  
+  
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="body-wrapper" tabindex="-1">
+
+    <nav class="sidebar devhelp-hidden">
+      
+      
+      <div class="section namespace">
+        <h3><a href="index.html">Hinawa</a></h3>
+        <p>API Version: 3.0</p>
+        
+        <p>Library Version: 2.4.0</p>
+        
+      </div>
+      
+<div class="section">
+  <h5>Type</h5>
+  <div class="links">
+    <a class="current" href="enum.SndEfwStatus.html">SndEfwStatus</a>
+  </div>
+</div>
+
+
+
+
+    </nav>
+    
+    <button id="btn-to-top" class="hidden"><span class="up-arrow"></span></button>
+
+    
+<section id="main" class="content">
+  <header>
+    <h3>Enumeration</h3>
+    <h1><a href="index.html">Hinawa</a><span class="sep"></span>SndEfwStatus</h1>
+  </header>
+
+  <section>
+    <div class="declaration toggle-wrapper">
+      <h4 style="display:flex;" id="declaration">
+        Declaration
+        <a href="#declaration" class="anchor"></a>
+        
+      </h4>
+
+      <div class="docblock">
+        <pre><code>enum Hinawa.SndEfwStatus</code></pre>
+      </div>
+    </div>
+
+    <div class="description toggle-wrapper">
+      <h4 style="display:flex;" id="description">
+        Description
+        <a href="#description" class="anchor"></a>
+        
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/hinawa_enum_types.h#L199">[src]</a>
+        
+      </h4>
+
+      <div class="docblock">
+      <p>A set of status code for Echo Audio Fireworks&nbsp;Transaction.</p>
+      </div>
+
+      <div class="docblock">
+        <table class="attributes">
+          
+          
+          <tr><td>Available since:</td><td>2.1</td></tr>
+          
+          
+        </table>
+      </div>
+
+      
+    </div>
+
+    <div class="members toggle-wrapper">
+      <h4 id="members">
+        Members
+        <a href="#members" class="anchor"></a>
+      </h4>
+
+      <div class="docblock">
+      <table class="enum-members">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+      
+        <tr>
+          <td><a id="ok" href="#ok"><code title="Value: 0">HINAWA_SND_EFW_STATUS_OK</code></a></td>
+          <td><p>The transaction finishes&nbsp;successfully.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad" href="#bad"><code title="Value: 1">HINAWA_SND_EFW_STATUS_BAD</code></a></td>
+          <td><p>The request or response includes invalid&nbsp;header.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_command" href="#bad_command"><code title="Value: 2">HINAWA_SND_EFW_STATUS_BAD_COMMAND</code></a></td>
+          <td><p>The request includes invalid category or&nbsp;command.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="comm_err" href="#comm_err"><code title="Value: 3">HINAWA_SND_EFW_STATUS_COMM_ERR</code></a></td>
+          <td><p>The transaction fails due to communication&nbsp;error.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_quad_count" href="#bad_quad_count"><code title="Value: 4">HINAWA_SND_EFW_STATUS_BAD_QUAD_COUNT</code></a></td>
+          <td><p>The number of quadlets in transaction is&nbsp;invalid.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="unsupported" href="#unsupported"><code title="Value: 5">HINAWA_SND_EFW_STATUS_UNSUPPORTED</code></a></td>
+          <td><p>The request is not&nbsp;supported.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="timeout" href="#timeout"><code title="Value: 6">HINAWA_SND_EFW_STATUS_TIMEOUT</code></a></td>
+          <td><p>The transaction is canceled due to response&nbsp;timeout.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="dsp_timeout" href="#dsp_timeout"><code title="Value: 7">HINAWA_SND_EFW_STATUS_DSP_TIMEOUT</code></a></td>
+          <td><p>The operation for <span class="caps">DSP</span> did not finish within&nbsp;timeout.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_rate" href="#bad_rate"><code title="Value: 8">HINAWA_SND_EFW_STATUS_BAD_RATE</code></a></td>
+          <td><p>The request includes invalid value for sampling&nbsp;frequency.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_clock" href="#bad_clock"><code title="Value: 9">HINAWA_SND_EFW_STATUS_BAD_CLOCK</code></a></td>
+          <td><p>The request includes invalid value for source of&nbsp;clock.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_channel" href="#bad_channel"><code title="Value: 10">HINAWA_SND_EFW_STATUS_BAD_CHANNEL</code></a></td>
+          <td><p>The request includes invalid value for the number of&nbsp;channel.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_pan" href="#bad_pan"><code title="Value: 11">HINAWA_SND_EFW_STATUS_BAD_PAN</code></a></td>
+          <td><p>The request includes invalid value for&nbsp;panning.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="flash_busy" href="#flash_busy"><code title="Value: 12">HINAWA_SND_EFW_STATUS_FLASH_BUSY</code></a></td>
+          <td><p>The on-board flash is busy and not&nbsp;operable.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_mirror" href="#bad_mirror"><code title="Value: 13">HINAWA_SND_EFW_STATUS_BAD_MIRROR</code></a></td>
+          <td><p>The request includes invalid value for mirroring&nbsp;channel.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_led" href="#bad_led"><code title="Value: 14">HINAWA_SND_EFW_STATUS_BAD_LED</code></a></td>
+          <td><p>The request includes invalid value for <span class="caps">LED</span>.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="bad_parameter" href="#bad_parameter"><code title="Value: 15">HINAWA_SND_EFW_STATUS_BAD_PARAMETER</code></a></td>
+          <td><p>The request includes invalid value of&nbsp;parameter.</p></td>
+        </tr>
+      
+        <tr>
+          <td><a id="large_resp" href="#large_resp"><code title="Value: 16">HINAWA_SND_EFW_STATUS_LARGE_RESP</code></a></td>
+          <td><p>The size of response is larger than&nbsp;expected.</p></td>
+        </tr>
+      
+      </table>
+      </div>
+    </div>
+
+    
+
+    
+
+  </section>
+</section>
+
+
+    
+<div id="toc" class="toc">
+  <nav aria-labelledby="toc-title">
+    <p id="toc-title">Content</p>
+    <ul class="toc-list">
+      <li class="toc-list-item"><a href="#description"><span class="link-text">Description</span></a></li>
+      <li class="toc-list-item"><a href="#members"><span class="link-text">Members</span></a></li>
+      
+
+      
+
+    </ul>
+  </nav>
+</div>
+
+
+    <section id="search" class="content hidden"></section>
+
+    <footer>
+    
+    </footer>
+  </div>
+</body>
+</html>
