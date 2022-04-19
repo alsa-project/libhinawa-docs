@@ -112,15 +112,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_unit.c#L221">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_unit.c#L219">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>When the sound card is not available anymore due to unbinding driver
-or hot unplugging, this signal is emit. The owner of this object
-should call <code>g_object_free()</code> as quickly as possible to release <span class="caps">ALSA</span>
-hwdep character&nbsp;device.</p>
+        <p>Emitted when the sound card is not available anymore due to unbinding driver or hot
+unplugging. The owner of this object should call <a href="javascript:void(0)" data-namespace="GObject" data-link="method.Object.unref.html" class="external"><code>g_object_unref()</code></a> as
+quickly as possible to release <span class="caps">ALSA</span> hwdep character&nbsp;device.</p>
       </div>
 
       <div class="docblock">

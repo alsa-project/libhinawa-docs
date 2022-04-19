@@ -112,13 +112,13 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_node.c#L249">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_node.c#L245">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>When phicical FireWire devices are disconnected from <span class="caps">IEEE</span> 1394 bus,
-the <code>HinawaFwNode::disconnected</code> signal is&nbsp;generated.</p>
+        <p>Emitted when the node is not available anymore due to removal from <span class="caps">IEEE</span> 1394 bus. It&#8217;s
+preferable to call <a href="javascript:void(0)" data-namespace="GObject" data-link="method.Object.unref.html" class="external"><code>g_object_unref()</code></a> immediately to release file&nbsp;descriptor.</p>
       </div>
 
       <div class="docblock">

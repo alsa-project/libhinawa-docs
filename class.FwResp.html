@@ -162,15 +162,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_resp.c#L8">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.FwResp : GObject.Object {
-  parent_instance: GObject,
-  priv: HinawaFwRespPrivate*
+  parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>A transaction responder for request initiated by node in <span class="caps">IEEE</span> 1394 bus.
+The <a href="class.FwResp.html"><code>HinawaFwResp</code></a> responds transaction initiated by node in <span class="caps">IEEE</span> 1394&nbsp;bus.</p>
+<p>This class is an application of Linux FireWire subsystem. All of operations utilize ioctl(2)
+with subsystem specific request&nbsp;commands.</p>
         </div>
 
         <div class="docblock">
@@ -264,7 +268,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.FwResp.release.html">hinawa_fw_resp_release</a></h6>
           <div class="docblock">
-            <p>Stop to listen to a range of address in host&nbsp;controller.</p>
+            <p>Stop to listen to a range of address in local node (e.g. <span class="caps">OHCI</span> 1394&nbsp;controller).</p>
           </div>
           <div class="docblock"><p>Available since: 1.4.</p></div>
         </div>
@@ -273,7 +277,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="method.FwResp.reserve.html">hinawa_fw_resp_reserve</a></h6>
           <div class="docblock">
             <p>Start to listen to a range of address in host controller which connects to the node. The function
-is a variant of #hinawa_fw_resp_reserve_within_region() so that the exact range of address should
+is a variant of <code>hinawa_fw_resp_reserve_within_region()</code> so that the exact range of address should
 be reserved as&nbsp;given.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4.</p></div>
@@ -284,7 +288,7 @@ be reserved as&nbsp;given.</p>
           <div class="docblock">
             <p>Start to listen to range of address equals to #width in local node (e.g. 1394 <span class="caps">OHCI</span> host
 controller), which is used to communicate to the node given as parameter. The range of address
-is looked up in region between #region_start and&nbsp;#region_end.</p>
+is looked up in region between region_start and&nbsp;region_end.</p>
           </div>
           <div class="docblock"><p>Available since: 2.3.</p></div>
         </div>
@@ -382,9 +386,9 @@ is looked up in region between #region_start and&nbsp;#region_end.</p>
         <div class="deprecated">
           <h6><a href="signal.FwResp.requested.html">Hinawa.FwResp::requested</a></h6>
           <div class="docblock">
-            <p>When any node transfers requests to the range of address to which this object listening,
-the <code>HinawaFwResp::requested</code> signal handler is called with <code>HinawaFwTcode</code>, without the
-case that <code>HinawaFwResp::requested2</code> signal handler is already&nbsp;assigned.</p>
+            <p>Emitted when any node transfers requests to the range of address to which this object
+listening, the <code>HinawaFwResp::requested</code> signal handler is called with <code>HinawaFwTcode</code>,
+without the case that <code>HinawaFwResp::requested2</code> signal handler is already&nbsp;assigned.</p>
           </div>
           <div class="docblock"><p>Available since: 0.3</p><p>Deprecated since: 2.2</p></div>
         </div>
@@ -392,10 +396,10 @@ case that <code>HinawaFwResp::requested2</code> signal handler is already&nbsp;a
         <div class="">
           <h6><a href="signal.FwResp.requested2.html">Hinawa.FwResp::requested2</a></h6>
           <div class="docblock">
-            <p>When any node transfers request subaction to the range of address to which this object
-listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived frame for
-the subaction. The handler is expected to call #hinawa_fw_resp_set_resp_frame() with
-frame and return rcode for response&nbsp;subaction.</p>
+            <p>Emitted when any node transfers request subaction to the range of address to which this
+object listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived
+frame for the subaction. The handler is expected to call <code>hinawa_fw_resp_set_resp_frame()</code>
+with frame and return <code>HinawaFwRcode</code> for response&nbsp;subaction.</p>
           </div>
           <div class="docblock"><p>Available since: 2.2</p></div>
         </div>
@@ -518,9 +522,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-requested"><a href="vfunc.FwResp.requested.html">Hinawa.FwRespClass.requested</a></h6>
 
         <div class="docblock">
-          <p>When any node transfers requests to the range of address to which this object listening,
-the <code>HinawaFwRespClass::requested</code> signal handler is called with <code>HinawaFwTcode</code>, without the
-case that <code>HinawaFwRespClass::requested2</code> signal handler is already&nbsp;assigned.</p>
+          <p>Class closure for the <code>HinawaFwResp::requested</code> signal.</p>
         </div>
 
           <div class="docblock"><p>Deprecated since: 2.2</p></div>
@@ -530,10 +532,7 @@ case that <code>HinawaFwRespClass::requested2</code> signal handler is already&n
         <h6 id="vfunc-requested2"><a href="vfunc.FwResp.requested2.html">Hinawa.FwRespClass.requested2</a></h6>
 
         <div class="docblock">
-          <p>When any node transfers request subaction to the range of address to which this object
-listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived frame for
-the subaction. The handler is expected to call #hinawa_fw_resp_set_resp_frame() with
-frame and return rcode for response&nbsp;subaction.</p>
+          <p>Class closure for the <code>HinawaFwResp::requested2</code> signal.</p>
         </div>
 
           <div class="docblock"><p>Available since: 2.2</p></div>

@@ -112,15 +112,13 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L177">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L174">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>When the unit transfers asynchronous packet as response for Echo Audio Fireworks
-protocol, and the process successfully reads the content of packet from <span class="caps">ALSA</span>
-Fireworks driver, the <code>HinawaFwFcp::responded</code> signal handler is called with parameters
-of the&nbsp;response.</p>
+        <p>Emitted when the node transfers asynchronous packet as response for <span class="caps">FCP</span> and the process
+successfully read the content of&nbsp;packet.</p>
       </div>
 
       <div class="docblock">
@@ -158,7 +156,7 @@ of the&nbsp;response.</p>
           <tr class="arg-description">
             <td>&nbsp;</td>
             <td><p>The array with elements for byte
-        data of response for Function Control&nbsp;Protocol.</p></td>
+        data of response for <span class="caps">FCP</span>.</p></td>
           </tr>
           
           

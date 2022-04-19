@@ -101,7 +101,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.h#L81">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.h#L47">[src]</a>
         
       </h4>
 
@@ -126,15 +126,16 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L283">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L278">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>Finish the pair of <span class="caps">AV</span>/C command and response transactions. The timeout_ms parameter is
-used to wait for response transaction since the command transaction is initiated, ignoring
-<code>HinawaFwFcp:timeout</code> property of instance. The timeout is not expanded in the case that <span class="caps">AV</span>/C
-<span class="caps">INTERIM</span> status is arrived, thus the caller should expand the timeout in advance for the&nbsp;case.</p>
+        <p>Finish the pair of asynchronous transaction for <span class="caps">AV</span>/C command and response transactions. The
+timeout_ms parameter is used to wait for response transaction since the command transaction is
+initiated, ignoring <a href="property.FwFcp.timeout.html"><code>HinawaFwFcp:timeout</code></a> property of instance. The timeout is not expanded in
+the case that <span class="caps">AV</span>/C <span class="caps">INTERIM</span> status is arrived, thus the caller should expand the timeout in
+advance for the&nbsp;case.</p>
       </div>
 
       <div class="docblock">

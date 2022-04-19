@@ -114,17 +114,16 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_motu.c#L51">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_motu.c#L48">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>When <span class="caps">MOTU</span> register <span class="caps">DSP</span> models transfer events by messages in the sequence of isochronous
-packet, the <code>HinawaSndMotu::register-dsp-changed</code> signal is emit.
-The event consists of encoded data. The most significant byte is the type of message. The
-next two bytes are identifier 0 and 1. The least significant byte is value. The meaning
-of identifier 0, 1 and value is decided depending on the type. For detail, see
-<code>sound/firewire/motu/motu-register-dsp-message-parser.c</code> in Linux&nbsp;kernel.</p>
+        <p>Emitted when <span class="caps">MOTU</span> register <span class="caps">DSP</span> models transfer events by messages in the sequence of
+isochronous packet. The event consists of encoded data. The most significant byte is the
+type of message. The next two bytes are identifier 0 and 1. The least significant byte
+is value. The meaning of identifier 0, 1 and value is decided depending on the type.
+For detail, see <code>sound/firewire/motu/motu-register-dsp-message-parser.c</code> in Linux&nbsp;kernel.</p>
       </div>
 
       <div class="docblock">

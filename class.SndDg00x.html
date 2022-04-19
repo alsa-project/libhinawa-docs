@@ -137,6 +137,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_dg00x.c#L7">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.SndDg00x : Hinawa.SndUnit {
@@ -144,7 +146,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>A notification listener for Digidesign Digi 00x models.
+A <a href="class.SndDg00x.html"><code>HinawaSndDg00x</code></a> listen to Dg00x notification and generates signal when&nbsp;received.</p>
         </div>
 
         <div class="docblock">
@@ -238,7 +241,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h5 style="display:block;">Methods inherited from <a href="class.SndUnit.html">HinawaSndUnit</a> (5)</h5><div class="docblock">
           
             <h6><a href="method.SndUnit.create_source.html">hinawa_snd_unit_create_source</a></h6><div class="docblock">
-              <p>Create Gsource for GMainContext to dispatch events for the sound&nbsp;device.</p>
+              <p>Create <code>GSource</code> for <code>GMainContext</code> to dispatch events for the sound&nbsp;device.</p>
             </div>
             <div class="docblock"><p>Available since: 1.4.</p></div>
           
@@ -248,7 +251,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
             <div class="docblock"><p>Available since: 2.0.</p></div>
           
             <h6><a href="method.SndUnit.lock.html">hinawa_snd_unit_lock</a></h6><div class="docblock">
-              <p>Disallow <span class="caps">ALSA</span> to start&nbsp;kernel-streaming.</p>
+              <p>Disallow corresponding <span class="caps">ALSA</span> driver to start packet&nbsp;streaming.</p>
             </div>
             <div class="docblock"><p>Available since: 0.3</p></div>
           
@@ -258,7 +261,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
             <div class="docblock"><p>Available since: 0.4</p></div>
           
             <h6><a href="method.SndUnit.unlock.html">hinawa_snd_unit_unlock</a></h6><div class="docblock">
-              <p>Allow <span class="caps">ALSA</span> to start&nbsp;kernel-streaming.</p>
+              <p>Allow corresponding <span class="caps">ALSA</span> driver to start packet&nbsp;streaming.</p>
             </div>
             <div class="docblock"><p>Available since: 0.3</p></div>
           
@@ -347,7 +350,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="signal.SndDg00x.message.html">Hinawa.SndDg00x::message</a></h6>
           <div class="docblock">
-            <p>When Dg00x models transfer notification, the <code>HinawaSndDg00x::message</code> signal is&nbsp;generated.</p>
+            <p>Emitted when Dg00x models transfer&nbsp;notification.</p>
           </div>
           <div class="docblock"><p>Available since: 0.7</p></div>
         </div>
@@ -361,16 +364,15 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h5 style="display:block;">Signals inherited from <a href="class.SndUnit.html">HinawaSndUnit</a> (2)</h5><div class="docblock">
           
             <h6><a href="signal.SndUnit.disconnected.html">Hinawa.SndUnit::disconnected</a></h6><div class="docblock">
-              <p>When the sound card is not available anymore due to unbinding driver
-or hot unplugging, this signal is emit. The owner of this object
-should call <code>g_object_free()</code> as quickly as possible to release <span class="caps">ALSA</span>
-hwdep character&nbsp;device.</p>
+              <p>Emitted when the sound card is not available anymore due to unbinding driver or hot
+unplugging. The owner of this object should call <code>g_object_unref()</code> as
+quickly as possible to release <span class="caps">ALSA</span> hwdep character&nbsp;device.</p>
             </div>
             <div class="docblock"><p>Available since: 2.0</p></div>
           
             <h6><a href="signal.SndUnit.lock-status.html">Hinawa.SndUnit::lock-status</a></h6><div class="docblock">
-              <p>When <span class="caps">ALSA</span> kernel-streaming status is changed, this <code>HinawaSndUnit::lock-status</code>
-signal is&nbsp;generated.</p>
+              <p>Emitted when corresponding <span class="caps">ALSA</span> driver changes status of lock by starting/stopping
+packet streaming requested by <span class="caps">ALSA</span> <span class="caps">PCM</span>/Rawmidi&nbsp;applications.</p>
             </div>
             <div class="docblock"><p>Available since: 0.3</p></div>
           
@@ -462,7 +464,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-message"><a href="vfunc.SndDg00x.message.html">Hinawa.SndDg00xClass.message</a></h6>
 
         <div class="docblock">
-          <p>When Dg00x models transfer notification, the <code>HinawaSndDg00xClass::message</code> handler is&nbsp;called.</p>
+          <p>Class closure for the <code>HinawaSndDg00x::message</code> signal.</p>
         </div>
 
           <div class="docblock"><p>Available since: 1.2</p></div>

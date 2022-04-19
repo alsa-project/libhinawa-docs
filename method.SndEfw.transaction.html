@@ -99,7 +99,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.h#L80">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.h#L47">[src]</a>
         
       </h4>
 
@@ -125,7 +125,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.c#L328">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_efw.c#L326">[src]</a>
         
       </h4>
 
@@ -202,8 +202,8 @@ the response of transaction within 200 millisecond&nbsp;timeout.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>An array with elements for
-  quadlet data as arguments for&nbsp;command.</p></td>
+            <td><p>An array with elements for quadlet data as
+  arguments for&nbsp;command.</p></td>
           </tr>
           
           <tr><td>&nbsp;</td><td>The argument can be <code>NULL</code>.</td></tr>
@@ -239,12 +239,11 @@ the response of transaction within 200 millisecond&nbsp;timeout.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>An array with elements for
-    quadlet data to save parameters in response. Callers should give it
-    for buffer with enough space against the request since this library
-    performs no reallocation. Due to the reason, the value of this
-    argument should point to the pointer to the array and immutable.
-    The content of array is mutable for parameters in&nbsp;response.</p></td>
+            <td><p>An array with elements for quadlet data to save
+    parameters in response. Callers should give it for buffer with enough space against
+    the request since this library performs no reallocation. Due to the reason, the value
+    of this argument should point to the pointer to the array and immutable. The content
+    of array is mutable for parameters in&nbsp;response.</p></td>
           </tr>
           <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
           

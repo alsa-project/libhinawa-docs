@@ -156,15 +156,22 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L7">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.FwFcp : Hinawa.FwResp {
-  parent_instance: HinawaFwResp,
-  priv: HinawaFwFcpPrivate*
+  parent_instance: HinawaFwResp
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>A <span class="caps">FCP</span> transaction executor to node in <span class="caps">IEEE</span> 1394 bus.
+A HinawaFwFcp supports Function Control Protocol (<span class="caps">FCP</span>) in <span class="caps">IEC</span> 61883-1, in which no way is defined
+to match response against command by the contents of frames. In &#8216;<span class="caps">AV</span>/C Digital Interface Command
+Set General Specification Version 4.2&#8217; (Sep 1 2004, <span class="caps">1394TA</span>), a pair of command and response is
+loosely matched by the contents of&nbsp;frames.</p>
+<p>Any of transaction frames should be aligned to 8bit (byte). This class is an application of
+<a href="class.FwReq.html"><code>HinawaFwReq</code></a> / <a href="class.FwResp.html"><code>HinawaFwResp</code></a>.</p>
         </div>
 
         <div class="docblock">
@@ -245,10 +252,11 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.FwFcp.avc_transaction.html">hinawa_fw_fcp_avc_transaction</a></h6>
           <div class="docblock">
-            <p>Finish the pair of <span class="caps">AV</span>/C command and response transactions. The timeout_ms parameter is
-used to wait for response transaction since the command transaction is initiated, ignoring
-<code>HinawaFwFcp:timeout</code> property of instance. The timeout is not expanded in the case that <span class="caps">AV</span>/C
-<span class="caps">INTERIM</span> status is arrived, thus the caller should expand the timeout in advance for the&nbsp;case.</p>
+            <p>Finish the pair of asynchronous transaction for <span class="caps">AV</span>/C command and response transactions. The
+timeout_ms parameter is used to wait for response transaction since the command transaction is
+initiated, ignoring <code>HinawaFwFcp:timeout</code> property of instance. The timeout is not expanded in
+the case that <span class="caps">AV</span>/C <span class="caps">INTERIM</span> status is arrived, thus the caller should expand the timeout in
+advance for the&nbsp;case.</p>
           </div>
           <div class="docblock"><p>Available since: 2.1.</p></div>
         </div>
@@ -264,8 +272,8 @@ used to wait for response transaction since the command transaction is initiated
         <div class="">
           <h6><a href="method.FwFcp.command.html">hinawa_fw_fcp_command</a></h6>
           <div class="docblock">
-            <p>Transfer command frame for <span class="caps">FCP</span>. When receiving response frame for <span class="caps">FCP</span>,
-<code>HinawaFwFcp::responded</code> signal is&nbsp;emitted.</p>
+            <p>Transfer command frame for <span class="caps">FCP</span>. When receiving response frame for <span class="caps">FCP</span>, <code>HinawaFwFcp::responded</code>
+signal is&nbsp;emitted.</p>
           </div>
           <div class="docblock"><p>Available since: 2.1.</p></div>
         </div>
@@ -273,8 +281,9 @@ used to wait for response transaction since the command transaction is initiated
         <div class="deprecated">
           <h6><a href="method.FwFcp.transaction.html">hinawa_fw_fcp_transaction</a></h6>
           <div class="docblock">
-            <p>Finish the pair of command and response transactions for <span class="caps">FCP</span>. The value of <code>HinawaFwFcp:timeout</code>
-property is used to wait for response transaction since the command transaction is&nbsp;initiated.</p>
+            <p>Finish the pair of command and response transactions for <span class="caps">FCP</span>. The value of
+<code>HinawaFwFcp:timeout</code> property is used to wait for response transaction since the command
+transaction is&nbsp;initiated.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4.</p><p>Deprecated since: 2.1</p></div>
         </div>
@@ -300,13 +309,13 @@ property is used to wait for response transaction since the command transaction 
             <div class="docblock"><p>Available since: 2.0</p><p>Deprecated since: 2.2</p></div>
           
             <h6><a href="method.FwResp.release.html">hinawa_fw_resp_release</a></h6><div class="docblock">
-              <p>Stop to listen to a range of address in host&nbsp;controller.</p>
+              <p>Stop to listen to a range of address in local node (e.g. <span class="caps">OHCI</span> 1394&nbsp;controller).</p>
             </div>
             <div class="docblock"><p>Available since: 1.4.</p></div>
           
             <h6><a href="method.FwResp.reserve.html">hinawa_fw_resp_reserve</a></h6><div class="docblock">
               <p>Start to listen to a range of address in host controller which connects to the node. The function
-is a variant of #hinawa_fw_resp_reserve_within_region() so that the exact range of address should
+is a variant of <code>hinawa_fw_resp_reserve_within_region()</code> so that the exact range of address should
 be reserved as&nbsp;given.</p>
             </div>
             <div class="docblock"><p>Available since: 1.4.</p></div>
@@ -314,7 +323,7 @@ be reserved as&nbsp;given.</p>
             <h6><a href="method.FwResp.reserve_within_region.html">hinawa_fw_resp_reserve_within_region</a></h6><div class="docblock">
               <p>Start to listen to range of address equals to #width in local node (e.g. 1394 <span class="caps">OHCI</span> host
 controller), which is used to communicate to the node given as parameter. The range of address
-is looked up in region between #region_start and&nbsp;#region_end.</p>
+is looked up in region between region_start and&nbsp;region_end.</p>
             </div>
             <div class="docblock"><p>Available since: 2.3.</p></div>
           
@@ -422,10 +431,8 @@ is looked up in region between #region_start and&nbsp;#region_end.</p>
         <div class="">
           <h6><a href="signal.FwFcp.responded.html">Hinawa.FwFcp::responded</a></h6>
           <div class="docblock">
-            <p>When the unit transfers asynchronous packet as response for Echo Audio Fireworks
-protocol, and the process successfully reads the content of packet from <span class="caps">ALSA</span>
-Fireworks driver, the <code>HinawaFwFcp::responded</code> signal handler is called with parameters
-of the&nbsp;response.</p>
+            <p>Emitted when the node transfers asynchronous packet as response for <span class="caps">FCP</span> and the process
+successfully read the content of&nbsp;packet.</p>
           </div>
           <div class="docblock"><p>Available since: 2.1</p></div>
         </div>
@@ -439,17 +446,17 @@ of the&nbsp;response.</p>
           <h5 style="display:block;">Signals inherited from <a href="class.FwResp.html">HinawaFwResp</a> (2)</h5><div class="docblock">
           
             <h6><a href="signal.FwResp.requested.html">Hinawa.FwResp::requested</a></h6><div class="docblock">
-              <p>When any node transfers requests to the range of address to which this object listening,
-the <code>HinawaFwResp::requested</code> signal handler is called with <code>HinawaFwTcode</code>, without the
-case that <code>HinawaFwResp::requested2</code> signal handler is already&nbsp;assigned.</p>
+              <p>Emitted when any node transfers requests to the range of address to which this object
+listening, the <code>HinawaFwResp::requested</code> signal handler is called with <code>HinawaFwTcode</code>,
+without the case that <code>HinawaFwResp::requested2</code> signal handler is already&nbsp;assigned.</p>
             </div>
             <div class="docblock"><p>Available since: 0.3</p><p>Deprecated since: 2.2</p></div>
           
             <h6><a href="signal.FwResp.requested2.html">Hinawa.FwResp::requested2</a></h6><div class="docblock">
-              <p>When any node transfers request subaction to the range of address to which this object
-listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived frame for
-the subaction. The handler is expected to call #hinawa_fw_resp_set_resp_frame() with
-frame and return rcode for response&nbsp;subaction.</p>
+              <p>Emitted when any node transfers request subaction to the range of address to which this
+object listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived
+frame for the subaction. The handler is expected to call <code>hinawa_fw_resp_set_resp_frame()</code>
+with frame and return <code>HinawaFwRcode</code> for response&nbsp;subaction.</p>
             </div>
             <div class="docblock"><p>Available since: 2.2</p></div>
           
@@ -543,10 +550,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-responded"><a href="vfunc.FwFcp.responded.html">Hinawa.FwFcpClass.responded</a></h6>
 
         <div class="docblock">
-          <p>When the unit transfers asynchronous packet as response for Echo Audio Fireworks
-protocol, and the process successfully reads the content of packet from <span class="caps">ALSA</span>
-Fireworks driver, the <code>HinawaFwFcpClass::responded</code> signal handler is called with
-parameters of the&nbsp;response.</p>
+          <p>Class closure for the <code>HinawaFwFcp::responded</code> signal.</p>
         </div>
 
           <div class="docblock"><p>Available since: 2.1</p></div>

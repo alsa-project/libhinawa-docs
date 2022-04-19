@@ -159,15 +159,19 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_req.c#L8">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.FwReq : GObject.Object {
-  parent_instance: GObject,
-  priv: HinawaFwReqPrivate*
+  parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>A transaction executor to a FireWire unit.
+A HinawaFwReq supports some types of transactions in <span class="caps">IEEE</span> 1212. Mainly for read, write and lock&nbsp;operations.</p>
+<p>This class is an application of Linux FireWire subsystem. All of operations utilize ioctl(2)
+with subsystem specific request&nbsp;commands.</p>
         </div>
 
         <div class="docblock">
@@ -243,7 +247,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <h6><a href="type_func.FwReq.error_quark.html">hinawa_fw_req_error_quark</a></h6>
 
         <div class="docblock">
-          <p>Return the GQuark for error domain of GError which has code in <code>HinawaFwRcode</code>.</p>
+          <p>Return the <code>GQuark</code> for <code>GError</code> with code of <code>HinawaFwRcode</code>.</p>
         </div>
 
         <div class="docblock"><p>Available since: 2.1</p></div>
@@ -266,7 +270,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           <h6><a href="method.FwReq.transaction.html">hinawa_fw_req_transaction</a></h6>
           <div class="docblock">
             <p>Execute request subaction of transaction to the given node according to given code, then wait
-for response subaction within <code>HinawaFwReq:timeout</code>.</p>
+for response subaction within the value of timeout&nbsp;argument.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4</p><p>Deprecated since: 2.1</p></div>
         </div>
@@ -285,8 +289,8 @@ as long as event dispatcher&nbsp;runs.</p>
           <h6><a href="method.FwReq.transaction_sync.html">hinawa_fw_req_transaction_sync</a></h6>
           <div class="docblock">
             <p>Execute request subaction of transaction to the given node according to given code, then wait
-for response subaction within the given timeout. The <code>HinawaFwReq:timeout</code> property of instance
-is&nbsp;ignored.</p>
+for response subaction within the given timeout. The <code>HinawaFwReq:timeout</code> property of
+instance is&nbsp;ignored.</p>
           </div>
           <div class="docblock"><p>Available since: 2.1.</p></div>
         </div>
@@ -356,9 +360,8 @@ is&nbsp;ignored.</p>
         <div class="">
           <h6><a href="signal.FwReq.responded.html">Hinawa.FwReq::responded</a></h6>
           <div class="docblock">
-            <p>When the unit transfers asynchronous packet as response subaction for the transaction,
-and the process successfully reads the content of packet from Linux firewire subsystem,
-the <code>HinawaFwReq::responded</code> signal handler is&nbsp;called.</p>
+            <p>Emitted when the unit transfers asynchronous packet as response subaction for the
+transaction and the process successfully reads the content of packet from Linux firewire&nbsp;subsystem.</p>
           </div>
           <div class="docblock"><p>Available since: 2.1</p></div>
         </div>
@@ -455,9 +458,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-responded"><a href="vfunc.FwReq.responded.html">Hinawa.FwReqClass.responded</a></h6>
 
         <div class="docblock">
-          <p>When the unit transfers asynchronous packet as response subaction for the transaction,
-and the process successfully reads the content of packet from Linux firewire subsystem,
-the <code>HinawaFwReqClass::responded</code> handler is&nbsp;called.</p>
+          <p>Class closure for the <code>HinawaFwReq::responded</code> signal.</p>
         </div>
 
           <div class="docblock"><p>Available since: 2.1</p></div>

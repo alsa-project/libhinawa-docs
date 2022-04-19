@@ -164,20 +164,26 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_node.c#L11">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.FwNode : GObject.Object {
-  parent_instance: GObject,
-  priv: HinawaFwNodePrivate*
+  parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>An event listener for FireWire node
+A <a href="class.FwNode.html"><code>HinawaFwNode</code></a> is an event listener for a specified node on <span class="caps">IEEE</span> 1394 bus. This class is an
+application of Linux FireWire subsystem. All of operations utilize ioctl(2) with subsystem
+specific request&nbsp;commands.</p>
         </div>
 
         <div class="docblock">
           <table class="attributes">
             
+            
+            <tr><td>Available since:</td><td>1.4.</td></tr>
             
             
           </table>
@@ -249,7 +255,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.FwNode.create_source.html">hinawa_fw_node_create_source</a></h6>
           <div class="docblock">
-            <p>Create Gsource for GMainContext to dispatch events for the node on <span class="caps">IEEE</span> 1394&nbsp;bus.</p>
+            <p>Create <code>GSource</code> for <code>GMainContext</code> to dispatch events for the node on
+<span class="caps">IEEE</span> 1394&nbsp;bus.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4.</p></div>
         </div>
@@ -385,8 +392,8 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="signal.FwNode.bus-update.html">Hinawa.FwNode::bus-update</a></h6>
           <div class="docblock">
-            <p>When <span class="caps">IEEE</span> 1394 bus is updated, the <code>HinawaFwNode::bus-update</code> signal is generated.
-Handlers can read current generation in the bus via &#8216;generation&#8217;&nbsp;property.</p>
+            <p>Emitted when <span class="caps">IEEE</span> 1394 bus is updated. Handlers can read current generation in the bus
+via <code>HinawaFwNode:generation</code> property.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4</p></div>
         </div>
@@ -394,8 +401,8 @@ Handlers can read current generation in the bus via &#8216;generation&#8217;&nbs
         <div class="">
           <h6><a href="signal.FwNode.disconnected.html">Hinawa.FwNode::disconnected</a></h6>
           <div class="docblock">
-            <p>When phicical FireWire devices are disconnected from <span class="caps">IEEE</span> 1394 bus,
-the <code>HinawaFwNode::disconnected</code> signal is&nbsp;generated.</p>
+            <p>Emitted when the node is not available anymore due to removal from <span class="caps">IEEE</span> 1394 bus. It&#8217;s
+preferable to call <code>g_object_unref()</code> immediately to release file&nbsp;descriptor.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4</p></div>
         </div>
@@ -500,8 +507,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-bus_update"><a href="vfunc.FwNode.bus_update.html">Hinawa.FwNodeClass.bus_update</a></h6>
 
         <div class="docblock">
-          <p>When <span class="caps">IEEE</span> 1394 bus is updated, the <code>HinawaFwNodeClass::bus-update</code> handler is called.
-The handlers can read current generation in the bus via &#8216;generation&#8217;&nbsp;property.</p>
+          <p>Class closure for the <code>HinawaFwNode::bus-update</code>.</p>
         </div>
 
           <div class="docblock"><p>Available since: 1.4.</p></div>
@@ -511,8 +517,7 @@ The handlers can read current generation in the bus via &#8216;generation&#8217;
         <h6 id="vfunc-disconnected"><a href="vfunc.FwNode.disconnected.html">Hinawa.FwNodeClass.disconnected</a></h6>
 
         <div class="docblock">
-          <p>When phicical FireWire devices are disconnected from <span class="caps">IEEE</span> 1394 bus,
-the <code>HinawaFwNodeClass::disconnected</code> handler is&nbsp;called.</p>
+          <p>Class closure for the <code>HinawaFwNode::disconnected</code>.</p>
         </div>
 
           <div class="docblock"><p>Available since: 1.4.</p></div>

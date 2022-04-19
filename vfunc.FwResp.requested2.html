@@ -95,7 +95,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a href="#declaration" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_resp.h#L90">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_resp.h#L54">[src]</a>
         
       </h4>
 
@@ -122,15 +122,12 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a href="#description" class="anchor"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_resp.h#L67">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_resp.h#L34">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>When any node transfers request subaction to the range of address to which this object
-listening, the <code>HinawaFwResp::requested</code> signal handler is called with arrived frame for
-the subaction. The handler is expected to call #hinawa_fw_resp_set_resp_frame() with
-frame and return rcode for response&nbsp;subaction.</p>
+        <p>Class closure for the <a href="signal.FwResp.requested2.html"><code>HinawaFwResp::requested2</code></a>&nbsp;signal.</p>
       </div>
 
       <div class="docblock">
@@ -162,7 +159,7 @@ frame and return rcode for response&nbsp;subaction.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>One of <code>HinawaTcode</code> enumerations.</p></td>
+            <td><p>One of <a href="enum.FwTcode.html"><code>HinawaFwTcode</code></a>&nbsp;enumerations.</p></td>
           </tr>
           
           
@@ -321,7 +318,7 @@ frame and return rcode for response&nbsp;subaction.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>One of <code>HinawaRcode</code> enumerators corresponding to rcodes defined in <span class="caps">IEEE</span> 1394&nbsp;specification.</p></td>
+            <td><p>One of [enum@FwRcode enumerations corresponding to rcodes defined in <span class="caps">IEEE</span> 1394&nbsp;specification.</p></td>
           </tr>
           
           

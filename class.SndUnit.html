@@ -166,15 +166,18 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
           Description
           <a href="#description" class="anchor"></a>
           
+          <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/snd_unit.c#L15">[src]</a>
+          
         </h4>
 
         <pre><code>class Hinawa.SndUnit : GObject.Object {
-  parent_instance: GObject,
-  priv: HinawaSndUnitPrivate*
+  parent_instance: GObject
 }</pre></code>
 
         <div class="docblock">
-          No description available.
+          <p>An event listener for <span class="caps">ALSA</span> FireWire sound devices.
+This class is an application of <span class="caps">ALSA</span> FireWire stack. Any functionality which <span class="caps">ALSA</span> drivers in the
+stack can be&nbsp;available.</p>
         </div>
 
         <div class="docblock">
@@ -268,7 +271,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.SndUnit.create_source.html">hinawa_snd_unit_create_source</a></h6>
           <div class="docblock">
-            <p>Create Gsource for GMainContext to dispatch events for the sound&nbsp;device.</p>
+            <p>Create <code>GSource</code> for <code>GMainContext</code> to dispatch events for the sound&nbsp;device.</p>
           </div>
           <div class="docblock"><p>Available since: 1.4.</p></div>
         </div>
@@ -284,7 +287,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.SndUnit.lock.html">hinawa_snd_unit_lock</a></h6>
           <div class="docblock">
-            <p>Disallow <span class="caps">ALSA</span> to start&nbsp;kernel-streaming.</p>
+            <p>Disallow corresponding <span class="caps">ALSA</span> driver to start packet&nbsp;streaming.</p>
           </div>
           <div class="docblock"><p>Available since: 0.3</p></div>
         </div>
@@ -300,7 +303,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="method.SndUnit.unlock.html">hinawa_snd_unit_unlock</a></h6>
           <div class="docblock">
-            <p>Allow <span class="caps">ALSA</span> to start&nbsp;kernel-streaming.</p>
+            <p>Allow corresponding <span class="caps">ALSA</span> driver to start packet&nbsp;streaming.</p>
           </div>
           <div class="docblock"><p>Available since: 0.3</p></div>
         </div>
@@ -410,10 +413,9 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         <div class="">
           <h6><a href="signal.SndUnit.disconnected.html">Hinawa.SndUnit::disconnected</a></h6>
           <div class="docblock">
-            <p>When the sound card is not available anymore due to unbinding driver
-or hot unplugging, this signal is emit. The owner of this object
-should call <code>g_object_free()</code> as quickly as possible to release <span class="caps">ALSA</span>
-hwdep character&nbsp;device.</p>
+            <p>Emitted when the sound card is not available anymore due to unbinding driver or hot
+unplugging. The owner of this object should call <code>g_object_unref()</code> as
+quickly as possible to release <span class="caps">ALSA</span> hwdep character&nbsp;device.</p>
           </div>
           <div class="docblock"><p>Available since: 2.0</p></div>
         </div>
@@ -421,8 +423,8 @@ hwdep character&nbsp;device.</p>
         <div class="">
           <h6><a href="signal.SndUnit.lock-status.html">Hinawa.SndUnit::lock-status</a></h6>
           <div class="docblock">
-            <p>When <span class="caps">ALSA</span> kernel-streaming status is changed, this <code>HinawaSndUnit::lock-status</code>
-signal is&nbsp;generated.</p>
+            <p>Emitted when corresponding <span class="caps">ALSA</span> driver changes status of lock by starting/stopping
+packet streaming requested by <span class="caps">ALSA</span> <span class="caps">PCM</span>/Rawmidi&nbsp;applications.</p>
           </div>
           <div class="docblock"><p>Available since: 0.3</p></div>
         </div>
@@ -529,10 +531,7 @@ its value set through g_object_set_property(), g_object_set(), et&nbsp;al.</p>
         <h6 id="vfunc-disconnected"><a href="vfunc.SndUnit.disconnected.html">Hinawa.SndUnitClass.disconnected</a></h6>
 
         <div class="docblock">
-          <p>When the sound card is not available anymore due to unbinding driver
-or hot unplugging, this signal is emit. The owner of this object
-should call <code>g_object_free()</code> as quickly as possible to release <span class="caps">ALSA</span>
-hwdep character&nbsp;device.</p>
+          <p>Class closure for the <code>HinawaSndUnit::disconnected</code>.</p>
         </div>
 
           <div class="docblock"><p>Available since: 2.0</p></div>
@@ -542,8 +541,7 @@ hwdep character&nbsp;device.</p>
         <h6 id="vfunc-lock_status"><a href="vfunc.SndUnit.lock_status.html">Hinawa.SndUnitClass.lock_status</a></h6>
 
         <div class="docblock">
-          <p>When <span class="caps">ALSA</span> kernel-streaming status is changed, this <code>HinawaSndUnitClass::lock_status</code>
-handler is&nbsp;called.</p>
+          <p>Class closure for the <code>HinawaSndUnit::lock-status</code>,</p>
         </div>
 
           <div class="docblock"><p>Available since: 1.2</p></div>

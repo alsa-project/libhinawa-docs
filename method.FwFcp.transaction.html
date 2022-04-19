@@ -101,7 +101,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.h#L69">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.h#L36">[src]</a>
         
       </h4>
 
@@ -125,13 +125,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L370">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_fcp.c#L366">[src]</a>
         
       </h4>
 
       <div class="docblock">
-        <p>Finish the pair of command and response transactions for <span class="caps">FCP</span>. The value of <code>HinawaFwFcp:timeout</code>
-property is used to wait for response transaction since the command transaction is&nbsp;initiated.</p>
+        <p>Finish the pair of command and response transactions for <span class="caps">FCP</span>. The value of
+<a href="property.FwFcp.timeout.html"><code>HinawaFwFcp:timeout</code></a> property is used to wait for response transaction since the command
+transaction is&nbsp;initiated.</p>
       </div>
 
       <div class="docblock">
@@ -142,7 +143,7 @@ property is used to wait for response transaction since the command transaction 
           
           
           <tr><td>Deprecated since:</td><td>2.1</td></tr>
-          <tr><td colspan="2"><p>Use #hinawa_fw_fcp_avc_transaction(),&nbsp;instead.</p></td></tr>
+          <tr><td colspan="2"><p>Use <a href="method.FwFcp.avc_transaction.html"><code>hinawa_fw_fcp_avc_transaction()</code></a>,&nbsp;instead.</p></td></tr>
           
           
           
@@ -169,9 +170,8 @@ property is used to wait for response transaction since the command transaction 
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>An array with elements for
-       request byte data. The value of this argument should point to
-       the array and&nbsp;immutable.</p></td>
+            <td><p>An array with elements for request byte data. The
+       value of this argument should point to the array and&nbsp;immutable.</p></td>
           </tr>
           
           
@@ -207,12 +207,11 @@ property is used to wait for response transaction since the command transaction 
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>An array with elements
-    for response byte data. Callers should give it for buffer with
-    enough space against the request since this library performs no
-    reallocation. Due to the reason, the value of this argument
-    should point to the pointer to the array and immutable. The
-    content of array is&nbsp;mutable.</p></td>
+            <td><p>An array with elements for response byte
+    data. Callers should give it for buffer with enough space against the request
+    since this library performs no reallocation. Due to the reason, the value of this
+    argument should point to the pointer to the array and immutable. The content of
+    array is&nbsp;mutable.</p></td>
           </tr>
           <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
           
@@ -230,8 +229,8 @@ property is used to wait for response transaction since the command transaction 
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>The size of array for response in byte unit. The value of
-         this argument should point to the numerical number and&nbsp;mutable.</p></td>
+            <td><p>The size of array for response in byte unit. The value of this argument should
+         point to the numerical number and&nbsp;mutable.</p></td>
           </tr>
           <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
           

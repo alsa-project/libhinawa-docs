@@ -97,7 +97,7 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Declaration
         <a class="anchor" href="#declaration"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_req.h#L75">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_req.h#L43">[src]</a>
         
       </h4>
 
@@ -124,14 +124,14 @@ SPDX-License-Identifier: Apache-2.0 OR GPL-3.0-or-later
         Description
         <a class="anchor" href="#description"></a>
         
-        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_req.c#L282">[src]</a>
+        <a class="srclink" title="go to source location" href="https://github.com/alsa-project/libhinawa/blob/master/src/fw_req.c#L278">[src]</a>
         
       </h4>
 
       <div class="docblock">
         <p>Execute request subaction of transaction to the given node according to given code, then wait
-for response subaction within the given timeout. The <code>HinawaFwReq:timeout</code> property of instance
-is&nbsp;ignored.</p>
+for response subaction within the given timeout. The <a href="property.FwReq.timeout.html"><code>HinawaFwReq:timeout</code></a> property of
+instance is&nbsp;ignored.</p>
       </div>
 
       <div class="docblock">
@@ -166,7 +166,7 @@ is&nbsp;ignored.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>A <code>HinawaFwNode</code>.</p></td>
+            <td><p>A <a href="class.FwNode.html"><code>HinawaFwNode</code></a>.</p></td>
           </tr>
           
           
@@ -184,7 +184,7 @@ is&nbsp;ignored.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>A transaction code of&nbsp;HinawaFwTcode.</p></td>
+            <td><p>A transaction code of <a href="enum.FwTcode.html"><code>HinawaFwTcode</code></a>.</p></td>
           </tr>
           
           
@@ -238,12 +238,10 @@ is&nbsp;ignored.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>An array with elements for byte
-   data. Callers should give it for buffer with enough space against the
-   request since this library performs no reallocation. Due to the
-   reason, the value of this argument should point to the pointer to the
-   array and immutable. The content of array is mutable for read and
-   lock&nbsp;transaction.</p></td>
+            <td><p>An array with elements for byte data. Callers should
+   give it for buffer with enough space against the request since this library performs no
+   reallocation. Due to the reason, the value of this argument should point to the pointer
+   to the array and immutable. The content of array is mutable for read and lock&nbsp;transaction.</p></td>
           </tr>
           <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
           
@@ -261,9 +259,8 @@ is&nbsp;ignored.</p>
           </tr>
           <tr class="arg-description">
             <td>&nbsp;</td>
-            <td><p>The size of array in byte unit. The value of this argument
-    should point to the numerical number and mutable for read and
-    lock&nbsp;transaction.</p></td>
+            <td><p>The size of array in byte unit. The value of this argument should point to the
+    numeric number and mutable for read and lock&nbsp;transaction.</p></td>
           </tr>
           <tr><td>&nbsp;</td><td title="direction: inout">The argument will be modified by the function.</td></tr>
           
